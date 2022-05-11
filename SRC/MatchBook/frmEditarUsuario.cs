@@ -55,19 +55,15 @@ namespace MatchBook
         
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            
             BDdatos.AbrirConexion();
-            if (usuario.InicioSesion(BDdatos.Conexion, txtEmail.Text, txtContraseña.Text))
-            {
-                frmPrincipal principal = new frmPrincipal();
-                principal.Show();
+            usuario.CambiarDatos(BDdatos.Conexion, txtcont1.Text, txtuser.Text, txtdir.Text, dtpfecha.Value, txtemail1.Text);
+
+            MessageBox.Show("Datos modificados");
                 BDdatos.CerrarConexion();
                
-            }
-            else
-            {
-                BDdatos.CerrarConexion();
-                MessageBox.Show("Usuario/Contraseña incorrectos.");
-            }
+           
+
         }
         
 

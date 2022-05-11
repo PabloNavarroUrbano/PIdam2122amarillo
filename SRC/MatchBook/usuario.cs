@@ -92,18 +92,13 @@ namespace MatchBook
             return retorno;
         }
 
-        public int CambiarDatos(MySqlConnection conexion, string pswd, )
+        public static int CambiarDatos(MySqlConnection conexion, string pswd, string username, string dir, DateTime fech, string email)
         {
             int retorno;
-
-            usuario emple = new usuario(emp.username, emp.fecha_nac, emp.email, emp.pswd, emp.direccion);
-            plant.Add(emple);
             string consulta;
 
 
-            consulta = String.Format("INSERT INTO usuario (username, fecha_nac, email, pswd, direccion) VALUES " +
-                "('{0}','{1}','{2}','{3}','{4}')", emp.Username, emp.Fecha_nac, emp.Email, emp.Pswd, emp.Direccion);
-
+            consulta = String.Format("UPDATE usuario SET username='{0}', fecha_nac='{1}', pswd='{2}', direccion='{3}' WHERE email='{4}'",  username, fech, pswd, dir,email);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
 
