@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+
+* {margin: 0;padding: 0;box-sizing:
+   border-box;list-style:none;text-decoration:none; 
+   font-family: "Josefin Sans", sans-serif;} 
+body{ 	
+	background-color:gray;
+	background-size: 100% 100% ;
+	background-attachment: fixed ;
+}
+.banner{
+	width: 100%;
+	height: 200px;
+	background-size: 100% 100%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.capa{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.6);
+}
+.info{
+	z-index: 1;
+	width: 100%;
+	max-width: 550px;
+	text-align: center;
+}
+.info h1{
+	color: #FFF;
+	font-size: 45px;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+}
+.info a{
+	color: #FFF;
+	text-decoration: none;
+	background: red;
+	padding: 16px 37px;
+	display: inline-block;
+	border-radius: 50px;
+}
+.envoltura .menu{
+	position: fixed;
+	width: 200px;
+	left:-200px;
+	height: 100%;
+	background: lightblue;
+	padding: 40px 0;
+	z-index: 1;
+	visibility:none;
+	transition:all 400ms ease-out;
+}
+.envoltura .menu h2{
+	color: #FFF;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 30px;
+	line-height:100px;
+	background:#81BEF7; 
+}
+.envoltura .menu ul li{
+	padding: 30px;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	border-top: 1px solid rgba(225,225,225,0.05);
+}
+.envoltura .menu ul li:hover{
+	transition: all 450ms ease-out;
+	box-shadow: 0 0 10px black, 0 0 10px white, 0 0 30px black;
+	color:lightblue;
+	background-color:#A9E2F3;
+}
+.envoltura .menu .redes_sociales {
+	position:absolute;
+	bottom:0;
+	left:50%;
+	transform:translateX(-50%);
+	display:flex;
+}
+.envoltura .menu .redes_sociales a{
+	display:block;
+	width:40px;
+	height:40px;
+	background-color:#81BEF7;
+	line-height:40px;
+	text-align:center;
+	margin:0px 5px;
+	color:black;
+	border-top-right-radius:5px;
+	border-top-left-radius:5px;
+}
+
+#check {
+	display:none;
+}
+
+label #button,label #cancel {
+	position:fixed;
+	cursor:pointer;
+	background:lightblue;
+	height:45px;
+	width:45px;
+	text-align:center;
+	line-height:45px;
+	color:white;
+	font-size:29px;
+	border:1px solid lightblue;
+	border-radius:5px;
+	z-index:1;
+	margin:30px 30px;
+	transition:all 400ms ease-out;
+}
+
+label #cancel {
+	visibility:hidden;
+	opacity:0;
+	position:fixed;
+}
+
+#check:checked ~ label #button {
+	margin-left:210px;
+	opacity:0;
+	visibility:hidden;
+}
+
+#check:checked ~ label #cancel {
+	margin-left:210px;
+	opacity:1;
+	visibility:visible;
+}
+
+#check:checked ~ .menu {
+	left:0;
+}
+
+#libro{
+	width: 500px;
+	height: 600px;
+	background-color: green;
+	position: absolute;
+	margin-top: 60%;
+}
+
+#likes{
+	width: 500px;
+	height: 100px;
+	background-color: red;
+	position: absolute;
+	margin-top: 100%;
+}
+
+
+
+#hor1{
+	width:100%;
+	height:150px;
+	background-color:#000;
+	margin-top:2000px;
+	position:absolute;
+	opacity:0.7
+	}
