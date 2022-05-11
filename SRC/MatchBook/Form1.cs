@@ -34,7 +34,7 @@ namespace MatchBook
             BDdatos.AbrirConexion();
             if (usuario.InicioSesion(BDdatos.Conexion, txtEmail.Text, txtContraseña.Text))
             {
-                frmPrincipal principal = new frmPrincipal();
+                frmPrincipal principal = new frmPrincipal(txtEmail.Text);
                  principal.Show();
                 BDdatos.CerrarConexion();
                 /* 11111111H */

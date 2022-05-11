@@ -92,6 +92,26 @@ namespace MatchBook
             return retorno;
         }
 
+        public int CambiarDatos(MySqlConnection conexion, string pswd, )
+        {
+            int retorno;
+
+            usuario emple = new usuario(emp.username, emp.fecha_nac, emp.email, emp.pswd, emp.direccion);
+            plant.Add(emple);
+            string consulta;
+
+
+            consulta = String.Format("INSERT INTO usuario (username, fecha_nac, email, pswd, direccion) VALUES " +
+                "('{0}','{1}','{2}','{3}','{4}')", emp.Username, emp.Fecha_nac, emp.Email, emp.Pswd, emp.Direccion);
+
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            return retorno;
+        }
+
 
     }
 }
