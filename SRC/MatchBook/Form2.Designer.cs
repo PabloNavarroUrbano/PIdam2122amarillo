@@ -29,6 +29,7 @@ namespace MatchBook
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.grpMenu = new System.Windows.Forms.GroupBox();
             this.btnForo = new System.Windows.Forms.Button();
             this.btnSubirPagina = new System.Windows.Forms.Button();
@@ -190,7 +191,7 @@ namespace MatchBook
             this.btnLike.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLike.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLike.ForeColor = System.Drawing.Color.Black;
-            this.btnLike.Image = global::MatchBook.Properties.Resources.like;
+            this.btnLike.Image = ((System.Drawing.Image)(resources.GetObject("btnLike.Image")));
             this.btnLike.Location = new System.Drawing.Point(576, 614);
             this.btnLike.Name = "btnLike";
             this.btnLike.Size = new System.Drawing.Size(186, 55);
@@ -203,7 +204,7 @@ namespace MatchBook
             this.btnDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDerecha.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDerecha.ForeColor = System.Drawing.Color.Black;
-            this.btnDerecha.Image = global::MatchBook.Properties.Resources.flecha_derecha;
+            this.btnDerecha.Image = ((System.Drawing.Image)(resources.GetObject("btnDerecha.Image")));
             this.btnDerecha.Location = new System.Drawing.Point(768, 111);
             this.btnDerecha.Name = "btnDerecha";
             this.btnDerecha.Size = new System.Drawing.Size(61, 497);
@@ -216,7 +217,7 @@ namespace MatchBook
             this.btnIzquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIzquierda.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIzquierda.ForeColor = System.Drawing.Color.Black;
-            this.btnIzquierda.Image = global::MatchBook.Properties.Resources.flecha_izquierda;
+            this.btnIzquierda.Image = ((System.Drawing.Image)(resources.GetObject("btnIzquierda.Image")));
             this.btnIzquierda.Location = new System.Drawing.Point(328, 111);
             this.btnIzquierda.Margin = new System.Windows.Forms.Padding(0);
             this.btnIzquierda.Name = "btnIzquierda";
@@ -230,7 +231,7 @@ namespace MatchBook
             this.btnAnyadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnyadir.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnyadir.ForeColor = System.Drawing.Color.Black;
-            this.btnAnyadir.Image = global::MatchBook.Properties.Resources.guardar;
+            this.btnAnyadir.Image = ((System.Drawing.Image)(resources.GetObject("btnAnyadir.Image")));
             this.btnAnyadir.Location = new System.Drawing.Point(394, 614);
             this.btnAnyadir.Name = "btnAnyadir";
             this.btnAnyadir.Size = new System.Drawing.Size(176, 55);
@@ -243,7 +244,7 @@ namespace MatchBook
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.Color.Black;
-            this.btnMenu.Image = global::MatchBook.Properties.Resources.menu_button_of_three_horizontal_lines;
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
             this.btnMenu.Location = new System.Drawing.Point(18, 110);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(68, 56);
@@ -279,10 +280,12 @@ namespace MatchBook
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrincipal";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.grpMenu.ResumeLayout(false);

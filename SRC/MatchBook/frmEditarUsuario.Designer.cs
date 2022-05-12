@@ -355,7 +355,9 @@ namespace MatchBook
             this.Controls.Add(this.grpMenu);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditarUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditarUsuario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

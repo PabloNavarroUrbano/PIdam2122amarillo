@@ -35,13 +35,21 @@ namespace MatchBook
             if (ConBBDD.Conexion != null)
             {
                 ConBBDD.AbrirConexion();
-                frmPrincipal principal = new frmPrincipal(txtEmail.Text);
-                principal.Show();
+
+                if (usuario.InicioSesion(ConBBDD.Conexion, txtEmail.Text, txtContraseña.Text))
+                {
+                    this.Hide();
+                    frmPrincipal principal = new frmPrincipal(txtEmail.Text);
+                    principal.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario/Contraseña incorrectos.");
+                }
+
                 ConBBDD.CerrarConexion();
-            } else
-            {
-                MessageBox.Show("Usuario/Contraseña incorrectos.");
-            } 
+            }
+        
         }
 
         private void btnRegistro_Click(object sender, EventArgs e)
@@ -69,7 +77,10 @@ namespace MatchBook
             {
                 MessageBox.Show("salio mal pa");
             }
-          
+            grbRegistro.Hide();
         }
+
+
+
     }
 }
