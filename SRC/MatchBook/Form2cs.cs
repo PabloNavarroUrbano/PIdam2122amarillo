@@ -22,6 +22,17 @@ namespace MatchBook
             btnIzquierda.FlatAppearance.BorderSize = 0;
             grpMenu.Visible = false;
         }
+        public frmPrincipal(string email)
+        {
+            InitializeComponent();
+            btnMenu.FlatAppearance.BorderSize = 0;
+            btnAnyadir.FlatAppearance.BorderSize = 0;
+            btnLike.FlatAppearance.BorderSize = 0;
+            btnDerecha.FlatAppearance.BorderSize = 0;
+            btnIzquierda.FlatAppearance.BorderSize = 0;
+            grpMenu.Visible = false;
+            lblemail.Text = email;
+        }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
@@ -48,5 +59,17 @@ namespace MatchBook
                 Form.Show();
 
             }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmEditarUsuario edit = new frmEditarUsuario(lblemail.Text);
+            edit.Show();
+        }
+
+        private void btnSubirPagina_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

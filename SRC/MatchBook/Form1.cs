@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace MatchBook
 {
@@ -22,7 +23,7 @@ namespace MatchBook
             grbRegistro.Hide();
         }
 
-        ConexionBD BDdatos = new ConexionBD();
+        
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -31,28 +32,24 @@ namespace MatchBook
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            BDdatos.AbrirConexion();
-            if (usuario.InicioSesion(BDdatos.Conexion, txtEmail.Text, txtContraseña.Text))
+            if (ConBBDD.Conexion != null)
             {
-                frmPrincipal principal = new frmPrincipal();
-                 principal.Show();
-                BDdatos.CerrarConexion();
-                /* 11111111H */
-            }
-            else
+                ConBBDD.AbrirConexion();
+                frmPrincipal principal = new frmPrincipal(txtEmail.Text);
+                principal.Show();
+            } else
             {
-                BDdatos.CerrarConexion();
                 MessageBox.Show("Usuario/Contraseña incorrectos.");
-            }
+            } ConBBDD.CerrarConexion();
         }
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
             int resultado = 1;
             DateTime fe;
-
-            if (BDdatos.AbrirConexion())
+            if (ConBBDD.Conexion != null)
             {
+                ConBBDD.AbrirConexion();
                 usuario usu = new usuario();
                 usu.Username = txtuser.Text;
                 fe = Convert.ToDateTime(dtpfecha.Value.ToString(""));
@@ -62,19 +59,16 @@ namespace MatchBook
                 usu.Direccion = txtdir.Text;
 
 
-                resultado = usu.AgregarUsuario(BDdatos.Conexion, usu);
+                resultado = usu.AgregarUsuario(ConBBDD.Conexion, usu);
                 MessageBox.Show("Listo pa");
 
-                BDdatos.CerrarConexion();
+                ConBBDD.CerrarConexion();
             }
             else
             {
                 MessageBox.Show("salio mal pa");
             }
-            BDdatos.CerrarConexion();
+          
         }
-
-
-
     }
 }
