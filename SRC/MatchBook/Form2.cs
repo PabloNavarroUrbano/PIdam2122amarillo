@@ -42,6 +42,8 @@ namespace MatchBook
         private void btnMenu_Click(object sender, EventArgs e)
         {
             if (grpMenu.Visible == true)
+
+                //comentario
             {
                 grpMenu.Visible = false;
             }else if (grpMenu.Visible == false)
