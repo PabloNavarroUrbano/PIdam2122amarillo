@@ -160,3 +160,4 @@ C:\Users\esalku\Desktop\AHORA SI QUE SI PUTO PABLO DE LOS COJONES\SRC\MatchBook\
 C:\Users\esalku\Desktop\AHORA SI QUE SI PUTO PABLO DE LOS COJONES\SRC\MatchBook\obj\Debug\MatchBook.csproj.CopyComplete
 C:\Users\esalku\Desktop\AHORA SI QUE SI PUTO PABLO DE LOS COJONES\SRC\MatchBook\obj\Debug\MatchBook.exe
 C:\Users\esalku\Desktop\AHORA SI QUE SI PUTO PABLO DE LOS COJONES\SRC\MatchBook\obj\Debug\MatchBook.pdb
+C:\Users\esalku\Desktop\AHORA SI QUE SI PUTO PABLO DE LOS COJONES\SRC\MatchBook\obj\Debug\MatchBook.frmSubirLibro.resources

@@ -88,6 +88,7 @@ namespace MatchBook
             this.btnSubirPagina.TabIndex = 4;
             this.btnSubirPagina.Text = "Subir Página";
             this.btnSubirPagina.UseVisualStyleBackColor = true;
+            this.btnSubirPagina.Click += new System.EventHandler(this.btnSubirPagina_Click);
             // 
             // btnMatchBook
             // 

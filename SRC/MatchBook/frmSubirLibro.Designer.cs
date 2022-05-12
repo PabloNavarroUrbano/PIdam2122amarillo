@@ -1,7 +1,7 @@
 ﻿
 namespace MatchBook
 {
-    partial class frmEditarUsuario
+    partial class frmSubirLibro
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@ namespace MatchBook
             this.grpMenu = new System.Windows.Forms.GroupBox();
             this.btnForo = new System.Windows.Forms.Button();
             this.btnSubirPagina = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnMatchBook = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.grbRegistro = new System.Windows.Forms.GroupBox();
@@ -51,8 +51,8 @@ namespace MatchBook
             this.label8 = new System.Windows.Forms.Label();
             this.txtcont1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtemail1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txttitulo = new System.Windows.Forms.TextBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grpMenu.SuspendLayout();
             this.grbRegistro.SuspendLayout();
@@ -66,7 +66,7 @@ namespace MatchBook
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1081, 105);
+            this.panel1.Size = new System.Drawing.Size(1069, 105);
             this.panel1.TabIndex = 13;
             // 
             // panel2
@@ -102,13 +102,12 @@ namespace MatchBook
             this.btnMenu.Size = new System.Drawing.Size(68, 56);
             this.btnMenu.TabIndex = 14;
             this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // grpMenu
             // 
             this.grpMenu.Controls.Add(this.btnForo);
             this.grpMenu.Controls.Add(this.btnSubirPagina);
-            this.grpMenu.Controls.Add(this.btnBuscar);
+            this.grpMenu.Controls.Add(this.btnMatchBook);
             this.grpMenu.Controls.Add(this.btnPerfil);
             this.grpMenu.Controls.Add(this.btnPrincipal);
             this.grpMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -141,16 +140,16 @@ namespace MatchBook
             this.btnSubirPagina.Text = "Subir Página";
             this.btnSubirPagina.UseVisualStyleBackColor = true;
             // 
-            // btnBuscar
+            // btnMatchBook
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Location = new System.Drawing.Point(6, 192);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(172, 51);
-            this.btnBuscar.TabIndex = 6;
-            this.btnBuscar.Text = "BUSCAR";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnMatchBook.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMatchBook.ForeColor = System.Drawing.Color.Black;
+            this.btnMatchBook.Location = new System.Drawing.Point(6, 192);
+            this.btnMatchBook.Name = "btnMatchBook";
+            this.btnMatchBook.Size = new System.Drawing.Size(172, 51);
+            this.btnMatchBook.TabIndex = 6;
+            this.btnMatchBook.Text = "MatchBook";
+            this.btnMatchBook.UseVisualStyleBackColor = true;
             // 
             // btnPerfil
             // 
@@ -162,7 +161,6 @@ namespace MatchBook
             this.btnPerfil.TabIndex = 2;
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.UseVisualStyleBackColor = true;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnPrincipal
             // 
@@ -174,7 +172,6 @@ namespace MatchBook
             this.btnPrincipal.TabIndex = 1;
             this.btnPrincipal.Text = "Principal";
             this.btnPrincipal.UseVisualStyleBackColor = true;
-            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
             // 
             // grbRegistro
             // 
@@ -189,14 +186,14 @@ namespace MatchBook
             this.grbRegistro.Controls.Add(this.label8);
             this.grbRegistro.Controls.Add(this.txtcont1);
             this.grbRegistro.Controls.Add(this.label7);
-            this.grbRegistro.Controls.Add(this.txtemail1);
-            this.grbRegistro.Controls.Add(this.label6);
-            this.grbRegistro.Location = new System.Drawing.Point(319, 134);
+            this.grbRegistro.Controls.Add(this.txttitulo);
+            this.grbRegistro.Controls.Add(this.lblTitulo);
+            this.grbRegistro.Location = new System.Drawing.Point(263, 138);
             this.grbRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbRegistro.Name = "grbRegistro";
             this.grbRegistro.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbRegistro.Size = new System.Drawing.Size(501, 485);
-            this.grbRegistro.TabIndex = 33;
+            this.grbRegistro.Size = new System.Drawing.Size(749, 485);
+            this.grbRegistro.TabIndex = 34;
             this.grbRegistro.TabStop = false;
             // 
             // txtcont2
@@ -230,7 +227,6 @@ namespace MatchBook
             this.btnModificar.TabIndex = 14;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // dtpfecha
             // 
@@ -319,42 +315,42 @@ namespace MatchBook
             this.label7.TabIndex = 6;
             this.label7.Text = "Contraseña:";
             // 
-            // txtemail1
+            // txttitulo
             // 
-            this.txtemail1.BackColor = System.Drawing.Color.White;
-            this.txtemail1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtemail1.Enabled = false;
-            this.txtemail1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemail1.Location = new System.Drawing.Point(85, 60);
-            this.txtemail1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtemail1.Name = "txtemail1";
-            this.txtemail1.Size = new System.Drawing.Size(301, 27);
-            this.txtemail1.TabIndex = 5;
+            this.txttitulo.BackColor = System.Drawing.Color.White;
+            this.txttitulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txttitulo.Enabled = false;
+            this.txttitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttitulo.Location = new System.Drawing.Point(85, 60);
+            this.txttitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txttitulo.Name = "txttitulo";
+            this.txttitulo.Size = new System.Drawing.Size(301, 27);
+            this.txttitulo.TabIndex = 5;
             // 
-            // label6
+            // lblTitulo
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(81, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 25);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Email:";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTitulo.Location = new System.Drawing.Point(81, 33);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(66, 25);
+            this.lblTitulo.TabIndex = 4;
+            this.lblTitulo.Text = "Titulo:";
             // 
-            // frmEditarUsuario
+            // frmSubirLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1081, 678);
+            this.ClientSize = new System.Drawing.Size(1069, 699);
             this.Controls.Add(this.grbRegistro);
             this.Controls.Add(this.grpMenu);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.panel1);
-            this.Name = "frmEditarUsuario";
-            this.Text = "frmEditarUsuario";
+            this.Name = "frmSubirLibro";
+            this.Text = "frmSubirLibro";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.grpMenu.ResumeLayout(false);
@@ -373,10 +369,12 @@ namespace MatchBook
         private System.Windows.Forms.GroupBox grpMenu;
         private System.Windows.Forms.Button btnForo;
         private System.Windows.Forms.Button btnSubirPagina;
-        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnMatchBook;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnPrincipal;
         private System.Windows.Forms.GroupBox grbRegistro;
+        private System.Windows.Forms.TextBox txtcont2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.DateTimePicker dtpfecha;
         private System.Windows.Forms.Label label10;
@@ -386,9 +384,7 @@ namespace MatchBook
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtcont1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtemail1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtcont2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txttitulo;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

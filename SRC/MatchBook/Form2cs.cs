@@ -66,5 +66,10 @@ namespace MatchBook
             frmEditarUsuario edit = new frmEditarUsuario(lblemail.Text);
             edit.Show();
         }
+
+        private void btnSubirPagina_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
