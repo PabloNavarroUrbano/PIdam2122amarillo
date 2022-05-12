@@ -41,5 +41,33 @@ namespace MatchBook
             }
 
         }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            if (grpMenu.Visible == true)
+            {
+                grpMenu.Visible = false;
+            }
+            else if (grpMenu.Visible == false)
+            {
+                grpMenu.Visible = true;
+            }
+        }
+
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmPrincipal pri = new frmPrincipal();
+            pri.Show();
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmEditarUsuario edi = new frmEditarUsuario();
+            edi.Show();
+        }
+
+
     }
 }

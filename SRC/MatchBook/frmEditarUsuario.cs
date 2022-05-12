@@ -60,14 +60,15 @@ namespace MatchBook
             usuario.CambiarDatos(ConBBDD.Conexion, txtcont1.Text, txtuser.Text, txtdir.Text, dtpfecha.Value, txtemail1.Text);
 
             MessageBox.Show("Datos modificados");
-                ConBBDD.CerrarConexion();
-               
-           
-
+            ConBBDD.CerrarConexion();
         }
-        
 
-
+        private void btnSubirPagina_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmSubirLibro lib = new frmSubirLibro();
+            lib.Show();
+        }
 
     }
 }
