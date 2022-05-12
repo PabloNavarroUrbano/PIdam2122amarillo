@@ -39,20 +39,20 @@ namespace MatchBook
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.Button();
-            this.grbRegistro = new System.Windows.Forms.GroupBox();
-            this.txtcont2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.dtpfecha = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtdir = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtuser = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtcont1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtemail1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtemail1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtcont1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtuser = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtdir = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dtpfecha = new System.Windows.Forms.DateTimePicker();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtcont2 = new System.Windows.Forms.TextBox();
+            this.grbRegistro = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.grpMenu.SuspendLayout();
             this.grbRegistro.SuspendLayout();
@@ -176,6 +176,150 @@ namespace MatchBook
             this.btnPrincipal.UseVisualStyleBackColor = true;
             this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label6.Location = new System.Drawing.Point(81, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 25);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Email:";
+            // 
+            // txtemail1
+            // 
+            this.txtemail1.BackColor = System.Drawing.Color.White;
+            this.txtemail1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtemail1.Enabled = false;
+            this.txtemail1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtemail1.Location = new System.Drawing.Point(85, 60);
+            this.txtemail1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtemail1.Name = "txtemail1";
+            this.txtemail1.Size = new System.Drawing.Size(301, 27);
+            this.txtemail1.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label7.Location = new System.Drawing.Point(80, 96);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(120, 25);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Contraseña:";
+            // 
+            // txtcont1
+            // 
+            this.txtcont1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtcont1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcont1.Location = new System.Drawing.Point(85, 123);
+            this.txtcont1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtcont1.Name = "txtcont1";
+            this.txtcont1.PasswordChar = '*';
+            this.txtcont1.Size = new System.Drawing.Size(301, 27);
+            this.txtcont1.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label8.Location = new System.Drawing.Point(81, 231);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 25);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Username:";
+            // 
+            // txtuser
+            // 
+            this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuser.Location = new System.Drawing.Point(86, 270);
+            this.txtuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(301, 27);
+            this.txtuser.TabIndex = 9;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label9.Location = new System.Drawing.Point(81, 299);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(99, 25);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Direccion:";
+            // 
+            // txtdir
+            // 
+            this.txtdir.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtdir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdir.Location = new System.Drawing.Point(86, 331);
+            this.txtdir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtdir.Name = "txtdir";
+            this.txtdir.Size = new System.Drawing.Size(301, 27);
+            this.txtdir.TabIndex = 11;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label10.Location = new System.Drawing.Point(70, 365);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(175, 25);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Fecha Nacimiento:";
+            // 
+            // dtpfecha
+            // 
+            this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpfecha.Location = new System.Drawing.Point(123, 403);
+            this.dtpfecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpfecha.Name = "dtpfecha";
+            this.dtpfecha.Size = new System.Drawing.Size(200, 22);
+            this.dtpfecha.TabIndex = 13;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(197, 432);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(91, 30);
+            this.btnModificar.TabIndex = 14;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Location = new System.Drawing.Point(80, 167);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 25);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Contraseña:";
+            // 
+            // txtcont2
+            // 
+            this.txtcont2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtcont2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcont2.Location = new System.Drawing.Point(86, 195);
+            this.txtcont2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtcont2.Name = "txtcont2";
+            this.txtcont2.PasswordChar = '*';
+            this.txtcont2.Size = new System.Drawing.Size(301, 27);
+            this.txtcont2.TabIndex = 16;
+            // 
             // grbRegistro
             // 
             this.grbRegistro.Controls.Add(this.txtcont2);
@@ -198,150 +342,7 @@ namespace MatchBook
             this.grbRegistro.Size = new System.Drawing.Size(501, 485);
             this.grbRegistro.TabIndex = 33;
             this.grbRegistro.TabStop = false;
-            // 
-            // txtcont2
-            // 
-            this.txtcont2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcont2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcont2.Location = new System.Drawing.Point(86, 195);
-            this.txtcont2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtcont2.Name = "txtcont2";
-            this.txtcont2.PasswordChar = '*';
-            this.txtcont2.Size = new System.Drawing.Size(301, 27);
-            this.txtcont2.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(80, 167);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 25);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Contraseña:";
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(197, 432);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(91, 30);
-            this.btnModificar.TabIndex = 14;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // dtpfecha
-            // 
-            this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfecha.Location = new System.Drawing.Point(123, 403);
-            this.dtpfecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpfecha.Name = "dtpfecha";
-            this.dtpfecha.Size = new System.Drawing.Size(200, 22);
-            this.dtpfecha.TabIndex = 13;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label10.Location = new System.Drawing.Point(70, 365);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(175, 25);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Fecha Nacimiento:";
-            // 
-            // txtdir
-            // 
-            this.txtdir.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtdir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdir.Location = new System.Drawing.Point(86, 331);
-            this.txtdir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtdir.Name = "txtdir";
-            this.txtdir.Size = new System.Drawing.Size(301, 27);
-            this.txtdir.TabIndex = 11;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label9.Location = new System.Drawing.Point(81, 299);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 25);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Direccion:";
-            // 
-            // txtuser
-            // 
-            this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuser.Location = new System.Drawing.Point(86, 270);
-            this.txtuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(301, 27);
-            this.txtuser.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label8.Location = new System.Drawing.Point(81, 231);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 25);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Username:";
-            // 
-            // txtcont1
-            // 
-            this.txtcont1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcont1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcont1.Location = new System.Drawing.Point(85, 123);
-            this.txtcont1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtcont1.Name = "txtcont1";
-            this.txtcont1.PasswordChar = '*';
-            this.txtcont1.Size = new System.Drawing.Size(301, 27);
-            this.txtcont1.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label7.Location = new System.Drawing.Point(80, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 25);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Contraseña:";
-            // 
-            // txtemail1
-            // 
-            this.txtemail1.BackColor = System.Drawing.Color.White;
-            this.txtemail1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtemail1.Enabled = false;
-            this.txtemail1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemail1.Location = new System.Drawing.Point(85, 60);
-            this.txtemail1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtemail1.Name = "txtemail1";
-            this.txtemail1.Size = new System.Drawing.Size(301, 27);
-            this.txtemail1.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(81, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 25);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Email:";
+            this.grbRegistro.Text = ".";
             // 
             // frmEditarUsuario
             // 
@@ -376,19 +377,19 @@ namespace MatchBook
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnPrincipal;
-        private System.Windows.Forms.GroupBox grbRegistro;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.DateTimePicker dtpfecha;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtdir;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtcont1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtemail1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtcont2;
+        private System.Windows.Forms.TextBox txtemail1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtcont1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtuser;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtdir;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DateTimePicker dtpfecha;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtcont2;
+        private System.Windows.Forms.GroupBox grbRegistro;
     }
 }

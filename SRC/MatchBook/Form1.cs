@@ -37,15 +37,16 @@ namespace MatchBook
                 ConBBDD.AbrirConexion();
                 frmPrincipal principal = new frmPrincipal(txtEmail.Text);
                 principal.Show();
+                ConBBDD.CerrarConexion();
             } else
             {
                 MessageBox.Show("Usuario/Contraseña incorrectos.");
-            } ConBBDD.CerrarConexion();
+            } 
         }
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            int resultado = 1;
+            
             DateTime fe;
             if (ConBBDD.Conexion != null)
             {
@@ -58,7 +59,7 @@ namespace MatchBook
                 usu.Pswd = txtpsw.Text;
                 usu.Direccion = txtdir.Text;
 
-
+                int resultado = 1;
                 resultado = usu.AgregarUsuario(ConBBDD.Conexion, usu);
                 MessageBox.Show("Listo pa");
 

@@ -39,18 +39,15 @@ namespace MatchBook
             this.btnMatchBook = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.Button();
+            this.lblrandom = new System.Windows.Forms.Label();
             this.grbRegistro = new System.Windows.Forms.GroupBox();
-            this.txtcont2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.dtpfecha = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtdir = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtuser = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtcont1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtAutor = new System.Windows.Forms.TextBox();
+            this.lblAutor = new System.Windows.Forms.Label();
+            this.txtContenido = new System.Windows.Forms.TextBox();
+            this.lblTexto = new System.Windows.Forms.Label();
+            this.btnSubirLibro = new System.Windows.Forms.Button();
+            this.txtpaginas = new System.Windows.Forms.TextBox();
+            this.lblPaginas = new System.Windows.Forms.Label();
             this.txttitulo = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -173,153 +170,118 @@ namespace MatchBook
             this.btnPrincipal.Text = "Principal";
             this.btnPrincipal.UseVisualStyleBackColor = true;
             // 
+            // lblrandom
+            // 
+            this.lblrandom.AutoSize = true;
+            this.lblrandom.BackColor = System.Drawing.Color.Transparent;
+            this.lblrandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblrandom.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblrandom.Location = new System.Drawing.Point(405, 68);
+            this.lblrandom.Name = "lblrandom";
+            this.lblrandom.Size = new System.Drawing.Size(134, 25);
+            this.lblrandom.TabIndex = 37;
+            this.lblrandom.Text = "SUBIR LIBRO";
+            // 
             // grbRegistro
             // 
-            this.grbRegistro.Controls.Add(this.txtcont2);
-            this.grbRegistro.Controls.Add(this.label1);
-            this.grbRegistro.Controls.Add(this.btnModificar);
-            this.grbRegistro.Controls.Add(this.dtpfecha);
-            this.grbRegistro.Controls.Add(this.label10);
-            this.grbRegistro.Controls.Add(this.txtdir);
-            this.grbRegistro.Controls.Add(this.label9);
-            this.grbRegistro.Controls.Add(this.txtuser);
-            this.grbRegistro.Controls.Add(this.label8);
-            this.grbRegistro.Controls.Add(this.txtcont1);
-            this.grbRegistro.Controls.Add(this.label7);
+            this.grbRegistro.Controls.Add(this.txtAutor);
+            this.grbRegistro.Controls.Add(this.lblAutor);
+            this.grbRegistro.Controls.Add(this.txtContenido);
+            this.grbRegistro.Controls.Add(this.lblTexto);
+            this.grbRegistro.Controls.Add(this.btnSubirLibro);
+            this.grbRegistro.Controls.Add(this.txtpaginas);
+            this.grbRegistro.Controls.Add(this.lblPaginas);
             this.grbRegistro.Controls.Add(this.txttitulo);
             this.grbRegistro.Controls.Add(this.lblTitulo);
-            this.grbRegistro.Location = new System.Drawing.Point(263, 138);
+            this.grbRegistro.Location = new System.Drawing.Point(208, 112);
             this.grbRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbRegistro.Name = "grbRegistro";
             this.grbRegistro.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbRegistro.Size = new System.Drawing.Size(749, 485);
-            this.grbRegistro.TabIndex = 34;
+            this.grbRegistro.Size = new System.Drawing.Size(652, 519);
+            this.grbRegistro.TabIndex = 36;
             this.grbRegistro.TabStop = false;
             // 
-            // txtcont2
+            // txtAutor
             // 
-            this.txtcont2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcont2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcont2.Location = new System.Drawing.Point(86, 195);
-            this.txtcont2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtcont2.Name = "txtcont2";
-            this.txtcont2.PasswordChar = '*';
-            this.txtcont2.Size = new System.Drawing.Size(301, 27);
-            this.txtcont2.TabIndex = 16;
+            this.txtAutor.BackColor = System.Drawing.Color.White;
+            this.txtAutor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAutor.Location = new System.Drawing.Point(85, 135);
+            this.txtAutor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAutor.Name = "txtAutor";
+            this.txtAutor.Size = new System.Drawing.Size(301, 27);
+            this.txtAutor.TabIndex = 36;
             // 
-            // label1
+            // lblAutor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(80, 167);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 25);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Contraseña:";
+            this.lblAutor.AutoSize = true;
+            this.lblAutor.BackColor = System.Drawing.Color.Transparent;
+            this.lblAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAutor.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblAutor.Location = new System.Drawing.Point(81, 108);
+            this.lblAutor.Name = "lblAutor";
+            this.lblAutor.Size = new System.Drawing.Size(59, 25);
+            this.lblAutor.TabIndex = 17;
+            this.lblAutor.Text = "Autor";
             // 
-            // btnModificar
+            // txtContenido
             // 
-            this.btnModificar.Location = new System.Drawing.Point(197, 432);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(91, 30);
-            this.btnModificar.TabIndex = 14;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.txtContenido.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContenido.Location = new System.Drawing.Point(85, 207);
+            this.txtContenido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContenido.Multiline = true;
+            this.txtContenido.Name = "txtContenido";
+            this.txtContenido.Size = new System.Drawing.Size(481, 231);
+            this.txtContenido.TabIndex = 16;
             // 
-            // dtpfecha
+            // lblTexto
             // 
-            this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfecha.Location = new System.Drawing.Point(123, 403);
-            this.dtpfecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpfecha.Name = "dtpfecha";
-            this.dtpfecha.Size = new System.Drawing.Size(200, 22);
-            this.dtpfecha.TabIndex = 13;
+            this.lblTexto.AutoSize = true;
+            this.lblTexto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTexto.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTexto.Location = new System.Drawing.Point(81, 180);
+            this.lblTexto.Name = "lblTexto";
+            this.lblTexto.Size = new System.Drawing.Size(194, 25);
+            this.lblTexto.TabIndex = 15;
+            this.lblTexto.Text = "Contenido a mostrar:";
             // 
-            // label10
+            // btnSubirLibro
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label10.Location = new System.Drawing.Point(70, 365);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(175, 25);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Fecha Nacimiento:";
+            this.btnSubirLibro.Location = new System.Drawing.Point(266, 459);
+            this.btnSubirLibro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSubirLibro.Name = "btnSubirLibro";
+            this.btnSubirLibro.Size = new System.Drawing.Size(91, 30);
+            this.btnSubirLibro.TabIndex = 14;
+            this.btnSubirLibro.Text = "Subir Libro";
+            this.btnSubirLibro.UseVisualStyleBackColor = true;
+            this.btnSubirLibro.Click += new System.EventHandler(this.btnSubirLibro_Click_1);
             // 
-            // txtdir
+            // txtpaginas
             // 
-            this.txtdir.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtdir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdir.Location = new System.Drawing.Point(86, 331);
-            this.txtdir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtdir.Name = "txtdir";
-            this.txtdir.Size = new System.Drawing.Size(301, 27);
-            this.txtdir.TabIndex = 11;
+            this.txtpaginas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtpaginas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpaginas.Location = new System.Drawing.Point(412, 60);
+            this.txtpaginas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtpaginas.Name = "txtpaginas";
+            this.txtpaginas.Size = new System.Drawing.Size(101, 27);
+            this.txtpaginas.TabIndex = 7;
             // 
-            // label9
+            // lblPaginas
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label9.Location = new System.Drawing.Point(81, 299);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 25);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Direccion:";
-            // 
-            // txtuser
-            // 
-            this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuser.Location = new System.Drawing.Point(86, 270);
-            this.txtuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(301, 27);
-            this.txtuser.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label8.Location = new System.Drawing.Point(81, 231);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 25);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Username:";
-            // 
-            // txtcont1
-            // 
-            this.txtcont1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcont1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcont1.Location = new System.Drawing.Point(85, 123);
-            this.txtcont1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtcont1.Name = "txtcont1";
-            this.txtcont1.PasswordChar = '*';
-            this.txtcont1.Size = new System.Drawing.Size(301, 27);
-            this.txtcont1.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label7.Location = new System.Drawing.Point(80, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 25);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Contraseña:";
+            this.lblPaginas.AutoSize = true;
+            this.lblPaginas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaginas.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblPaginas.Location = new System.Drawing.Point(407, 33);
+            this.lblPaginas.Name = "lblPaginas";
+            this.lblPaginas.Size = new System.Drawing.Size(89, 25);
+            this.lblPaginas.TabIndex = 6;
+            this.lblPaginas.Text = "Paginas:";
             // 
             // txttitulo
             // 
             this.txttitulo.BackColor = System.Drawing.Color.White;
             this.txttitulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txttitulo.Enabled = false;
             this.txttitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttitulo.Location = new System.Drawing.Point(85, 60);
             this.txttitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -345,6 +307,7 @@ namespace MatchBook
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1069, 699);
+            this.Controls.Add(this.lblrandom);
             this.Controls.Add(this.grbRegistro);
             this.Controls.Add(this.grpMenu);
             this.Controls.Add(this.btnMenu);
@@ -357,6 +320,7 @@ namespace MatchBook
             this.grbRegistro.ResumeLayout(false);
             this.grbRegistro.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -372,18 +336,15 @@ namespace MatchBook
         private System.Windows.Forms.Button btnMatchBook;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnPrincipal;
+        private System.Windows.Forms.Label lblrandom;
         private System.Windows.Forms.GroupBox grbRegistro;
-        private System.Windows.Forms.TextBox txtcont2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.DateTimePicker dtpfecha;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtdir;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtcont1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtAutor;
+        private System.Windows.Forms.Label lblAutor;
+        private System.Windows.Forms.TextBox txtContenido;
+        private System.Windows.Forms.Label lblTexto;
+        private System.Windows.Forms.Button btnSubirLibro;
+        private System.Windows.Forms.TextBox txtpaginas;
+        private System.Windows.Forms.Label lblPaginas;
         private System.Windows.Forms.TextBox txttitulo;
         private System.Windows.Forms.Label lblTitulo;
     }

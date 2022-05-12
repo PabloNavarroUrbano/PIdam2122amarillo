@@ -69,7 +69,9 @@ namespace MatchBook
 
         private void btnSubirPagina_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmSubirLibro sub = new frmSubirLibro();
+            sub.Show();
         }
     }
 }
