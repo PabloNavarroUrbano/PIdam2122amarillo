@@ -59,6 +59,59 @@ namespace MatchBook
             Console.WriteLine("un descanso timidin");
         }
 
+        public int SacarID(MySqlConnection conexion)
+        {
+            int retorno;
+            string consulta;
+
+            consulta = String.Format("SELECT ROUND(RAND()*MAX(id_libro)+1) FROM libro");
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                reader.Read();
+                retorno = reader.GetInt32(1);
+                reader.Close();
+                return retorno;
+
+            }
+            else
+            {
+                retorno = 1;
+                reader.Close();
+                return retorno;
+                
+            }
+          
+        }
+
+
+        public string VisualizarContenido(MySqlConnection conexion, int id)
+        {
+            string retorno;
+
+            string consulta;
+
+            consulta = String.Format("SELECT contenido_texto FROM libro WHERE id_libro = '{0}'", id);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                reader.Read();
+                retorno = reader.GetString(5);
+                reader.Close();
+                return retorno;
+            }
+            else
+            {
+                retorno = "nono";
+                reader.Close();
+                return retorno;
+            }
+        }
+
 
     }
 }

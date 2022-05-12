@@ -29,6 +29,7 @@ namespace MatchBook
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarUsuario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblMatchBook = new System.Windows.Forms.Label();
@@ -356,9 +357,11 @@ namespace MatchBook
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEditarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditarUsuario";
+            this.Load += new System.EventHandler(this.frmEditarUsuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.grpMenu.ResumeLayout(false);

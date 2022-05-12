@@ -70,5 +70,9 @@ namespace MatchBook
             lib.Show();
         }
 
+        private void frmEditarUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

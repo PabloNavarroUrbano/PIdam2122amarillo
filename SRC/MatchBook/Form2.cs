@@ -34,9 +34,16 @@ namespace MatchBook
             lblemail.Text = email;
         }
 
+        libro li = new libro();
+
+
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-
+            int id;
+            id = li.SacarID(ConBBDD.Conexion);
+            string text;
+            text = li.VisualizarContenido(ConBBDD.Conexion, id);
+            txtPagina.Text = text;
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
