@@ -38,15 +38,14 @@ namespace MatchBook
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.lblMatchBook = new System.Windows.Forms.Label();
             this.txtPagina = new System.Windows.Forms.TextBox();
+            this.btnIzquierda = new System.Windows.Forms.Button();
+            this.btnDerecha = new System.Windows.Forms.Button();
+            this.btnAnyadir = new System.Windows.Forms.Button();
+            this.btnLike = new System.Windows.Forms.Button();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnLike = new System.Windows.Forms.Button();
-            this.btnDerecha = new System.Windows.Forms.Button();
-            this.btnIzquierda = new System.Windows.Forms.Button();
-            this.btnAnyadir = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.lblemail = new System.Windows.Forms.Label();
             this.grpMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -88,7 +87,6 @@ namespace MatchBook
             this.btnSubirPagina.TabIndex = 4;
             this.btnSubirPagina.Text = "Subir Página";
             this.btnSubirPagina.UseVisualStyleBackColor = true;
-            this.btnSubirPagina.Click += new System.EventHandler(this.btnSubirPagina_Click);
             // 
             // btnMatchBook
             // 
@@ -111,7 +109,6 @@ namespace MatchBook
             this.btnPerfil.TabIndex = 2;
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.UseVisualStyleBackColor = true;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnPrincipal
             // 
@@ -155,6 +152,73 @@ namespace MatchBook
             this.txtPagina.Size = new System.Drawing.Size(337, 464);
             this.txtPagina.TabIndex = 9;
             // 
+            // btnIzquierda
+            // 
+            this.btnIzquierda.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnIzquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIzquierda.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIzquierda.ForeColor = System.Drawing.Color.Black;
+            this.btnIzquierda.Image = global::MatchBook.Properties.Resources.flecha_izquierda;
+            this.btnIzquierda.Location = new System.Drawing.Point(328, 111);
+            this.btnIzquierda.Margin = new System.Windows.Forms.Padding(0);
+            this.btnIzquierda.Name = "btnIzquierda";
+            this.btnIzquierda.Size = new System.Drawing.Size(63, 497);
+            this.btnIzquierda.TabIndex = 11;
+            this.btnIzquierda.UseVisualStyleBackColor = false;
+            // 
+            // btnDerecha
+            // 
+            this.btnDerecha.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDerecha.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDerecha.ForeColor = System.Drawing.Color.Black;
+            this.btnDerecha.Image = global::MatchBook.Properties.Resources.flecha_derecha;
+            this.btnDerecha.Location = new System.Drawing.Point(768, 111);
+            this.btnDerecha.Name = "btnDerecha";
+            this.btnDerecha.Size = new System.Drawing.Size(61, 497);
+            this.btnDerecha.TabIndex = 10;
+            this.btnDerecha.UseVisualStyleBackColor = false;
+            // 
+            // btnAnyadir
+            // 
+            this.btnAnyadir.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAnyadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnyadir.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnyadir.ForeColor = System.Drawing.Color.Black;
+            this.btnAnyadir.Image = global::MatchBook.Properties.Resources.guardar;
+            this.btnAnyadir.Location = new System.Drawing.Point(394, 614);
+            this.btnAnyadir.Name = "btnAnyadir";
+            this.btnAnyadir.Size = new System.Drawing.Size(176, 55);
+            this.btnAnyadir.TabIndex = 2;
+            this.btnAnyadir.UseVisualStyleBackColor = false;
+            // 
+            // btnLike
+            // 
+            this.btnLike.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLike.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLike.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLike.ForeColor = System.Drawing.Color.Black;
+            this.btnLike.Image = global::MatchBook.Properties.Resources.like;
+            this.btnLike.Location = new System.Drawing.Point(576, 614);
+            this.btnLike.Name = "btnLike";
+            this.btnLike.Size = new System.Drawing.Size(186, 55);
+            this.btnLike.TabIndex = 3;
+            this.btnLike.UseVisualStyleBackColor = false;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.ForeColor = System.Drawing.Color.Black;
+            this.btnMenu.Image = global::MatchBook.Properties.Resources.menu_button_of_three_horizontal_lines;
+            this.btnMenu.Location = new System.Drawing.Point(18, 110);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(68, 56);
+            this.btnMenu.TabIndex = 1;
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -184,82 +248,6 @@ namespace MatchBook
             this.panel3.Size = new System.Drawing.Size(368, 497);
             this.panel3.TabIndex = 13;
             // 
-            // btnLike
-            // 
-            this.btnLike.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnLike.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLike.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLike.ForeColor = System.Drawing.Color.Black;
-            this.btnLike.Image = global::MatchBook.Properties.Resources.like;
-            this.btnLike.Location = new System.Drawing.Point(576, 614);
-            this.btnLike.Name = "btnLike";
-            this.btnLike.Size = new System.Drawing.Size(186, 55);
-            this.btnLike.TabIndex = 3;
-            this.btnLike.UseVisualStyleBackColor = false;
-            // 
-            // btnDerecha
-            // 
-            this.btnDerecha.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDerecha.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDerecha.ForeColor = System.Drawing.Color.Black;
-            this.btnDerecha.Image = global::MatchBook.Properties.Resources.flecha_derecha;
-            this.btnDerecha.Location = new System.Drawing.Point(768, 111);
-            this.btnDerecha.Name = "btnDerecha";
-            this.btnDerecha.Size = new System.Drawing.Size(61, 497);
-            this.btnDerecha.TabIndex = 10;
-            this.btnDerecha.UseVisualStyleBackColor = false;
-            // 
-            // btnIzquierda
-            // 
-            this.btnIzquierda.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnIzquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIzquierda.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIzquierda.ForeColor = System.Drawing.Color.Black;
-            this.btnIzquierda.Image = global::MatchBook.Properties.Resources.flecha_izquierda;
-            this.btnIzquierda.Location = new System.Drawing.Point(328, 111);
-            this.btnIzquierda.Margin = new System.Windows.Forms.Padding(0);
-            this.btnIzquierda.Name = "btnIzquierda";
-            this.btnIzquierda.Size = new System.Drawing.Size(63, 497);
-            this.btnIzquierda.TabIndex = 11;
-            this.btnIzquierda.UseVisualStyleBackColor = false;
-            // 
-            // btnAnyadir
-            // 
-            this.btnAnyadir.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnAnyadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnyadir.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnyadir.ForeColor = System.Drawing.Color.Black;
-            this.btnAnyadir.Image = global::MatchBook.Properties.Resources.guardar;
-            this.btnAnyadir.Location = new System.Drawing.Point(394, 614);
-            this.btnAnyadir.Name = "btnAnyadir";
-            this.btnAnyadir.Size = new System.Drawing.Size(176, 55);
-            this.btnAnyadir.TabIndex = 2;
-            this.btnAnyadir.UseVisualStyleBackColor = false;
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.ForeColor = System.Drawing.Color.Black;
-            this.btnMenu.Image = global::MatchBook.Properties.Resources.menu_button_of_three_horizontal_lines;
-            this.btnMenu.Location = new System.Drawing.Point(18, 110);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(68, 56);
-            this.btnMenu.TabIndex = 1;
-            this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // lblemail
-            // 
-            this.lblemail.AutoSize = true;
-            this.lblemail.Location = new System.Drawing.Point(1155, 672);
-            this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(42, 17);
-            this.lblemail.TabIndex = 14;
-            this.lblemail.Text = "Email";
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -267,7 +255,6 @@ namespace MatchBook
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1161, 698);
             this.ControlBox = false;
-            this.Controls.Add(this.lblemail);
             this.Controls.Add(this.btnLike);
             this.Controls.Add(this.btnDerecha);
             this.Controls.Add(this.btnIzquierda);
@@ -291,7 +278,6 @@ namespace MatchBook
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -314,6 +300,5 @@ namespace MatchBook
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblemail;
     }
 }

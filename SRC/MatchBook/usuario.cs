@@ -92,21 +92,6 @@ namespace MatchBook
             return retorno;
         }
 
-        public static int CambiarDatos(MySqlConnection conexion, string pswd, string username, string dir, DateTime fech, string email)
-        {
-            int retorno;
-            string consulta;
-
-
-            consulta = String.Format("UPDATE usuario SET username='{0}', fecha_nac='{1}', pswd='{2}', direccion='{3}' WHERE email='{4}'",  username, fech, pswd, dir,email);
-
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-            retorno = comando.ExecuteNonQuery();
-
-            return retorno;
-        }
-
 
     }
 }
