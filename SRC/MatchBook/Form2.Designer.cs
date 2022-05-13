@@ -44,7 +44,6 @@ namespace MatchBook
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnLike = new System.Windows.Forms.Button();
             this.btnDerecha = new System.Windows.Forms.Button();
-            this.btnIzquierda = new System.Windows.Forms.Button();
             this.btnAnyadir = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.lblemail = new System.Windows.Forms.Label();
@@ -150,6 +149,8 @@ namespace MatchBook
             // 
             // txtPagina
             // 
+            this.txtPagina.Enabled = false;
+            this.txtPagina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPagina.Location = new System.Drawing.Point(16, 17);
             this.txtPagina.Multiline = true;
             this.txtPagina.Name = "txtPagina";
@@ -197,6 +198,7 @@ namespace MatchBook
             this.btnLike.Size = new System.Drawing.Size(186, 55);
             this.btnLike.TabIndex = 3;
             this.btnLike.UseVisualStyleBackColor = false;
+            this.btnLike.Click += new System.EventHandler(this.btnLike_Click);
             // 
             // btnDerecha
             // 
@@ -210,20 +212,7 @@ namespace MatchBook
             this.btnDerecha.Size = new System.Drawing.Size(61, 497);
             this.btnDerecha.TabIndex = 10;
             this.btnDerecha.UseVisualStyleBackColor = false;
-            // 
-            // btnIzquierda
-            // 
-            this.btnIzquierda.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnIzquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIzquierda.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIzquierda.ForeColor = System.Drawing.Color.Black;
-            this.btnIzquierda.Image = ((System.Drawing.Image)(resources.GetObject("btnIzquierda.Image")));
-            this.btnIzquierda.Location = new System.Drawing.Point(328, 111);
-            this.btnIzquierda.Margin = new System.Windows.Forms.Padding(0);
-            this.btnIzquierda.Name = "btnIzquierda";
-            this.btnIzquierda.Size = new System.Drawing.Size(63, 497);
-            this.btnIzquierda.TabIndex = 11;
-            this.btnIzquierda.UseVisualStyleBackColor = false;
+            this.btnDerecha.Click += new System.EventHandler(this.btnDerecha_Click);
             // 
             // btnAnyadir
             // 
@@ -271,7 +260,6 @@ namespace MatchBook
             this.Controls.Add(this.lblemail);
             this.Controls.Add(this.btnLike);
             this.Controls.Add(this.btnDerecha);
-            this.Controls.Add(this.btnIzquierda);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnAnyadir);
             this.Controls.Add(this.btnMenu);
@@ -313,7 +301,6 @@ namespace MatchBook
         private System.Windows.Forms.Label lblMatchBook;
         private System.Windows.Forms.TextBox txtPagina;
         private System.Windows.Forms.Button btnDerecha;
-        private System.Windows.Forms.Button btnIzquierda;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;

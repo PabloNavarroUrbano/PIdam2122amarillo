@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace MatchBook
@@ -64,14 +65,18 @@ namespace MatchBook
             int retorno;
             string consulta;
 
-            consulta = String.Format("SELECT ROUND(RAND()*MAX(id_libro)+1) FROM libro");
+            consulta = "SELECT ROUND(RAND()*MAX(id_libro)+1) FROM libro;";
+
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
             MySqlDataReader reader = comando.ExecuteReader();
+     
             if (reader.HasRows)
             {
+
                 reader.Read();
-                retorno = reader.GetInt32(1);
+                retorno = Convert.ToInt32(reader.GetString(0));
                 reader.Close();
                 return retorno;
 
@@ -83,8 +88,39 @@ namespace MatchBook
                 return retorno;
                 
             }
-          
+
         }
+
+        public int SacarMAX(MySqlConnection conexion)
+        {
+            int retorno;
+            string consulta;
+
+            consulta = String.Format("SELECT * from libro");
+
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                reader.Read();
+                retorno = Convert.ToInt32(reader);
+                reader.Close();
+                return retorno;
+
+            }
+            else
+            {
+                retorno = 1;
+                reader.Close();
+                return retorno;
+
+            }
+        }
+
+
 
 
         public string VisualizarContenido(MySqlConnection conexion, int id)
@@ -100,7 +136,7 @@ namespace MatchBook
             if (reader.HasRows)
             {
                 reader.Read();
-                retorno = reader.GetString(5);
+                retorno = reader.GetString(0);
                 reader.Close();
                 return retorno;
             }
@@ -111,6 +147,11 @@ namespace MatchBook
                 return retorno;
             }
         }
+
+
+
+
+
 
 
     }

@@ -7,48 +7,8 @@ using System.Windows.Forms;
 
 namespace MatchBook
 {
-    public class ConBBDD
-    {
-        private static MySqlConnection instancia = null;
-        private static readonly object padlock = new object();
-        private ConBBDD() { }
-        public static MySqlConnection Conexion
-        {
-            get
-            {
-                lock (padlock)
-                {
-                    if (instancia == null)
-                    {
-                        instancia = new MySqlConnection();
-                        string server = "server=database-1.camnos0tv0v7.us-east-1.rds.amazonaws.com;";
-                        string port = "port=3306;";
-                        string database = "database=MatchBook;";
-                        string usuario = "uid=admin;";
-                        string password = "pwd=matchbook69;";
-                        string convert = "Convert Zero Datetime=True;";
-                        instancia.ConnectionString = server + port + database + usuario + password + convert;
-                    }
-                    return instancia;
-                }
-            }
-        }
-        public static void AbrirConexion()
-        {
-            if (instancia != null)
-                instancia.Open();
-        }
-        public static void CerrarConexion()
-        {
-            if (instancia != null)
-                instancia.Close();
-        }
-
-    }
-}
-
     // Clase para gestionar las operaciones con la Base de Datos
-    /*class ConexionBD
+    class ConexionBD
     {
         private MySqlConnection conexion;
 
@@ -57,11 +17,11 @@ namespace MatchBook
         public ConexionBD()
         {
             // Conexión Local
-            string server = "server=database-1.camnos0tv0v7.us-east-1.rds.amazonaws.com;";
+            string server = "server=localhost;";
             string port = "port=3306;";
             string database = "database=matchbook;";
-            string usuario = "uid=admin;";
-            string password = "pwd=matchbook69;";
+            string usuario = "uid=root;";
+            string password = "pwd=;";
             string convert = "Convert Zero Datetime=True;";
             string connectionstring = server + port + database + usuario + password + convert;
 
@@ -69,7 +29,7 @@ namespace MatchBook
         }
 
         // Método que se encarga de abrir la conexión
-        public static AbrirConexion()
+        public bool AbrirConexion()
         {
             try
             {
@@ -96,8 +56,6 @@ namespace MatchBook
             }
         }
 
-
-
-    }*/
-
+    }
+}
 

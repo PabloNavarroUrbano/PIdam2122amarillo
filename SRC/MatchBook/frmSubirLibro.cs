@@ -17,28 +17,32 @@ namespace MatchBook
             InitializeComponent();
         }
 
-      
+        ConexionBD BDdatos = new ConexionBD();
 
         private void btnSubirLibro_Click_1(object sender, EventArgs e)
         {
-            if (ConBBDD.Conexion != null)
+            if (BDdatos.Conexion != null)
             {
                 int resultado = 1;
-                ConBBDD.AbrirConexion();
+                BDdatos.AbrirConexion();
                 libro lib = new libro();
                 lib.Nombre = txttitulo.Text;
                 lib.Autor = txtAutor.Text;
                 lib.Paginas = Convert.ToInt32(txtpaginas.Text);
                 lib.Contenido = txtContenido.Text;
 
-                resultado = lib.AgregarLibro(ConBBDD.Conexion, lib);
+                resultado = lib.AgregarLibro(BDdatos.Conexion, lib);
                 MessageBox.Show("Listo pa");
-                ConBBDD.CerrarConexion();
+                BDdatos.CerrarConexion();
             }
             else
             {
                 MessageBox.Show("No fue.");
             }
+            txtAutor.Text = "";
+            txtContenido.Text= "";
+            txtpaginas.Text = "";
+            txttitulo.Text = "";
 
         }
 
@@ -68,6 +72,11 @@ namespace MatchBook
             edi.Show();
         }
 
+        private void frmSubirLibro_Load(object sender, EventArgs e)
+        {
+            grpMenu.Hide();
+            txtContenido.MaxLength = 310;
+        }
 
     }
 }

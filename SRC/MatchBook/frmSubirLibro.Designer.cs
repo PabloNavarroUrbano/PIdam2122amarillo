@@ -37,7 +37,7 @@ namespace MatchBook
             this.grpMenu = new System.Windows.Forms.GroupBox();
             this.btnForo = new System.Windows.Forms.Button();
             this.btnSubirPagina = new System.Windows.Forms.Button();
-            this.btnMatchBook = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.lblrandom = new System.Windows.Forms.Label();
@@ -106,7 +106,7 @@ namespace MatchBook
             // 
             this.grpMenu.Controls.Add(this.btnForo);
             this.grpMenu.Controls.Add(this.btnSubirPagina);
-            this.grpMenu.Controls.Add(this.btnMatchBook);
+            this.grpMenu.Controls.Add(this.btnBuscar);
             this.grpMenu.Controls.Add(this.btnPerfil);
             this.grpMenu.Controls.Add(this.btnPrincipal);
             this.grpMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -139,16 +139,16 @@ namespace MatchBook
             this.btnSubirPagina.Text = "Subir Página";
             this.btnSubirPagina.UseVisualStyleBackColor = true;
             // 
-            // btnMatchBook
+            // btnBuscar
             // 
-            this.btnMatchBook.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMatchBook.ForeColor = System.Drawing.Color.Black;
-            this.btnMatchBook.Location = new System.Drawing.Point(6, 192);
-            this.btnMatchBook.Name = "btnMatchBook";
-            this.btnMatchBook.Size = new System.Drawing.Size(172, 51);
-            this.btnMatchBook.TabIndex = 6;
-            this.btnMatchBook.Text = "MatchBook";
-            this.btnMatchBook.UseVisualStyleBackColor = true;
+            this.btnBuscar.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscar.Location = new System.Drawing.Point(6, 192);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(172, 51);
+            this.btnBuscar.TabIndex = 6;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // btnPerfil
             // 
@@ -234,6 +234,7 @@ namespace MatchBook
             this.txtContenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContenido.Location = new System.Drawing.Point(85, 207);
             this.txtContenido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContenido.MaxLength = 310;
             this.txtContenido.Multiline = true;
             this.txtContenido.Name = "txtContenido";
             this.txtContenido.Size = new System.Drawing.Size(481, 231);
@@ -320,6 +321,7 @@ namespace MatchBook
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSubirLibro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmSubirLibro_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.grpMenu.ResumeLayout(false);
@@ -339,7 +341,7 @@ namespace MatchBook
         private System.Windows.Forms.GroupBox grpMenu;
         private System.Windows.Forms.Button btnForo;
         private System.Windows.Forms.Button btnSubirPagina;
-        private System.Windows.Forms.Button btnMatchBook;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnPrincipal;
         private System.Windows.Forms.Label lblrandom;

@@ -51,16 +51,16 @@ namespace MatchBook
         }
 
 
-
+        ConexionBD BDdatos = new ConexionBD();
         
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            
-            ConBBDD.AbrirConexion();
-            usuario.CambiarDatos(ConBBDD.Conexion, txtcont1.Text, txtuser.Text, txtdir.Text, dtpfecha.Value, txtemail1.Text);
+
+            BDdatos.AbrirConexion();
+            usuario.CambiarDatos(BDdatos.Conexion, txtcont1.Text, txtuser.Text, txtdir.Text, dtpfecha.Value, txtemail1.Text);
 
             MessageBox.Show("Datos modificados");
-            ConBBDD.CerrarConexion();
+            BDdatos.CerrarConexion();
         }
 
         private void btnSubirPagina_Click(object sender, EventArgs e)
