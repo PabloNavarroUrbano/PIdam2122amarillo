@@ -17,11 +17,11 @@ namespace MatchBook
         public ConexionBD()
         {
             // Conexión Local
-            string server = "server=localhost;";
+            string server = "server=database-1.camnos0tv0v7.us-east-1.rds.amazonaws.com;";
             string port = "port=3306;";
-            string database = "database=matchbook;";
-            string usuario = "uid=root;";
-            string password = "pwd=;";
+            string database = "database=MatchBook;";
+            string usuario = "uid=admin;";
+            string password = "pwd=matchbook69;";
             string convert = "Convert Zero Datetime=True;";
             string connectionstring = server + port + database + usuario + password + convert;
 

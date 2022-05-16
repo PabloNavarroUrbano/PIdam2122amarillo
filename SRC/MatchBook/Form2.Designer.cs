@@ -44,9 +44,9 @@ namespace MatchBook
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnLike = new System.Windows.Forms.Button();
             this.btnDerecha = new System.Windows.Forms.Button();
-            this.btnAnyadir = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.lblemail = new System.Windows.Forms.Label();
+            this.btnAnyadir = new System.Windows.Forms.Button();
             this.grpMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -197,6 +197,7 @@ namespace MatchBook
             this.btnLike.Name = "btnLike";
             this.btnLike.Size = new System.Drawing.Size(186, 55);
             this.btnLike.TabIndex = 3;
+            this.btnLike.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnLike.UseVisualStyleBackColor = false;
             this.btnLike.Click += new System.EventHandler(this.btnLike_Click);
             // 
@@ -214,6 +215,30 @@ namespace MatchBook
             this.btnDerecha.UseVisualStyleBackColor = false;
             this.btnDerecha.Click += new System.EventHandler(this.btnDerecha_Click);
             // 
+            // btnMenu
+            // 
+            this.btnMenu.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.ForeColor = System.Drawing.Color.Black;
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
+            this.btnMenu.Location = new System.Drawing.Point(18, 110);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(68, 56);
+            this.btnMenu.TabIndex = 1;
+            this.btnMenu.UseCompatibleTextRendering = true;
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // lblemail
+            // 
+            this.lblemail.AutoSize = true;
+            this.lblemail.Location = new System.Drawing.Point(1155, 672);
+            this.lblemail.Name = "lblemail";
+            this.lblemail.Size = new System.Drawing.Size(42, 17);
+            this.lblemail.TabIndex = 14;
+            this.lblemail.Text = "Email";
+            // 
             // btnAnyadir
             // 
             this.btnAnyadir.BackColor = System.Drawing.Color.SteelBlue;
@@ -227,36 +252,12 @@ namespace MatchBook
             this.btnAnyadir.TabIndex = 2;
             this.btnAnyadir.UseVisualStyleBackColor = false;
             // 
-            // btnMenu
-            // 
-            this.btnMenu.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.ForeColor = System.Drawing.Color.Black;
-            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
-            this.btnMenu.Location = new System.Drawing.Point(18, 110);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(68, 56);
-            this.btnMenu.TabIndex = 1;
-            this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // lblemail
-            // 
-            this.lblemail.AutoSize = true;
-            this.lblemail.Location = new System.Drawing.Point(1155, 672);
-            this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(42, 17);
-            this.lblemail.TabIndex = 14;
-            this.lblemail.Text = "Email";
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1161, 698);
-            this.ControlBox = false;
             this.Controls.Add(this.lblemail);
             this.Controls.Add(this.btnLike);
             this.Controls.Add(this.btnDerecha);
@@ -267,14 +268,13 @@ namespace MatchBook
             this.Controls.Add(this.grpMenu);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Transparent;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmPrincipal";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.grpMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -295,7 +295,6 @@ namespace MatchBook
         private System.Windows.Forms.Button btnMatchBook;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnCerrarSesion;
-        private System.Windows.Forms.Button btnAnyadir;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnLike;
         private System.Windows.Forms.Label lblMatchBook;
@@ -305,5 +304,6 @@ namespace MatchBook
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblemail;
+        private System.Windows.Forms.Button btnAnyadir;
     }
 }

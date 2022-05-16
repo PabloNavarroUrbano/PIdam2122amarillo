@@ -60,6 +60,7 @@ namespace MatchBook
             Console.WriteLine("un descanso timidin");
         }
 
+
         public int SacarID(MySqlConnection conexion)
         {
             int retorno;
@@ -69,9 +70,8 @@ namespace MatchBook
 
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
             MySqlDataReader reader = comando.ExecuteReader();
-     
+
             if (reader.HasRows)
             {
 
@@ -86,10 +86,11 @@ namespace MatchBook
                 retorno = 1;
                 reader.Close();
                 return retorno;
-                
+
             }
 
         }
+
 
         public int SacarMAX(MySqlConnection conexion)
         {
@@ -149,6 +150,22 @@ namespace MatchBook
         }
 
 
+        public int DarLike(MySqlConnection conexion, int id)
+        {
+            int retorno;
+            string consulta;
+            
+            consulta = String.Format("UPDATE libro SET num_likes = num_likes+1 WHERE id_libro ='{0}'",id);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            return retorno;
+            Console.WriteLine("un descanso timidin");
+
+
+        }
 
 
 

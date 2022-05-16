@@ -101,7 +101,11 @@ namespace MatchBook
 
         private void btnLike_Click(object sender, EventArgs e)
         {
-
+            BDdatos.AbrirConexion();
+            int id;
+            id = li.SacarID(BDdatos.Conexion);
+            li.DarLike(BDdatos.Conexion, id);
+            BDdatos.CerrarConexion();
         }
 
     }
