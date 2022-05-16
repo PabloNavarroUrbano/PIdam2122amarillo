@@ -119,6 +119,7 @@ namespace MatchBook
                 return retorno;
 
             }
+
         }
 
 
@@ -149,13 +150,12 @@ namespace MatchBook
             }
         }
 
-
         public int DarLike(MySqlConnection conexion, int id)
         {
             int retorno;
             string consulta;
             
-            consulta = String.Format("UPDATE libro SET num_likes = num_likes+1 WHERE id_libro ='{0}'",id);
+            consulta = String.Format("UPDATE libro SET num_likes=num_likes+1 WHERE id_libro='{0}'", id);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
 
@@ -163,12 +163,13 @@ namespace MatchBook
 
             return retorno;
             Console.WriteLine("un descanso timidin");
-
-
         }
 
 
 
+
+
+        
 
 
     }

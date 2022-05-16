@@ -47,6 +47,7 @@ namespace MatchBook
             this.btnMenu = new System.Windows.Forms.Button();
             this.lblemail = new System.Windows.Forms.Label();
             this.btnAnyadir = new System.Windows.Forms.Button();
+            this.lblidusu = new System.Windows.Forms.Label();
             this.grpMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -252,12 +253,22 @@ namespace MatchBook
             this.btnAnyadir.TabIndex = 2;
             this.btnAnyadir.UseVisualStyleBackColor = false;
             // 
+            // lblidusu
+            // 
+            this.lblidusu.AutoSize = true;
+            this.lblidusu.Location = new System.Drawing.Point(911, 271);
+            this.lblidusu.Name = "lblidusu";
+            this.lblidusu.Size = new System.Drawing.Size(36, 17);
+            this.lblidusu.TabIndex = 15;
+            this.lblidusu.Text = "teee";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1161, 698);
+            this.Controls.Add(this.lblidusu);
             this.Controls.Add(this.lblemail);
             this.Controls.Add(this.btnLike);
             this.Controls.Add(this.btnDerecha);
@@ -267,14 +278,14 @@ namespace MatchBook
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.grpMenu);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.grpMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -305,5 +316,6 @@ namespace MatchBook
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblemail;
         private System.Windows.Forms.Button btnAnyadir;
+        private System.Windows.Forms.Label lblidusu;
     }
 }

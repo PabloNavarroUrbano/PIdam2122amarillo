@@ -37,13 +37,17 @@ namespace MatchBook
         }
 
         libro li = new libro();
+        usuario usu = new usuario();
         ConexionBD BDdatos = new ConexionBD();
+        int id;
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             BDdatos.AbrirConexion();
-            int id;
+            int usuari;
+            usuari = usu.SacarID(BDdatos.Conexion, lblemail.Text);
             id = li.SacarID(BDdatos.Conexion);
+            lblidusu.Text = usuari.ToString();
             string text;
             text = li.VisualizarContenido(BDdatos.Conexion, id);
             txtPagina.Text = text;
@@ -102,11 +106,10 @@ namespace MatchBook
         private void btnLike_Click(object sender, EventArgs e)
         {
             BDdatos.AbrirConexion();
-            int id;
             id = li.SacarID(BDdatos.Conexion);
             li.DarLike(BDdatos.Conexion, id);
             BDdatos.CerrarConexion();
         }
-
+        
     }
 }

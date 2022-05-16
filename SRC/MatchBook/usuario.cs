@@ -16,7 +16,7 @@ namespace MatchBook
         private string pswd;
         private string direccion;
 
-        public string Username { get { return username; } set {username=value; } }
+        public string Username { get { return username; } set { username = value; } }
         public DateTime Fecha_nac { get { return fecha_nac; } set { fecha_nac = value; } }
         public string Email { get { return email; } set { email = value; } }
         public string Pswd { get { return pswd; } set { pswd = value; } }
@@ -32,7 +32,7 @@ namespace MatchBook
             this.pswd = ps;
             this.direccion = di;
         }
-       
+
 
         public usuario()
         {
@@ -56,11 +56,14 @@ namespace MatchBook
             if (reader.HasRows)
             {
                 return true;
+                reader.Close();
             }
             else
             {
                 return false;
+                reader.Close();
             }
+
         }
 
 
@@ -98,7 +101,7 @@ namespace MatchBook
             string consulta;
 
 
-            consulta = String.Format("UPDATE usuario SET username='{0}', fecha_nac='{1}', pswd='{2}', direccion='{3}' WHERE email='{4}'",  username, fech, pswd, dir,email);
+            consulta = String.Format("UPDATE usuario SET username='{0}', fecha_nac='{1}', pswd='{2}', direccion='{3}' WHERE email='{4}'", username, fech, pswd, dir, email);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
 
@@ -108,5 +111,33 @@ namespace MatchBook
         }
 
 
+
+
+        public int SacarID(MySqlConnection conexion, string email)
+        {
+            int retorno;
+            string consulta = string.Format("SELECT id_usuario from usuario WHERE email='{0}'", email);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                reader.Read();
+                retorno = Convert.ToInt32(reader.GetString(0));
+                reader.Close();
+                return retorno;
+
+            }
+            else
+            {
+                retorno = 1;
+                reader.Close();
+                return retorno;
+
+            }
+
+
+        }
     }
 }
