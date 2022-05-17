@@ -29,14 +29,13 @@ namespace MatchBook
         {
             grbRegistro.Show();
         }
-        ConexionBD BDdatos = new ConexionBD();
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (BDdatos.Conexion != null)
+            if (BBDD.Conexion != null)
             {
-                BDdatos.AbrirConexion();
+                BBDD.AbrirConexion();
 
-                if (usuario.InicioSesion(BDdatos.Conexion, txtEmail.Text, txtContraseña.Text))
+                if (usuario.InicioSesion(BBDD.Conexion, txtEmail.Text, txtContraseña.Text))
                 {
                     this.Hide();
                     frmPrincipal principal = new frmPrincipal(txtEmail.Text);
@@ -47,18 +46,18 @@ namespace MatchBook
                     MessageBox.Show("Usuario/Contraseña incorrectos.");
                 }
 
-                BDdatos.CerrarConexion();
+                BBDD.CerrarConexion();
             }
-            BDdatos.CerrarConexion();
+            BBDD.CerrarConexion();
         }
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
             
             DateTime fe;
-            if (BDdatos.Conexion != null)
+            if (BBDD.Conexion != null)
             {
-                BDdatos.AbrirConexion();
+                BBDD.AbrirConexion();
                 usuario usu = new usuario();
                 usu.Username = txtuser.Text;
                 fe = Convert.ToDateTime(dtpfecha.Value.ToString(""));
@@ -68,10 +67,10 @@ namespace MatchBook
                 usu.Direccion = txtdir.Text;
 
                 int resultado = 1;
-                resultado = usu.AgregarUsuario(BDdatos.Conexion, usu);
+                resultado = usu.AgregarUsuario(BBDD.Conexion, usu);
                 MessageBox.Show("Listo pa");
 
-                BDdatos.CerrarConexion();
+                BBDD.CerrarConexion();
             }
             else
             {

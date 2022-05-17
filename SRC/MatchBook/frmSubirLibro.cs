@@ -17,23 +17,21 @@ namespace MatchBook
             InitializeComponent();
         }
 
-        ConexionBD BDdatos = new ConexionBD();
-
         private void btnSubirLibro_Click_1(object sender, EventArgs e)
         {
-            if (BDdatos.Conexion != null)
+            if (BBDD.Conexion != null)
             {
                 int resultado = 1;
-                BDdatos.AbrirConexion();
+                BBDD.AbrirConexion();
                 libro lib = new libro();
                 lib.Nombre = txttitulo.Text;
                 lib.Autor = txtAutor.Text;
                 lib.Paginas = Convert.ToInt32(txtpaginas.Text);
                 lib.Contenido = txtContenido.Text;
 
-                resultado = lib.AgregarLibro(BDdatos.Conexion, lib);
+                resultado = lib.AgregarLibro(BBDD.Conexion, lib);
                 MessageBox.Show("Listo pa");
-                BDdatos.CerrarConexion();
+                BBDD.CerrarConexion();
             }
             else
             {

@@ -38,20 +38,20 @@ namespace MatchBook
 
         libro li = new libro();
         usuario usu = new usuario();
-        ConexionBD BDdatos = new ConexionBD();
         int id;
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            BDdatos.AbrirConexion();
+            BBDD.CerrarConexion();
+            BBDD.AbrirConexion();
             int usuari;
-            usuari = usu.SacarID(BDdatos.Conexion, lblemail.Text);
-            id = li.SacarID(BDdatos.Conexion);
+            usuari = usu.SacarID(BBDD.Conexion, lblemail.Text);
+            id = li.SacarID(BBDD.Conexion);
             lblidusu.Text = usuari.ToString();
             string text;
-            text = li.VisualizarContenido(BDdatos.Conexion, id);
+            text = li.VisualizarContenido(BBDD.Conexion, id);
             txtPagina.Text = text;
-            BDdatos.CerrarConexion();
+            BBDD.CerrarConexion();
         }
 
 
@@ -94,21 +94,20 @@ namespace MatchBook
 
         private void btnDerecha_Click(object sender, EventArgs e)
         {
-            BDdatos.AbrirConexion();
+            BBDD.AbrirConexion();
             int id;
-            id = li.SacarID(BDdatos.Conexion);
+            id = li.SacarID(BBDD.Conexion);
             string text;
-            text = li.VisualizarContenido(BDdatos.Conexion, id);
+            text = li.VisualizarContenido(BBDD.Conexion, id);
             txtPagina.Text = text;
-            BDdatos.CerrarConexion();
+            BBDD.CerrarConexion();
         }
 
         private void btnLike_Click(object sender, EventArgs e)
         {
-            BDdatos.AbrirConexion();
-            id = li.SacarID(BDdatos.Conexion);
-            li.DarLike(BDdatos.Conexion, id);
-            BDdatos.CerrarConexion();
+            BBDD.AbrirConexion();
+            li.DarLike(BBDD.Conexion, id);
+            BBDD.CerrarConexion();
         }
         
     }

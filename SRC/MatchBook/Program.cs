@@ -16,7 +16,7 @@ namespace MatchBook
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSubirLibro());
+            Application.Run(new frmInicioSesion());
         }
     }
 }
