@@ -36,21 +36,26 @@ namespace MatchBook
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.Button();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.lblMatchBook = new System.Windows.Forms.Label();
             this.txtPagina = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtitulo = new System.Windows.Forms.TextBox();
             this.lblemail = new System.Windows.Forms.Label();
             this.btnLike = new System.Windows.Forms.Button();
             this.btnDerecha = new System.Windows.Forms.Button();
             this.btnAnyadir = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.txtitulo = new System.Windows.Forms.TextBox();
+            this.btnMenu2 = new System.Windows.Forms.Button();
+            this.btnMasCosas = new System.Windows.Forms.Button();
+            this.grbMenu2 = new System.Windows.Forms.GroupBox();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnInformacion = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.grpMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.grbMenu2.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpMenu
@@ -126,17 +131,6 @@ namespace MatchBook
             this.btnPrincipal.Text = "Principal";
             this.btnPrincipal.UseVisualStyleBackColor = true;
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(18, 545);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(172, 51);
-            this.btnCerrarSesion.TabIndex = 7;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            // 
             // lblMatchBook
             // 
             this.lblMatchBook.AutoSize = true;
@@ -158,7 +152,6 @@ namespace MatchBook
             this.txtPagina.Name = "txtPagina";
             this.txtPagina.Size = new System.Drawing.Size(337, 411);
             this.txtPagina.TabIndex = 9;
-            this.txtPagina.TextChanged += new System.EventHandler(this.txtPagina_TextChanged);
             // 
             // panel1
             // 
@@ -189,6 +182,15 @@ namespace MatchBook
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(368, 497);
             this.panel3.TabIndex = 13;
+            // 
+            // txtitulo
+            // 
+            this.txtitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtitulo.Location = new System.Drawing.Point(16, 24);
+            this.txtitulo.Name = "txtitulo";
+            this.txtitulo.Size = new System.Drawing.Size(337, 34);
+            this.txtitulo.TabIndex = 10;
+            this.txtitulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblemail
             // 
@@ -241,29 +243,81 @@ namespace MatchBook
             this.btnAnyadir.TabIndex = 2;
             this.btnAnyadir.UseVisualStyleBackColor = false;
             // 
-            // btnMenu
+            // btnMenu2
             // 
-            this.btnMenu.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.ForeColor = System.Drawing.Color.Black;
-            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
-            this.btnMenu.Location = new System.Drawing.Point(18, 110);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(68, 56);
-            this.btnMenu.TabIndex = 1;
-            this.btnMenu.UseCompatibleTextRendering = true;
-            this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            this.btnMenu2.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnMenu2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu2.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu2.ForeColor = System.Drawing.Color.Black;
+            this.btnMenu2.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu2.Image")));
+            this.btnMenu2.Location = new System.Drawing.Point(18, 110);
+            this.btnMenu2.Name = "btnMenu2";
+            this.btnMenu2.Size = new System.Drawing.Size(68, 56);
+            this.btnMenu2.TabIndex = 1;
+            this.btnMenu2.UseCompatibleTextRendering = true;
+            this.btnMenu2.UseVisualStyleBackColor = false;
+            this.btnMenu2.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // txtitulo
+            // btnMasCosas
             // 
-            this.txtitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtitulo.Location = new System.Drawing.Point(16, 24);
-            this.txtitulo.Name = "txtitulo";
-            this.txtitulo.Size = new System.Drawing.Size(337, 34);
-            this.txtitulo.TabIndex = 10;
-            this.txtitulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnMasCosas.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnMasCosas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMasCosas.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMasCosas.ForeColor = System.Drawing.Color.Black;
+            this.btnMasCosas.Image = ((System.Drawing.Image)(resources.GetObject("btnMasCosas.Image")));
+            this.btnMasCosas.Location = new System.Drawing.Point(1022, 114);
+            this.btnMasCosas.Name = "btnMasCosas";
+            this.btnMasCosas.Size = new System.Drawing.Size(79, 55);
+            this.btnMasCosas.TabIndex = 16;
+            this.btnMasCosas.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnMasCosas.UseVisualStyleBackColor = false;
+            this.btnMasCosas.Click += new System.EventHandler(this.btnMasCosas_Click);
+            // 
+            // grbMenu2
+            // 
+            this.grbMenu2.Controls.Add(this.btnSalir);
+            this.grbMenu2.Controls.Add(this.btnInformacion);
+            this.grbMenu2.Controls.Add(this.btnCerrarSesion);
+            this.grbMenu2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grbMenu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbMenu2.Location = new System.Drawing.Point(966, 172);
+            this.grbMenu2.Name = "grbMenu2";
+            this.grbMenu2.Size = new System.Drawing.Size(183, 207);
+            this.grbMenu2.TabIndex = 17;
+            this.grbMenu2.TabStop = false;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
+            this.btnSalir.Location = new System.Drawing.Point(6, 135);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(172, 51);
+            this.btnSalir.TabIndex = 4;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // btnInformacion
+            // 
+            this.btnInformacion.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformacion.ForeColor = System.Drawing.Color.Black;
+            this.btnInformacion.Location = new System.Drawing.Point(6, 78);
+            this.btnInformacion.Name = "btnInformacion";
+            this.btnInformacion.Size = new System.Drawing.Size(172, 51);
+            this.btnInformacion.TabIndex = 2;
+            this.btnInformacion.Text = "Informacion";
+            this.btnInformacion.UseVisualStyleBackColor = true;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.Black;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(6, 21);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(172, 51);
+            this.btnCerrarSesion.TabIndex = 1;
+            this.btnCerrarSesion.Text = "Cerrar Sesion";
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
@@ -271,13 +325,14 @@ namespace MatchBook
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1161, 698);
+            this.Controls.Add(this.grbMenu2);
+            this.Controls.Add(this.btnMasCosas);
             this.Controls.Add(this.lblemail);
             this.Controls.Add(this.btnLike);
             this.Controls.Add(this.btnDerecha);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnAnyadir);
-            this.Controls.Add(this.btnMenu);
-            this.Controls.Add(this.btnCerrarSesion);
+            this.Controls.Add(this.btnMenu2);
             this.Controls.Add(this.grpMenu);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -294,6 +349,7 @@ namespace MatchBook
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.grbMenu2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,8 +363,7 @@ namespace MatchBook
         private System.Windows.Forms.Button btnSubirPagina;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnPerfil;
-        private System.Windows.Forms.Button btnCerrarSesion;
-        private System.Windows.Forms.Button btnMenu;
+        private System.Windows.Forms.Button btnMenu2;
         private System.Windows.Forms.Button btnLike;
         private System.Windows.Forms.Label lblMatchBook;
         private System.Windows.Forms.TextBox txtPagina;
@@ -319,5 +374,10 @@ namespace MatchBook
         private System.Windows.Forms.Label lblemail;
         private System.Windows.Forms.Button btnAnyadir;
         private System.Windows.Forms.TextBox txtitulo;
+        private System.Windows.Forms.Button btnMasCosas;
+        private System.Windows.Forms.GroupBox grbMenu2;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnInformacion;
+        private System.Windows.Forms.Button btnCerrarSesion;
     }
 }

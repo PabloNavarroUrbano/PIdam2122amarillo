@@ -16,10 +16,9 @@ namespace MatchBook
 
         public frmPrincipal()
         {
-
             libro li = new libro();
             InitializeComponent();
-            btnMenu.FlatAppearance.BorderSize = 0;
+            btnMenu2.FlatAppearance.BorderSize = 0;
             btnAnyadir.FlatAppearance.BorderSize = 0;
             btnLike.FlatAppearance.BorderSize = 0;
             btnDerecha.FlatAppearance.BorderSize = 0;
@@ -28,7 +27,7 @@ namespace MatchBook
         public frmPrincipal(string email)
         {
             InitializeComponent();
-            btnMenu.FlatAppearance.BorderSize = 0;
+            btnMenu2.FlatAppearance.BorderSize = 0;
             btnAnyadir.FlatAppearance.BorderSize = 0;
             btnLike.FlatAppearance.BorderSize = 0;
             btnDerecha.FlatAppearance.BorderSize = 0;
@@ -52,6 +51,7 @@ namespace MatchBook
             txtitulo.Text = titu;
             txtPagina.Text = text;
             BBDD.CerrarConexion();
+            grbMenu2.Hide();
         }
 
 
@@ -66,6 +66,7 @@ namespace MatchBook
             {
                 grpMenu.Visible = true;
             }
+            grbMenu2.Hide();
         }
 
 
@@ -120,13 +121,10 @@ namespace MatchBook
             fr.Show();   
         }
 
-
-        private void txtPagina_TextChanged(object sender, EventArgs e)
+        private void btnMasCosas_Click(object sender, EventArgs e)
         {
-
+            grbMenu2.Show();
+            grpMenu.Hide();
         }
-
-
-
     }
 }

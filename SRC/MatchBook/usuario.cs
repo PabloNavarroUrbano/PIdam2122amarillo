@@ -125,27 +125,14 @@ namespace MatchBook
 
             if (reader.HasRows)
             {
-                return true;
+                return false;
             }
             else
             {
-                return false;
+                return true;
             }
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         /*
                 public int SacarID(MySqlConnection conexion, string email)
