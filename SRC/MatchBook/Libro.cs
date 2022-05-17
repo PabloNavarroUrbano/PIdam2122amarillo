@@ -42,7 +42,7 @@ namespace MatchBook
 
 
 
-        public int ID { get { return id; } set { id = value; } }
+        public int ID { get { return id; } set{id = value;} }
         public string Nombre { get { return nombre; } set { nombre = value; } }
         public int Paginas { get { return paginas; } set { paginas = value; } }
         public string Contenido { get { return contenido; } set { contenido = value; } }
@@ -163,6 +163,32 @@ namespace MatchBook
             }
         }
 
+        public string VisualizarTitulo(MySqlConnection conexion, int id)
+        {
+            string retorno;
+
+            string consulta;
+
+            consulta = String.Format("SELECT titulo FROM libro WHERE id_libro = '{0}'", id);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                reader.Read();
+                retorno = reader.GetString(0);
+                reader.Close();
+                return retorno;
+            }
+            else
+            {
+                retorno = "nono";
+                reader.Close();
+                return retorno;
+            }
+        }
+
+
         public int DarLike(MySqlConnection conexion, int id)
         {
             int retorno;
@@ -175,7 +201,7 @@ namespace MatchBook
             retorno = comando.ExecuteNonQuery();
 
             return retorno;
-            Console.WriteLine("un descanso timidin");
+
         }
 
 

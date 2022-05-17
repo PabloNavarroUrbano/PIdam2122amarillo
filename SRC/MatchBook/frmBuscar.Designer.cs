@@ -29,6 +29,7 @@ namespace MatchBook
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscar));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,16 +42,18 @@ namespace MatchBook
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.txtbuscartitulo = new System.Windows.Forms.TextBox();
             this.dtgvLibros = new System.Windows.Forms.DataGridView();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.btnBscar = new System.Windows.Forms.Button();
             this.Id_libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paginas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.num_likes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnMenu = new System.Windows.Forms.Button();
+            this.btnBscar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.grpMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,6 +113,7 @@ namespace MatchBook
             this.btnForo.TabIndex = 5;
             this.btnForo.Text = "Foro";
             this.btnForo.UseVisualStyleBackColor = true;
+            this.btnForo.Click += new System.EventHandler(this.btnForo_Click);
             // 
             // btnSubirPagina
             // 
@@ -121,6 +125,7 @@ namespace MatchBook
             this.btnSubirPagina.TabIndex = 4;
             this.btnSubirPagina.Text = "Subir Página";
             this.btnSubirPagina.UseVisualStyleBackColor = true;
+            this.btnSubirPagina.Click += new System.EventHandler(this.btnSubirPagina_Click);
             // 
             // btnBuscar
             // 
@@ -132,6 +137,7 @@ namespace MatchBook
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnPerfil
             // 
@@ -143,6 +149,7 @@ namespace MatchBook
             this.btnPerfil.TabIndex = 2;
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnPrincipal
             // 
@@ -179,33 +186,6 @@ namespace MatchBook
             this.dtgvLibros.Size = new System.Drawing.Size(665, 279);
             this.dtgvLibros.TabIndex = 18;
             // 
-            // btnMenu
-            // 
-            this.btnMenu.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.ForeColor = System.Drawing.Color.Black;
-            this.btnMenu.Image = global::MatchBook.Properties.Resources.menu_button_of_three_horizontal_lines;
-            this.btnMenu.Location = new System.Drawing.Point(12, 122);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(68, 56);
-            this.btnMenu.TabIndex = 15;
-            this.btnMenu.UseVisualStyleBackColor = false;
-            // 
-            // btnBscar
-            // 
-            this.btnBscar.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnBscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBscar.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBscar.Image")));
-            this.btnBscar.Location = new System.Drawing.Point(814, 128);
-            this.btnBscar.Name = "btnBscar";
-            this.btnBscar.Size = new System.Drawing.Size(51, 37);
-            this.btnBscar.TabIndex = 20;
-            this.btnBscar.UseVisualStyleBackColor = false;
-            this.btnBscar.Click += new System.EventHandler(this.btnBscar_Click);
-            // 
             // Id_libro
             // 
             this.Id_libro.HeaderText = "Id_libro";
@@ -241,6 +221,37 @@ namespace MatchBook
             this.num_likes.Name = "num_likes";
             this.num_likes.Width = 125;
             // 
+            // btnMenu
+            // 
+            this.btnMenu.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.ForeColor = System.Drawing.Color.Black;
+            this.btnMenu.Image = global::MatchBook.Properties.Resources.menu_button_of_three_horizontal_lines;
+            this.btnMenu.Location = new System.Drawing.Point(12, 122);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(68, 56);
+            this.btnMenu.TabIndex = 15;
+            this.btnMenu.UseVisualStyleBackColor = false;
+            // 
+            // btnBscar
+            // 
+            this.btnBscar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBscar.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBscar.ForeColor = System.Drawing.Color.Black;
+            this.btnBscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBscar.Image")));
+            this.btnBscar.Location = new System.Drawing.Point(814, 128);
+            this.btnBscar.Name = "btnBscar";
+            this.btnBscar.Size = new System.Drawing.Size(51, 37);
+            this.btnBscar.TabIndex = 20;
+            this.btnBscar.UseVisualStyleBackColor = false;
+            this.btnBscar.Click += new System.EventHandler(this.btnBscar_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -260,6 +271,7 @@ namespace MatchBook
             this.panel1.PerformLayout();
             this.grpMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,5 +297,6 @@ namespace MatchBook
         private System.Windows.Forms.DataGridViewTextBoxColumn autor;
         private System.Windows.Forms.DataGridViewTextBoxColumn paginas;
         private System.Windows.Forms.DataGridViewTextBoxColumn num_likes;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

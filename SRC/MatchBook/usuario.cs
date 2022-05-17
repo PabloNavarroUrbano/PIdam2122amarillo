@@ -95,49 +95,86 @@ namespace MatchBook
             return retorno;
         }
 
-        public static int CambiarDatos(MySqlConnection conexion, string pswd, string username, string dir, DateTime fech, string email)
+        public static int CambiarDatos(string pswd, string username, string dir, string email, string email1)
         {
+            usuario usu = new usuario();
             int retorno;
-            string consulta;
+            string consulta = String.Format("UPDATE usuario SET username='{0}', pswd='{1}', direccion='{2}' ,email='{3}'" +
+                " WHERE email='{4}'", username, pswd, dir, email, email1);
 
+            BBDD.AbrirConexion();
 
-            consulta = String.Format("UPDATE usuario SET username='{0}', fecha_nac='{1}', pswd='{2}', direccion='{3}' WHERE email='{4}'", username, fech, pswd, dir, email);
-
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, BBDD.Conexion);
 
             retorno = comando.ExecuteNonQuery();
 
+            BBDD.CerrarConexion();
+
             return retorno;
+
         }
 
-
-
-
-        public int SacarID(MySqlConnection conexion, string email)
+        public bool ComprobarEmail(MySqlConnection conexion, string email)
         {
-            int retorno;
-            string consulta = string.Format("SELECT id_usuario from usuario WHERE email='{0}'", email);
+            string consulta = string.Format("SELECT * FROM usuario" +
+                " WHERE email = '{0}'", email);
+
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
             if (reader.HasRows)
             {
-                reader.Read();
-                retorno = Convert.ToInt32(reader.GetString(0));
-                reader.Close();
-                return retorno;
-
+                return true;
             }
             else
             {
-                retorno = 1;
-                reader.Close();
-                return retorno;
-
+                return false;
             }
 
-
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+                public int SacarID(MySqlConnection conexion, string email)
+                {
+                    int retorno;
+                    string consulta = string.Format("SELECT id_usuario from usuario WHERE email='{0}'", email);
+
+                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                    MySqlDataReader reader = comando.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        retorno = Convert.ToInt32(reader.GetString(0));
+                        reader.Close();
+                        return retorno;
+
+                    }
+                    else
+                    {
+                        retorno = 1;
+                        reader.Close();
+                        return retorno;
+
+                    }
+                }
+        */
+
+
+
     }
 }

@@ -44,11 +44,12 @@ namespace MatchBook
         {
             BBDD.CerrarConexion();
             BBDD.AbrirConexion();
-            int usuari;
-            usuari = usu.SacarID(BBDD.Conexion, lblemail.Text);
             id = li.SacarID(BBDD.Conexion);
             string text;
+            string titu;
             text = li.VisualizarContenido(BBDD.Conexion, id);
+            titu = li.VisualizarTitulo(BBDD.Conexion, id);
+            txtitulo.Text = titu;
             txtPagina.Text = text;
             BBDD.CerrarConexion();
         }
@@ -97,8 +98,11 @@ namespace MatchBook
             int id;
             id = li.SacarID(BBDD.Conexion);
             string text;
+            string titu;
             text = li.VisualizarContenido(BBDD.Conexion, id);
             txtPagina.Text = text;
+            titu = li.VisualizarTitulo(BBDD.Conexion, id);
+            txtitulo.Text = titu;
             BBDD.CerrarConexion();
         }
 
@@ -111,9 +115,18 @@ namespace MatchBook
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            this.Close();
+         this.Close();
             frmBuscar fr = new frmBuscar();
-            fr.Show();
+            fr.Show();   
         }
+
+
+        private void txtPagina_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
     }
 }

@@ -21,17 +21,20 @@ namespace MatchBook
         {
             if (BBDD.Conexion != null)
             {
-                int resultado = 1;
-                BBDD.AbrirConexion();
-                libro lib = new libro();
-                lib.Nombre = txttitulo.Text;
-                lib.Autor = txtAutor.Text;
-                lib.Paginas = Convert.ToInt32(txtpaginas.Text);
-                lib.Contenido = txtContenido.Text;
+                if (ComprobacionCajasSubir())
+                {
+                    int resultado = 1;
+                    BBDD.AbrirConexion();
+                    libro lib = new libro();
+                    lib.Nombre = txttitulo.Text;
+                    lib.Autor = txtAutor.Text;
+                    lib.Paginas = Convert.ToInt32(txtpaginas.Text);
+                    lib.Contenido = txtContenido.Text;
 
-                resultado = lib.AgregarLibro(BBDD.Conexion, lib);
-                MessageBox.Show("Listo pa");
-                BBDD.CerrarConexion();
+                    resultado = lib.AgregarLibro(BBDD.Conexion, lib);
+                    MessageBox.Show("Listo pa");
+                    BBDD.CerrarConexion();
+                }
             }
             else
             {
@@ -75,6 +78,46 @@ namespace MatchBook
             grpMenu.Hide();
             txtContenido.MaxLength = 310;
         }
-
+        private bool ComprobacionCajasSubir()
+        {
+            bool valido = true;
+            if (txttitulo.Text == "")
+            {
+                valido = false;
+                errorProvider1.SetError(txttitulo, "Debes introducir un nombre de autor");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            if (txtpaginas.Text == "")
+            {
+                valido = false;
+                errorProvider1.SetError(txtpaginas, "Debes introducir el número de páginas");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            if (txtAutor.Text == "")
+            {
+                valido = false;
+                errorProvider1.SetError(txtAutor, "Debes introducir un nombre de autor");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            if (txtContenido.Text == "")
+            {
+                valido = false;
+                errorProvider1.SetError(txtContenido, "Debes introducir contenido");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return valido;
+        }
     }
 }

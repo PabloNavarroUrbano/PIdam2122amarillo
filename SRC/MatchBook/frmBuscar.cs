@@ -39,9 +39,12 @@ namespace MatchBook
         {
             if (BBDD.Conexion!=null)
             {
-                BBDD.AbrirConexion();
-                RellenarDtgvLibro();
-                BBDD.CerrarConexion();
+                if (ComprobacionCajasBuscar())
+                {
+                    BBDD.AbrirConexion();
+                    RellenarDtgvLibro();
+                    BBDD.CerrarConexion();
+                }
             }
             else
             {
@@ -49,8 +52,43 @@ namespace MatchBook
             }
         }
 
+        private bool ComprobacionCajasBuscar()
+        {
+            bool valido = true;
+            if (txtbuscartitulo.Text == "")
+            {
+                valido = false;
+                errorProvider1.SetError(txtbuscartitulo, "Debes introducir el título de un libro");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return valido;
+        }
 
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            frmEditarUsuario perf = new frmEditarUsuario();
+            this.Close();
+            perf.Show();
+        }
 
+        private void btnSubirPagina_Click(object sender, EventArgs e)
+        {
+            frmSubirLibro lib = new frmSubirLibro();
+            this.Close();
+            lib.Show();
+        }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnForo_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

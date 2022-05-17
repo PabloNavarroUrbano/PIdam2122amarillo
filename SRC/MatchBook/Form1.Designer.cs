@@ -29,6 +29,7 @@ namespace MatchBook
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
             this.panel1 = new System.Windows.Forms.Panel();
             this.grbRegistro = new System.Windows.Forms.GroupBox();
@@ -52,8 +53,10 @@ namespace MatchBook
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnEntrar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.grbRegistro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,6 +69,7 @@ namespace MatchBook
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 639);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // grbRegistro
             // 
@@ -311,6 +315,10 @@ namespace MatchBook
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -340,6 +348,7 @@ namespace MatchBook
             this.panel1.ResumeLayout(false);
             this.grbRegistro.ResumeLayout(false);
             this.grbRegistro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,6 +378,7 @@ namespace MatchBook
         private System.Windows.Forms.TextBox txtemail1;
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

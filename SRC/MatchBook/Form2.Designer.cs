@@ -47,6 +47,7 @@ namespace MatchBook
             this.btnDerecha = new System.Windows.Forms.Button();
             this.btnAnyadir = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
+            this.txtitulo = new System.Windows.Forms.TextBox();
             this.grpMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -152,11 +153,12 @@ namespace MatchBook
             // 
             this.txtPagina.Enabled = false;
             this.txtPagina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPagina.Location = new System.Drawing.Point(16, 17);
+            this.txtPagina.Location = new System.Drawing.Point(16, 70);
             this.txtPagina.Multiline = true;
             this.txtPagina.Name = "txtPagina";
-            this.txtPagina.Size = new System.Drawing.Size(337, 464);
+            this.txtPagina.Size = new System.Drawing.Size(337, 411);
             this.txtPagina.TabIndex = 9;
+            this.txtPagina.TextChanged += new System.EventHandler(this.txtPagina_TextChanged);
             // 
             // panel1
             // 
@@ -181,6 +183,7 @@ namespace MatchBook
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel3.Controls.Add(this.txtitulo);
             this.panel3.Controls.Add(this.txtPagina);
             this.panel3.Location = new System.Drawing.Point(394, 111);
             this.panel3.Name = "panel3";
@@ -253,6 +256,15 @@ namespace MatchBook
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
+            // txtitulo
+            // 
+            this.txtitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtitulo.Location = new System.Drawing.Point(16, 24);
+            this.txtitulo.Name = "txtitulo";
+            this.txtitulo.Size = new System.Drawing.Size(337, 34);
+            this.txtitulo.TabIndex = 10;
+            this.txtitulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -306,5 +318,6 @@ namespace MatchBook
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblemail;
         private System.Windows.Forms.Button btnAnyadir;
+        private System.Windows.Forms.TextBox txtitulo;
     }
 }

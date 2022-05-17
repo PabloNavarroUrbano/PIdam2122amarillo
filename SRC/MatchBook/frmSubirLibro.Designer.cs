@@ -29,6 +29,7 @@ namespace MatchBook
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSubirLibro));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -51,9 +52,11 @@ namespace MatchBook
             this.lblPaginas = new System.Windows.Forms.Label();
             this.txttitulo = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.grpMenu.SuspendLayout();
             this.grbRegistro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -306,6 +309,10 @@ namespace MatchBook
             this.lblTitulo.TabIndex = 4;
             this.lblTitulo.Text = "Titulo:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmSubirLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -327,6 +334,7 @@ namespace MatchBook
             this.grpMenu.ResumeLayout(false);
             this.grbRegistro.ResumeLayout(false);
             this.grbRegistro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,5 +363,6 @@ namespace MatchBook
         private System.Windows.Forms.Label lblPaginas;
         private System.Windows.Forms.TextBox txttitulo;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
