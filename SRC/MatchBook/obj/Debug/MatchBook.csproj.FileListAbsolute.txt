@@ -232,3 +232,5 @@ C:\Users\esalku\Desktop\PROYECTO\MatchBook\obj\Debug\MatchBook.csproj.CoreCompil
 C:\Users\esalku\Desktop\PROYECTO\MatchBook\obj\Debug\MatchBook.csproj.CopyComplete
 C:\Users\esalku\Desktop\PROYECTO\MatchBook\obj\Debug\MatchBook.exe
 C:\Users\esalku\Desktop\PROYECTO\MatchBook\obj\Debug\MatchBook.pdb
+C:\Users\esalku\Desktop\otra vez xddd\SRC\MatchBook\obj\Debug\MatchBook.AboutBox1.resources
+C:\Users\esalku\Desktop\otra vez xddd\SRC\MatchBook\obj\Debug\MatchBook.frmBuscar.resources

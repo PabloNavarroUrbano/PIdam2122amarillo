@@ -47,7 +47,6 @@ namespace MatchBook
             int usuari;
             usuari = usu.SacarID(BBDD.Conexion, lblemail.Text);
             id = li.SacarID(BBDD.Conexion);
-            lblidusu.Text = usuari.ToString();
             string text;
             text = li.VisualizarContenido(BBDD.Conexion, id);
             txtPagina.Text = text;
@@ -109,6 +108,12 @@ namespace MatchBook
             li.DarLike(BBDD.Conexion, id);
             BBDD.CerrarConexion();
         }
-        
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmBuscar fr = new frmBuscar();
+            fr.Show();
+        }
     }
 }

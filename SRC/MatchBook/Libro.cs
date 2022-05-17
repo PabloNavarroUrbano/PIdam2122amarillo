@@ -10,6 +10,7 @@ namespace MatchBook
 {
     class libro
     {
+        private int id;
         private string nombre;
         private int paginas;
         private string contenido;
@@ -30,6 +31,18 @@ namespace MatchBook
 
         }
 
+        public libro(int idl, string nom, string au, int pag,  int numlikes)
+        {
+            id = idl;
+            nombre = nom;
+            autor = au;
+            paginas = pag;
+            num_likes = numlikes;
+        }
+
+
+
+        public int ID { get { return id; } set { id = value; } }
         public string Nombre { get { return nombre; } set { nombre = value; } }
         public int Paginas { get { return paginas; } set { paginas = value; } }
         public string Contenido { get { return contenido; } set { contenido = value; } }
@@ -166,10 +179,31 @@ namespace MatchBook
         }
 
 
-
-
-
         
+        public static List<libro> BuscarLibro(MySqlConnection conexion, string titulo)
+        {
+            List<libro> lista = new List<libro>();
+            string consulta = String.Format("SELECT id_libro,titulo,autor,paginas,num_likes FROM libro WHERE titulo = ('{0}') ", titulo);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)  
+            {
+
+                while (reader.Read())
+                {
+                    libro user = new libro(reader.GetInt16(0), reader.GetString(1), reader.GetString(2),
+                        reader.GetInt16(3), reader.GetInt16(4));
+                    lista.Add(user);
+                }
+            }
+            reader.Close();
+
+            return lista;
+        }
+
+
 
 
     }
