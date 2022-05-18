@@ -31,6 +31,11 @@ namespace MatchBook
 
         }
 
+        public libro(string titulo)
+        {
+            this.nombre = titulo;
+        }
+
         public libro(int idl, string nom, string au, int pag,  int numlikes)
         {
             id = idl;

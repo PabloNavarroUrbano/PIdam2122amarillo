@@ -242,6 +242,7 @@ namespace MatchBook
             this.btnAnyadir.Size = new System.Drawing.Size(176, 55);
             this.btnAnyadir.TabIndex = 2;
             this.btnAnyadir.UseVisualStyleBackColor = false;
+            this.btnAnyadir.Click += new System.EventHandler(this.btnAnyadir_Click);
             // 
             // btnMenu2
             // 

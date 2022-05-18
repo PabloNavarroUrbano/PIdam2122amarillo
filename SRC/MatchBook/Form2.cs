@@ -142,5 +142,20 @@ namespace MatchBook
         {
             
         }
+
+        private void btnAnyadir_Click(object sender, EventArgs e)
+        {
+            BBDD.AbrirConexion();
+            int id;
+            id = li.SacarID(BBDD.Conexion);
+            string titulo = li.VisualizarTitulo(BBDD.Conexion, id);
+            string texto = txtPagina.Text;
+            libro lib = new libro(titulo);
+            string title = txtitulo.Text;
+            usuario usu = new usuario(lblemail.Text);
+            Guardado gua = new Guardado(usu, lib);
+            gua.Guardar(BBDD.Conexion, usu, title, texto);
+            BBDD.CerrarConexion();
+        }
     }
 }

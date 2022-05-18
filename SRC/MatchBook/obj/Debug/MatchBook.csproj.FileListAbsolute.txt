@@ -264,4 +264,4 @@ C:\Users\esalku\Desktop\Carpeta para ir trabajando\MatchBook\obj\Debug\MatchBook
 C:\Users\esalku\Desktop\Carpeta para ir trabajando\MatchBook\obj\Debug\MatchBook.csproj.CopyComplete
 C:\Users\esalku\Desktop\Carpeta para ir trabajando\MatchBook\obj\Debug\MatchBook.exe
 C:\Users\esalku\Desktop\Carpeta para ir trabajando\MatchBook\obj\Debug\MatchBook.pdb
-C:\Users\esalku\Desktop\otra vez xddd\SRC\MatchBook\obj\Debug\MatchBook.AboutBox2.resources
+C:\Users\esalku\Desktop\otra vez xddd\SRC\MatchBook\obj\Debug\MatchBook.frmBiblioteca.resources

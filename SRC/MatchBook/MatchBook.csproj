@@ -53,12 +53,6 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
-    <Compile Include="AboutBox2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AboutBox2.Designer.cs">
-      <DependentUpon>AboutBox2.cs</DependentUpon>
-    </Compile>
     <Compile Include="ConexionBD.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -71,6 +65,12 @@
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBiblioteca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBiblioteca.designer.cs">
+      <DependentUpon>frmBiblioteca.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBuscar.cs">
       <SubType>Form</SubType>
@@ -90,6 +90,7 @@
     <Compile Include="frmSubirLibro.Designer.cs">
       <DependentUpon>frmSubirLibro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Guardado.cs" />
     <Compile Include="Libro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,14 +98,14 @@
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AboutBox2.resx">
-      <DependentUpon>AboutBox2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBiblioteca.resx">
+      <DependentUpon>frmBiblioteca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscar.resx">
       <DependentUpon>frmBuscar.cs</DependentUpon>
