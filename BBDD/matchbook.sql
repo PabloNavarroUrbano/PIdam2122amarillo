@@ -1,113 +1,102 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 09-05-2022 a las 16:53:40
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 7.4.25
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
+-- --------------------------------------------------------
+-- Host:                         database-1.camnos0tv0v7.us-east-1.rds.amazonaws.com
+-- Versión del servidor:         8.0.23 - Source distribution
+-- SO del servidor:              Linux
+-- HeidiSQL Versión:             11.3.0.6295
+-- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Base de datos: `matchbook`
---
 
--- --------------------------------------------------------
+-- Volcando estructura de base de datos para MatchBook
+CREATE DATABASE IF NOT EXISTS `MatchBook` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `MatchBook`;
 
---
--- Estructura de tabla para la tabla `libro`
---
+-- Volcando estructura para tabla MatchBook.biblio
+CREATE TABLE IF NOT EXISTS `biblio` (
+  `email` varchar(40) NOT NULL,
+  `titulo` varchar(40) NOT NULL,
+  `contenido` mediumtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `libro` (
-  `id_libro` int(10) NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(20) NOT NULL,
-  `paginas` int(10) NOT NULL,
-  `contenido_texto` varchar(500) DEFAULT NULL,
-  `num_likes` int(10) NOT NULL,
-  `contenido_pdf` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
-  `contenido_img` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
-  `id_usuario_fk` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- Volcando datos para la tabla MatchBook.biblio: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `biblio` DISABLE KEYS */;
+INSERT INTO `biblio` (`email`, `titulo`, `contenido`) VALUES
+	('pitomorango@gmail.com', 'Estanis', 'apasudfpoasdfpoasdfpaasdfasddfsodifuasdpofiuasdpofuasdfopasdflkjasdhf'),
+	('pitomorango@gmail.com', 'Cervantes', 'aosiifjañsdfjasñdlfjasñdflkjasdñfljkasdfñlajsdfñalsdjkfasdñlkf'),
+	('pitomorango@gmail.com', 'Juan', 'aossdfgiifjañsdfjasñdlfjasñdflkjasdñfljkasdfñlajsdfñalsdjkfasdñlasdfasdfkf');
+/*!40000 ALTER TABLE `biblio` ENABLE KEYS */;
 
--- --------------------------------------------------------
+-- Volcando estructura para tabla MatchBook.libro
+CREATE TABLE IF NOT EXISTS `libro` (
+  `id_libro` int NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(25) NOT NULL,
+  `autor` varchar(25) NOT NULL,
+  `paginas` int NOT NULL,
+  `contenido_texto` varchar(500) NOT NULL,
+  `num_likes` int NOT NULL,
+  `id_usuario_fk` int NOT NULL,
+  PRIMARY KEY (`id_libro`),
+  KEY `fk_id_usuario` (`id_usuario_fk`),
+  CONSTRAINT `fk_id_usuario` FOREIGN KEY (`id_usuario_fk`) REFERENCES `usuario` (`id_usuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Estructura de tabla para la tabla `usuario`
---
+-- Volcando datos para la tabla MatchBook.libro: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `libro` DISABLE KEYS */;
+INSERT INTO `libro` (`id_libro`, `titulo`, `autor`, `paginas`, `contenido_texto`, `num_likes`, `id_usuario_fk`) VALUES
+	(2, 'Cervantes', ' Perro', 1, 'aosiifjañsdfjasñdlfjasñdflkjasdñfljkasdfñlajsdfñalsdjkfasdñlkf', 0, 1),
+	(3, 'Cervantes', ' Perro', 1, 'aosiifjañsdfjasñdlfjasñdflkjasdñfljkasdfñlajsdfñalsdjkfasdñlkf', 0, 1),
+	(4, 'Cervantes', ' Perro', 1, 'aossdfgiifjañsdfjasñdlfjasñdflkjasdñfljkasdfñlajsdfñalsdjkfasdñlkf', 1, 1),
+	(5, 'Juan', ' Perro', 1, 'aossdfgiifjañsdfjasñdlfjasñdflkjasdñfljkasdfñlajsdfñalsdjkfasdñlasdfasdfkf', 0, 1),
+	(6, 'Juan', ' Perrito', 1, 'pasudfpoasdfpoasdfpasodifuasdpofiuasdpofuasdfopasdflkjasdhf', 0, 1),
+	(7, 'Juan', ' Perrito', 1, 'pasudfpoasdfpoasdfpaasdfasddfsodifuasdpofiuasdpofuasdfopasdflkjasdhf', 0, 1),
+	(8, 'Juan', ' Perrito', 1, 'apasudfpoasdfpoasdfpaasdfasddfsodifuasdpofiuasdpofuasdfopasdflkjasdhf', 0, 1),
+	(9, 'Estanis', ' Perrito', 1, 'apasudfpoasdfpoasdfpaasdfasddfsodifuasdpofiuasdpofuasdfopasdflkjasdhf', 1, 1),
+	(10, 'Estanis', ' xd', 1, 'apasudfpoasdfpoasdfpaasdfasddfsodifuasdpofiuasdpofuasdfopasdflkjasdhf', 0, 1),
+	(11, 'Estanis', ' xdxdxd', 1, 'apasudfpoasdfpoasdfpaasdfasddfsodifuasdpofiuasdpofuasdfopasdflkjasdhf', 1, 1),
+	(12, 'Estanis', ' xdxdxdxd', 1, 'apasudfpoasdfpoasdfpaasdfasddfsodifuasdpofiuasdpofuasdfopasdflkjasdhf', 0, 1),
+	(13, 'La odisea de santi', 'Marcos Simon', 56, 'Santi perdiendo rankeds, Santi perdiendo rankedsSanti perdiendo rankedsSanti perdiendo rankedsSanti perdiendo rankedsSanti perdiendo rankedsSanti perdiendo rankedsSanti perdiendo rankedsSanti perdiendo rankedsSanti perdiendo rankedsSanti perdiendo rankedsSanti perdiendo rankedsSanti perdiendo rankedsSanti per', 0, 5);
+/*!40000 ALTER TABLE `libro` ENABLE KEYS */;
 
-CREATE TABLE `usuario` (
-  `id_usuario` int(10) NOT NULL AUTO_INCREMENT,
+-- Volcando estructura para tabla MatchBook.usuario
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `id_usuario` int NOT NULL AUTO_INCREMENT,
   `username` varchar(15) NOT NULL,
   `fecha_nac` date NOT NULL,
   `email` varchar(30) NOT NULL,
   `pswd` varchar(50) NOT NULL,
-  `direccion` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `direccion` varchar(40) NOT NULL,
+  PRIMARY KEY (`id_usuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- --------------------------------------------------------
+-- Volcando datos para la tabla MatchBook.usuario: ~4 rows (aproximadamente)
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` (`id_usuario`, `username`, `fecha_nac`, `email`, `pswd`, `direccion`) VALUES
+	(1, 'santi maricona', '0000-00-00', 'santiestrela9@gmail.com', '123', 'sexosfd'),
+	(2, 'pinga', '0000-00-00', 'pitomorango@gmail.com', '5555', 'La calle'),
+	(3, 'alvaro', '0000-00-00', 'alvaro@gmail.com', '1234', 'FLORIDA UNIVERSITARIA'),
+	(5, '2', '0000-00-00', '2', '2', 'rafa sucio');
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
---
--- Estructura de tabla para la tabla `valoracion`
---
-
-CREATE TABLE `valoracion` (
-  `mg` int(11) NOT NULL,
+-- Volcando estructura para tabla MatchBook.valoracion
+CREATE TABLE IF NOT EXISTS `valoracion` (
+  `cant_likes` int NOT NULL,
   `reseña` varchar(500) DEFAULT NULL,
-  `id_usuario_fk` int(10) NOT NULL,
-  `id_libro_fk` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id_usuario_fk` int NOT NULL,
+  `id_libro_fk` int NOT NULL,
+  `fecha` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Índices para tablas volcadas
---
+-- Volcando datos para la tabla MatchBook.valoracion: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `valoracion` DISABLE KEYS */;
+/*!40000 ALTER TABLE `valoracion` ENABLE KEYS */;
 
---
--- Indices de la tabla `libro`
---
-ALTER TABLE `libro`
-  ADD PRIMARY KEY (`id_libro`),
-  ADD KEY `fk_usuario1` (`id_usuario_fk`) USING BTREE;
-
---
--- Indices de la tabla `usuario`
---
-ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id_usuario`);
-
---
--- Indices de la tabla `valoracion`
---
-ALTER TABLE `valoracion`
-  ADD KEY `fk_usuario` (`id_usuario_fk`) USING BTREE,
-  ADD KEY `fk_libro` (`id_libro_fk`) USING BTREE;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `libro`
---
-ALTER TABLE `libro`
-  ADD CONSTRAINT `fk` FOREIGN KEY (`id_usuario_fk`) REFERENCES `usuario` (`id_usuario`);
-
---
--- Filtros para la tabla `valoracion`
---
-ALTER TABLE `valoracion`
-  ADD CONSTRAINT `fk1` FOREIGN KEY (`id_usuario_fk`) REFERENCES `usuario` (`id_usuario`),
-  ADD CONSTRAINT `fk2` FOREIGN KEY (`id_libro_fk`) REFERENCES `libro` (`id_libro`);
-COMMIT;
-
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
