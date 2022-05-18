@@ -52,6 +52,7 @@ namespace MatchBook
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnInformacion = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnMiBiblioteca = new System.Windows.Forms.Button();
             this.grpMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -60,6 +61,7 @@ namespace MatchBook
             // 
             // grpMenu
             // 
+            this.grpMenu.Controls.Add(this.btnMiBiblioteca);
             this.grpMenu.Controls.Add(this.btnForo);
             this.grpMenu.Controls.Add(this.btnSubirPagina);
             this.grpMenu.Controls.Add(this.btnBuscar);
@@ -69,7 +71,7 @@ namespace MatchBook
             this.grpMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpMenu.Location = new System.Drawing.Point(18, 172);
             this.grpMenu.Name = "grpMenu";
-            this.grpMenu.Size = new System.Drawing.Size(184, 319);
+            this.grpMenu.Size = new System.Drawing.Size(184, 367);
             this.grpMenu.TabIndex = 0;
             this.grpMenu.TabStop = false;
             // 
@@ -77,7 +79,7 @@ namespace MatchBook
             // 
             this.btnForo.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForo.ForeColor = System.Drawing.Color.Black;
-            this.btnForo.Location = new System.Drawing.Point(6, 249);
+            this.btnForo.Location = new System.Drawing.Point(6, 306);
             this.btnForo.Name = "btnForo";
             this.btnForo.Size = new System.Drawing.Size(172, 51);
             this.btnForo.TabIndex = 5;
@@ -88,7 +90,7 @@ namespace MatchBook
             // 
             this.btnSubirPagina.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubirPagina.ForeColor = System.Drawing.Color.Black;
-            this.btnSubirPagina.Location = new System.Drawing.Point(6, 135);
+            this.btnSubirPagina.Location = new System.Drawing.Point(6, 192);
             this.btnSubirPagina.Name = "btnSubirPagina";
             this.btnSubirPagina.Size = new System.Drawing.Size(172, 51);
             this.btnSubirPagina.TabIndex = 4;
@@ -100,7 +102,7 @@ namespace MatchBook
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Location = new System.Drawing.Point(6, 192);
+            this.btnBuscar.Location = new System.Drawing.Point(6, 249);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(172, 51);
             this.btnBuscar.TabIndex = 6;
@@ -322,6 +324,18 @@ namespace MatchBook
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click_1);
             // 
+            // btnMiBiblioteca
+            // 
+            this.btnMiBiblioteca.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMiBiblioteca.ForeColor = System.Drawing.Color.Black;
+            this.btnMiBiblioteca.Location = new System.Drawing.Point(6, 135);
+            this.btnMiBiblioteca.Name = "btnMiBiblioteca";
+            this.btnMiBiblioteca.Size = new System.Drawing.Size(172, 51);
+            this.btnMiBiblioteca.TabIndex = 7;
+            this.btnMiBiblioteca.Text = "Mi bilbioteca";
+            this.btnMiBiblioteca.UseVisualStyleBackColor = true;
+            this.btnMiBiblioteca.Click += new System.EventHandler(this.btnMiBiblioteca_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -382,5 +396,6 @@ namespace MatchBook
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnInformacion;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Button btnMiBiblioteca;
     }
 }

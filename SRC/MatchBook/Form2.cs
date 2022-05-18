@@ -24,6 +24,7 @@ namespace MatchBook
             btnDerecha.FlatAppearance.BorderSize = 0;
             grpMenu.Visible = false;
         }
+
         public frmPrincipal(string email)
         {
             InitializeComponent();
@@ -157,5 +158,15 @@ namespace MatchBook
             gua.Guardar(BBDD.Conexion, usu, title, texto);
             BBDD.CerrarConexion();
         }
+
+        private void btnMiBiblioteca_Click(object sender, EventArgs e)
+        {
+
+            frmBiblioteca biblio = new frmBiblioteca(lblemail.Text);
+            this.Close();
+            biblio.Show();
+        }
+
+
     }
 }

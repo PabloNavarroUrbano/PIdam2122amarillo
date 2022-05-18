@@ -36,6 +36,12 @@ namespace MatchBook
             this.nombre = titulo;
         }
 
+        public libro(string titulo, string cont)
+        {
+            this.nombre = titulo;
+            this.contenido = cont;
+        }
+
         public libro(int idl, string nom, string au, int pag,  int numlikes)
         {
             id = idl;
@@ -249,7 +255,27 @@ namespace MatchBook
             return lista;
         }
 
+        public static List<libro> VisualizarGuardados(MySqlConnection conexion, string email)
+        {
+            List<libro> lista = new List<libro>();
+            string consulta = String.Format("SELECT titulo, contenido FROM biblio WHERE email= '{0}';", email);
 
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+
+                while (reader.Read())
+                {
+                    libro user = new libro (reader.GetString(0), reader.GetString(1));
+                    lista.Add(user);
+                }
+            }
+            reader.Close();
+
+            return lista;
+        }
 
 
     }

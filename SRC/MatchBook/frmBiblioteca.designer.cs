@@ -29,8 +29,8 @@ namespace MatchBook
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBiblioteca));
             this.lblMatchBook = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -41,12 +41,13 @@ namespace MatchBook
             this.btnPerfil = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.grpMenu = new System.Windows.Forms.GroupBox();
+            this.btnBiblioteca = new System.Windows.Forms.Button();
             this.btnForo = new System.Windows.Forms.Button();
             this.btnSubirPagina = new System.Windows.Forms.Button();
             this.btnMatchBook = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
-            this.btnBiblioteca = new System.Windows.Forms.Button();
+            this.lblemail = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgBiblioteca)).BeginInit();
             this.grpMenu.SuspendLayout();
@@ -86,18 +87,18 @@ namespace MatchBook
             // 
             // dtgBiblioteca
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dtgBiblioteca.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dtgBiblioteca.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgBiblioteca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgBiblioteca.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgBiblioteca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgBiblioteca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgBiblioteca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgBiblioteca.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_usuario,
@@ -160,6 +161,17 @@ namespace MatchBook
             this.grpMenu.TabIndex = 19;
             this.grpMenu.TabStop = false;
             // 
+            // btnBiblioteca
+            // 
+            this.btnBiblioteca.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBiblioteca.ForeColor = System.Drawing.Color.Black;
+            this.btnBiblioteca.Location = new System.Drawing.Point(6, 306);
+            this.btnBiblioteca.Name = "btnBiblioteca";
+            this.btnBiblioteca.Size = new System.Drawing.Size(172, 51);
+            this.btnBiblioteca.TabIndex = 7;
+            this.btnBiblioteca.Text = "Biblioteca";
+            this.btnBiblioteca.UseVisualStyleBackColor = true;
+            // 
             // btnForo
             // 
             this.btnForo.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,6 +215,7 @@ namespace MatchBook
             this.btnPrincipal.TabIndex = 1;
             this.btnPrincipal.Text = "Principal";
             this.btnPrincipal.UseVisualStyleBackColor = true;
+            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
             // 
             // btnMenu
             // 
@@ -218,16 +231,13 @@ namespace MatchBook
             this.btnMenu.UseCompatibleTextRendering = true;
             this.btnMenu.UseVisualStyleBackColor = false;
             // 
-            // btnBiblioteca
+            // lblemail
             // 
-            this.btnBiblioteca.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBiblioteca.ForeColor = System.Drawing.Color.Black;
-            this.btnBiblioteca.Location = new System.Drawing.Point(6, 306);
-            this.btnBiblioteca.Name = "btnBiblioteca";
-            this.btnBiblioteca.Size = new System.Drawing.Size(172, 51);
-            this.btnBiblioteca.TabIndex = 7;
-            this.btnBiblioteca.Text = "Biblioteca";
-            this.btnBiblioteca.UseVisualStyleBackColor = true;
+            this.lblemail.AutoSize = true;
+            this.lblemail.Location = new System.Drawing.Point(852, 121);
+            this.lblemail.Name = "lblemail";
+            this.lblemail.Size = new System.Drawing.Size(0, 17);
+            this.lblemail.TabIndex = 22;
             // 
             // frmBiblioteca
             // 
@@ -235,6 +245,7 @@ namespace MatchBook
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1209, 643);
+            this.Controls.Add(this.lblemail);
             this.Controls.Add(this.dtgBiblioteca);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMenu);
@@ -242,6 +253,7 @@ namespace MatchBook
             this.Controls.Add(this.panel1);
             this.Name = "frmBiblioteca";
             this.Text = "frmBiblioteca";
+            this.Load += new System.EventHandler(this.frmBiblioteca_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgBiblioteca)).EndInit();
@@ -268,5 +280,6 @@ namespace MatchBook
         private System.Windows.Forms.Button btnMatchBook;
         private System.Windows.Forms.Button btnPrincipal;
         private System.Windows.Forms.Button btnBiblioteca;
+        private System.Windows.Forms.Label lblemail;
     }
 }
