@@ -12,6 +12,12 @@ namespace MatchBook
 {
     public partial class frmSubirLibro : Form
     {
+        public frmSubirLibro(string email)
+        {
+            InitializeComponent();
+             lblidusu.Text=email;
+        }
+
         public frmSubirLibro()
         {
             InitializeComponent();
@@ -31,7 +37,7 @@ namespace MatchBook
                     lib.Paginas = Convert.ToInt32(txtpaginas.Text);
                     lib.Contenido = txtContenido.Text;
 
-                    resultado = lib.AgregarLibro(BBDD.Conexion, lib);
+                    resultado = lib.AgregarLibro(BBDD.Conexion, lib, lblidusu.Text);
                     MessageBox.Show("Listo pa");
                     BBDD.CerrarConexion();
                 }

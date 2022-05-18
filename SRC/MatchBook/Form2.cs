@@ -37,12 +37,14 @@ namespace MatchBook
 
         libro li = new libro();
         usuario usu = new usuario();
+        int idusuario;
         int id;
-
+        int cont = 0;
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             BBDD.CerrarConexion();
             BBDD.AbrirConexion();
+            idusuario = usu.SacarID(BBDD.Conexion, lblemail.Text);
             id = li.SacarID(BBDD.Conexion);
             string text;
             string titu;
@@ -51,6 +53,7 @@ namespace MatchBook
             txtitulo.Text = titu;
             txtPagina.Text = text;
             BBDD.CerrarConexion();
+            cont = 0;
             grbMenu2.Hide();
         }
 
@@ -70,15 +73,6 @@ namespace MatchBook
         }
 
 
-
-            private void btnCerrarSesion_Click(object sender, EventArgs e)
-            {
-                this.Hide();
-                frmInicioSesion Form = new frmInicioSesion();
-                Form.Show();
-
-            }
-
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -89,14 +83,13 @@ namespace MatchBook
         private void btnSubirPagina_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmSubirLibro sub = new frmSubirLibro();
+            frmSubirLibro sub = new frmSubirLibro(lblemail.Text);
             sub.Show();
         }
 
         private void btnDerecha_Click(object sender, EventArgs e)
         {
             BBDD.AbrirConexion();
-            int id;
             id = li.SacarID(BBDD.Conexion);
             string text;
             string titu;
@@ -104,13 +97,24 @@ namespace MatchBook
             txtPagina.Text = text;
             titu = li.VisualizarTitulo(BBDD.Conexion, id);
             txtitulo.Text = titu;
+            cont = 0;
             BBDD.CerrarConexion();
         }
+
 
         private void btnLike_Click(object sender, EventArgs e)
         {
             BBDD.AbrirConexion();
-            li.DarLike(BBDD.Conexion, id);
+            if (cont==0)
+            {
+                li.DarLike(BBDD.Conexion, id);
+                cont++;
+            }
+            else if (cont==1)
+            {
+                li.QuitarLike(BBDD.Conexion, id);
+                cont--;
+            }
             BBDD.CerrarConexion();
         }
 
@@ -125,6 +129,18 @@ namespace MatchBook
         {
             grbMenu2.Show();
             grpMenu.Hide();
+        }
+
+        private void btnCerrarSesion_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmInicioSesion Form = new frmInicioSesion();
+            Form.Show();
+        }
+
+        private void btnInformacion_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

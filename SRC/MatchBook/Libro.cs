@@ -52,17 +52,18 @@ namespace MatchBook
         static List<libro> libros = new List<libro>();
 
 
-        public int AgregarLibro(MySqlConnection conexion, libro lib)
+        public int AgregarLibro(MySqlConnection conexion, libro lib, string email)
         {
             int retorno;
 
             libro li = new libro(lib.nombre, lib.paginas, lib.autor, lib.contenido);
+            usuario us = new usuario(email);
             libros.Add(li);
             string consulta;
 
 
-            consulta = String.Format("INSERT INTO libro (titulo, autor, paginas, contenido_texto) VALUES " +
-                "('{0}','{1}','{2}','{3}')", lib.Nombre, lib.Autor, lib.Paginas, lib.Contenido);
+            consulta = String.Format("INSERT INTO libro (titulo, autor, paginas, contenido_texto, id_usuario_fk) VALUES " +
+                "('{0}','{1}','{2}','{3}','{4}')", lib.Nombre, lib.Autor, lib.Paginas, lib.Contenido, us.SacarID(conexion, email));
 
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
@@ -136,8 +137,6 @@ namespace MatchBook
         }
 
 
-
-
         public string VisualizarContenido(MySqlConnection conexion, int id)
         {
             string retorno;
@@ -157,7 +156,8 @@ namespace MatchBook
             }
             else
             {
-                retorno = "nono";
+                retorno = "Texto de prueba" +
+                    "";
                 reader.Close();
                 return retorno;
             }
@@ -204,8 +204,23 @@ namespace MatchBook
 
         }
 
+        public int QuitarLike(MySqlConnection conexion, int id)
+        {
+            int retorno;
+            string consulta;
 
-        
+            consulta = String.Format("UPDATE libro SET num_likes=num_likes-1 WHERE id_libro='{0}'", id);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            return retorno;
+
+        }
+
+
+
         public static List<libro> BuscarLibro(MySqlConnection conexion, string titulo)
         {
             List<libro> lista = new List<libro>();

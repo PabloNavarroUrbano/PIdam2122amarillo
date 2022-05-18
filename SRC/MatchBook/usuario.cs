@@ -39,6 +39,11 @@ namespace MatchBook
 
         }
 
+        public usuario(string email)
+        {
+            this.email = email;
+        }
+
         //Lista donde guardamos las instancias de los usuarios
         static List<usuario> plant = new List<usuario>();
 
@@ -134,7 +139,7 @@ namespace MatchBook
 
         }
 
-        /*
+        
                 public int SacarID(MySqlConnection conexion, string email)
                 {
                     int retorno;
@@ -159,7 +164,7 @@ namespace MatchBook
 
                     }
                 }
-        */
+        
 
 
 

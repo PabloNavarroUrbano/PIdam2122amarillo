@@ -307,6 +307,7 @@ namespace MatchBook
             this.btnInformacion.TabIndex = 2;
             this.btnInformacion.Text = "Informacion";
             this.btnInformacion.UseVisualStyleBackColor = true;
+            this.btnInformacion.Click += new System.EventHandler(this.btnInformacion_Click);
             // 
             // btnCerrarSesion
             // 
@@ -318,6 +319,7 @@ namespace MatchBook
             this.btnCerrarSesion.TabIndex = 1;
             this.btnCerrarSesion.Text = "Cerrar Sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click_1);
             // 
             // frmPrincipal
             // 

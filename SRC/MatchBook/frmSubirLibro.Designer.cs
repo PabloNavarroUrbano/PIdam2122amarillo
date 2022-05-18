@@ -53,6 +53,7 @@ namespace MatchBook
             this.txttitulo = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblidusu = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grpMenu.SuspendLayout();
             this.grbRegistro.SuspendLayout();
@@ -313,12 +314,21 @@ namespace MatchBook
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // lblidusu
+            // 
+            this.lblidusu.AutoSize = true;
+            this.lblidusu.Location = new System.Drawing.Point(966, 552);
+            this.lblidusu.Name = "lblidusu";
+            this.lblidusu.Size = new System.Drawing.Size(0, 17);
+            this.lblidusu.TabIndex = 38;
+            // 
             // frmSubirLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1069, 699);
+            this.Controls.Add(this.lblidusu);
             this.Controls.Add(this.lblrandom);
             this.Controls.Add(this.grbRegistro);
             this.Controls.Add(this.grpMenu);
@@ -364,5 +374,6 @@ namespace MatchBook
         private System.Windows.Forms.TextBox txttitulo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lblidusu;
     }
 }
