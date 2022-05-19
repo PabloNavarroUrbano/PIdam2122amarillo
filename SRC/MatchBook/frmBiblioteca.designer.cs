@@ -29,8 +29,8 @@ namespace MatchBook
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBiblioteca));
             this.lblMatchBook = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -38,16 +38,16 @@ namespace MatchBook
             this.dtgBiblioteca = new System.Windows.Forms.DataGridView();
             this.id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnPerfil = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblemail = new System.Windows.Forms.Label();
+            this.btnMenu2 = new System.Windows.Forms.Button();
             this.grpMenu = new System.Windows.Forms.GroupBox();
-            this.btnBiblioteca = new System.Windows.Forms.Button();
+            this.btnMiBiblioteca = new System.Windows.Forms.Button();
             this.btnForo = new System.Windows.Forms.Button();
             this.btnSubirPagina = new System.Windows.Forms.Button();
-            this.btnMatchBook = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.lblemail = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgBiblioteca)).BeginInit();
             this.grpMenu.SuspendLayout();
@@ -87,18 +87,18 @@ namespace MatchBook
             // 
             // dtgBiblioteca
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dtgBiblioteca.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dtgBiblioteca.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgBiblioteca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgBiblioteca.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgBiblioteca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgBiblioteca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgBiblioteca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgBiblioteca.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_usuario,
@@ -122,17 +122,6 @@ namespace MatchBook
             this.titulo.MinimumWidth = 6;
             this.titulo.Name = "titulo";
             // 
-            // btnPerfil
-            // 
-            this.btnPerfil.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.ForeColor = System.Drawing.Color.Black;
-            this.btnPerfil.Location = new System.Drawing.Point(6, 78);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(172, 51);
-            this.btnPerfil.TabIndex = 2;
-            this.btnPerfil.Text = "Perfil";
-            this.btnPerfil.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -145,38 +134,60 @@ namespace MatchBook
             this.label1.TabIndex = 21;
             this.label1.Text = "Mi biblioteca";
             // 
+            // lblemail
+            // 
+            this.lblemail.AutoSize = true;
+            this.lblemail.Location = new System.Drawing.Point(852, 121);
+            this.lblemail.Name = "lblemail";
+            this.lblemail.Size = new System.Drawing.Size(0, 17);
+            this.lblemail.TabIndex = 22;
+            // 
+            // btnMenu2
+            // 
+            this.btnMenu2.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnMenu2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu2.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu2.ForeColor = System.Drawing.Color.Black;
+            this.btnMenu2.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu2.Image")));
+            this.btnMenu2.Location = new System.Drawing.Point(12, 111);
+            this.btnMenu2.Name = "btnMenu2";
+            this.btnMenu2.Size = new System.Drawing.Size(68, 56);
+            this.btnMenu2.TabIndex = 24;
+            this.btnMenu2.UseCompatibleTextRendering = true;
+            this.btnMenu2.UseVisualStyleBackColor = false;
+            // 
             // grpMenu
             // 
-            this.grpMenu.Controls.Add(this.btnBiblioteca);
+            this.grpMenu.Controls.Add(this.btnMiBiblioteca);
             this.grpMenu.Controls.Add(this.btnForo);
             this.grpMenu.Controls.Add(this.btnSubirPagina);
-            this.grpMenu.Controls.Add(this.btnMatchBook);
+            this.grpMenu.Controls.Add(this.btnBuscar);
             this.grpMenu.Controls.Add(this.btnPerfil);
             this.grpMenu.Controls.Add(this.btnPrincipal);
             this.grpMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpMenu.Location = new System.Drawing.Point(12, 174);
+            this.grpMenu.Location = new System.Drawing.Point(12, 173);
             this.grpMenu.Name = "grpMenu";
-            this.grpMenu.Size = new System.Drawing.Size(184, 365);
-            this.grpMenu.TabIndex = 19;
+            this.grpMenu.Size = new System.Drawing.Size(184, 367);
+            this.grpMenu.TabIndex = 23;
             this.grpMenu.TabStop = false;
             // 
-            // btnBiblioteca
+            // btnMiBiblioteca
             // 
-            this.btnBiblioteca.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBiblioteca.ForeColor = System.Drawing.Color.Black;
-            this.btnBiblioteca.Location = new System.Drawing.Point(6, 306);
-            this.btnBiblioteca.Name = "btnBiblioteca";
-            this.btnBiblioteca.Size = new System.Drawing.Size(172, 51);
-            this.btnBiblioteca.TabIndex = 7;
-            this.btnBiblioteca.Text = "Biblioteca";
-            this.btnBiblioteca.UseVisualStyleBackColor = true;
+            this.btnMiBiblioteca.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMiBiblioteca.ForeColor = System.Drawing.Color.Black;
+            this.btnMiBiblioteca.Location = new System.Drawing.Point(6, 135);
+            this.btnMiBiblioteca.Name = "btnMiBiblioteca";
+            this.btnMiBiblioteca.Size = new System.Drawing.Size(172, 51);
+            this.btnMiBiblioteca.TabIndex = 7;
+            this.btnMiBiblioteca.Text = "Mi bilbioteca";
+            this.btnMiBiblioteca.UseVisualStyleBackColor = true;
             // 
             // btnForo
             // 
             this.btnForo.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForo.ForeColor = System.Drawing.Color.Black;
-            this.btnForo.Location = new System.Drawing.Point(6, 249);
+            this.btnForo.Location = new System.Drawing.Point(6, 306);
             this.btnForo.Name = "btnForo";
             this.btnForo.Size = new System.Drawing.Size(172, 51);
             this.btnForo.TabIndex = 5;
@@ -187,23 +198,34 @@ namespace MatchBook
             // 
             this.btnSubirPagina.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubirPagina.ForeColor = System.Drawing.Color.Black;
-            this.btnSubirPagina.Location = new System.Drawing.Point(6, 135);
+            this.btnSubirPagina.Location = new System.Drawing.Point(6, 192);
             this.btnSubirPagina.Name = "btnSubirPagina";
             this.btnSubirPagina.Size = new System.Drawing.Size(172, 51);
             this.btnSubirPagina.TabIndex = 4;
             this.btnSubirPagina.Text = "Subir Página";
             this.btnSubirPagina.UseVisualStyleBackColor = true;
             // 
-            // btnMatchBook
+            // btnBuscar
             // 
-            this.btnMatchBook.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMatchBook.ForeColor = System.Drawing.Color.Black;
-            this.btnMatchBook.Location = new System.Drawing.Point(6, 192);
-            this.btnMatchBook.Name = "btnMatchBook";
-            this.btnMatchBook.Size = new System.Drawing.Size(172, 51);
-            this.btnMatchBook.TabIndex = 6;
-            this.btnMatchBook.Text = "MatchBook";
-            this.btnMatchBook.UseVisualStyleBackColor = true;
+            this.btnBuscar.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscar.Location = new System.Drawing.Point(6, 249);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(172, 51);
+            this.btnBuscar.TabIndex = 6;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // btnPerfil
+            // 
+            this.btnPerfil.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.ForeColor = System.Drawing.Color.Black;
+            this.btnPerfil.Location = new System.Drawing.Point(6, 78);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(172, 51);
+            this.btnPerfil.TabIndex = 2;
+            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.UseVisualStyleBackColor = true;
             // 
             // btnPrincipal
             // 
@@ -215,29 +237,6 @@ namespace MatchBook
             this.btnPrincipal.TabIndex = 1;
             this.btnPrincipal.Text = "Principal";
             this.btnPrincipal.UseVisualStyleBackColor = true;
-            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.ForeColor = System.Drawing.Color.Black;
-            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
-            this.btnMenu.Location = new System.Drawing.Point(12, 111);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(68, 56);
-            this.btnMenu.TabIndex = 20;
-            this.btnMenu.UseCompatibleTextRendering = true;
-            this.btnMenu.UseVisualStyleBackColor = false;
-            // 
-            // lblemail
-            // 
-            this.lblemail.AutoSize = true;
-            this.lblemail.Location = new System.Drawing.Point(852, 121);
-            this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(0, 17);
-            this.lblemail.TabIndex = 22;
             // 
             // frmBiblioteca
             // 
@@ -245,11 +244,11 @@ namespace MatchBook
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1209, 643);
+            this.Controls.Add(this.btnMenu2);
+            this.Controls.Add(this.grpMenu);
             this.Controls.Add(this.lblemail);
             this.Controls.Add(this.dtgBiblioteca);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnMenu);
-            this.Controls.Add(this.grpMenu);
             this.Controls.Add(this.panel1);
             this.Name = "frmBiblioteca";
             this.Text = "frmBiblioteca";
@@ -271,15 +270,15 @@ namespace MatchBook
         private System.Windows.Forms.DataGridView dtgBiblioteca;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn titulo;
-        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnMenu;
+        private System.Windows.Forms.Label lblemail;
+        private System.Windows.Forms.Button btnMenu2;
         private System.Windows.Forms.GroupBox grpMenu;
+        private System.Windows.Forms.Button btnMiBiblioteca;
         private System.Windows.Forms.Button btnForo;
         private System.Windows.Forms.Button btnSubirPagina;
-        private System.Windows.Forms.Button btnMatchBook;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnPrincipal;
-        private System.Windows.Forms.Button btnBiblioteca;
-        private System.Windows.Forms.Label lblemail;
     }
 }
