@@ -360,3 +360,35 @@ C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\GIT IMPORTADO\18-05-22\PIdam2122amar
 C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\GIT IMPORTADO\18-05-22\PIdam2122amarillo-SRC\SRC\MatchBook\obj\Debug\MatchBook.csproj.CopyComplete
 C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\GIT IMPORTADO\18-05-22\PIdam2122amarillo-SRC\SRC\MatchBook\obj\Debug\MatchBook.exe
 C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\GIT IMPORTADO\18-05-22\PIdam2122amarillo-SRC\SRC\MatchBook\obj\Debug\MatchBook.pdb
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\MatchBook.exe.config
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\MatchBook.exe
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\MatchBook.pdb
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\Google.Protobuf.dll
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\ZstdNet.dll
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\System.Memory.dll
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\System.Buffers.dll
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\bin\Debug\MySql.Data.xml
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.csproj.AssemblyReference.cache
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.csproj.SuggestedBindingRedirects.cache
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.exe.config
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.AboutBox1.resources
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.frmInicioSesion.resources
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.frmPrincipal.resources
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.frmBiblioteca.resources
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.frmBuscar.resources
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.frmEditarUsuario.resources
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.frmForo.resources
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.frmSubirLibro.resources
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.Properties.Resources.resources
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.csproj.GenerateResource.cache
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.csproj.CoreCompileInputs.cache
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.csproj.CopyComplete
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.exe
+C:\Users\Álvaro Polo Ortuño\Desktop\CLASE\PROYECTO AMARILLO GIT\PIdam2122amarillo-SRC\SRC\MatchBook(alvaro edit)\obj\Debug\MatchBook.pdb

@@ -156,5 +156,11 @@ namespace MatchBook
         {
 
         }
+
+        private void bntExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+       
     }
 }

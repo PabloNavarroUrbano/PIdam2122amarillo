@@ -31,7 +31,6 @@ namespace MatchBook
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.grpMenu = new System.Windows.Forms.GroupBox();
-            this.btnMiBiblioteca = new System.Windows.Forms.Button();
             this.btnForo = new System.Windows.Forms.Button();
             this.btnSubirPagina = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -53,6 +52,7 @@ namespace MatchBook
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnInformacion = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnMiBiblioteca = new System.Windows.Forms.Button();
             this.grpMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -75,18 +75,6 @@ namespace MatchBook
             this.grpMenu.TabIndex = 0;
             this.grpMenu.TabStop = false;
             // 
-            // btnMiBiblioteca
-            // 
-            this.btnMiBiblioteca.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMiBiblioteca.ForeColor = System.Drawing.Color.Black;
-            this.btnMiBiblioteca.Location = new System.Drawing.Point(6, 135);
-            this.btnMiBiblioteca.Name = "btnMiBiblioteca";
-            this.btnMiBiblioteca.Size = new System.Drawing.Size(172, 51);
-            this.btnMiBiblioteca.TabIndex = 7;
-            this.btnMiBiblioteca.Text = "Mi bilbioteca";
-            this.btnMiBiblioteca.UseVisualStyleBackColor = true;
-            this.btnMiBiblioteca.Click += new System.EventHandler(this.btnMiBiblioteca_Click);
-            // 
             // btnForo
             // 
             this.btnForo.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -97,7 +85,6 @@ namespace MatchBook
             this.btnForo.TabIndex = 5;
             this.btnForo.Text = "Foro";
             this.btnForo.UseVisualStyleBackColor = true;
-            this.btnForo.Click += new System.EventHandler(this.btnForo_Click);
             // 
             // btnSubirPagina
             // 
@@ -281,7 +268,7 @@ namespace MatchBook
             this.btnMasCosas.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMasCosas.ForeColor = System.Drawing.Color.Black;
             this.btnMasCosas.Image = ((System.Drawing.Image)(resources.GetObject("btnMasCosas.Image")));
-            this.btnMasCosas.Location = new System.Drawing.Point(1065, 114);
+            this.btnMasCosas.Location = new System.Drawing.Point(1022, 114);
             this.btnMasCosas.Name = "btnMasCosas";
             this.btnMasCosas.Size = new System.Drawing.Size(79, 55);
             this.btnMasCosas.TabIndex = 16;
@@ -336,6 +323,18 @@ namespace MatchBook
             this.btnCerrarSesion.Text = "Cerrar Sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click_1);
+            // 
+            // btnMiBiblioteca
+            // 
+            this.btnMiBiblioteca.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMiBiblioteca.ForeColor = System.Drawing.Color.Black;
+            this.btnMiBiblioteca.Location = new System.Drawing.Point(6, 135);
+            this.btnMiBiblioteca.Name = "btnMiBiblioteca";
+            this.btnMiBiblioteca.Size = new System.Drawing.Size(172, 51);
+            this.btnMiBiblioteca.TabIndex = 7;
+            this.btnMiBiblioteca.Text = "Mi bilbioteca";
+            this.btnMiBiblioteca.UseVisualStyleBackColor = true;
+            this.btnMiBiblioteca.Click += new System.EventHandler(this.btnMiBiblioteca_Click);
             // 
             // frmPrincipal
             // 

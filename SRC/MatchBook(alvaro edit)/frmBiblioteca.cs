@@ -95,5 +95,32 @@ namespace MatchBook
             }
             //grbMenu2.Hide();
         }
+
+        private void btnMasCosas_Click(object sender, EventArgs e)
+        {
+            if (grbMenu2.Visible == true)
+
+            //comentario
+            {
+                grbMenu2.Visible = false;
+            }
+            else if (grbMenu2.Visible == false)
+            {
+                grbMenu2.Visible = true;
+            }
+            grpMenu.Hide();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmInicioSesion Form = new frmInicioSesion();
+            Form.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

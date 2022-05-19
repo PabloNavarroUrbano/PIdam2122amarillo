@@ -121,7 +121,7 @@ namespace MatchBook
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            this.Close();
+         this.Close();
             frmBuscar fr = new frmBuscar();
             fr.Show();   
         }
@@ -167,11 +167,6 @@ namespace MatchBook
             biblio.Show();
         }
 
-        private void btnForo_Click(object sender, EventArgs e)
-        {
-            frmForo foro = new frmForo(lblemail.Text);
-            this.Close();
-            foro.Show();
-        }
+
     }
 }

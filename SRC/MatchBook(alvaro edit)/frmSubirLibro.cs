@@ -204,5 +204,17 @@ namespace MatchBook
             }
             grpMenu.Hide();
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmInicioSesion Form = new frmInicioSesion();
+            Form.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

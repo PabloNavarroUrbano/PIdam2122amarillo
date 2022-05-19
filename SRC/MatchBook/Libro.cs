@@ -116,36 +116,6 @@ namespace MatchBook
 
         }
 
-        public int ObtieneIDLibro(MySqlConnection conexion, string titu)
-        {
-            int retorno;
-            string consulta;
-
-            consulta = String.Format("SELECT id_libro from libro WHERE titulo = '{0}'", titu);
-
-
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
-            MySqlDataReader reader = comando.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-
-                reader.Read();
-                retorno = Convert.ToInt32(reader.GetString(0));
-                reader.Close();
-                return retorno;
-
-            }
-            else
-            {
-                retorno = 1;
-                reader.Close();
-                return retorno;
-
-            }
-
-        }
-
 
         public int SacarMAX(MySqlConnection conexion)
         {
@@ -307,29 +277,6 @@ namespace MatchBook
             return lista;
         }
 
-        public List<string> CargarListaLibro(MySqlConnection conexion)
-        {
-            List<string> listalibro = new List<string>();
-
-            string consulta = String.Format("SELECT titulo FROM libro");
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
-            MySqlDataReader reader = comando.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-
-                while (reader.Read())
-                {
-                    string buscado = (reader.GetString(0));
-                    listalibro.Add(buscado.ToString());
-                }
-            }
-            reader.Close();
-
-            return listalibro;
-            
-        }
-            
 
     }
 }
