@@ -12,9 +12,10 @@ namespace MatchBook
 {
     public partial class frmBuscar : Form
     {
-        public frmBuscar()
+        public frmBuscar(string email)
         {
             InitializeComponent();
+            lblemail.Text = email;
         }
 
         private void frmBuscar_Load(object sender, EventArgs e)
@@ -70,22 +71,22 @@ namespace MatchBook
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            frmEditarUsuario perf = new frmEditarUsuario();
-            this.Close();
+            frmEditarUsuario perf = new frmEditarUsuario(lblemail.Text);
+            this.Hide();
             perf.Show();
         }
 
         private void btnSubirPagina_Click(object sender, EventArgs e)
         {
-            frmSubirLibro lib = new frmSubirLibro();
-            this.Close();
+            frmSubirLibro lib = new frmSubirLibro(lblemail.Text);
+            this.Hide();
             lib.Show();
         }
 
         private void btnPrincipal_Click(object sender, EventArgs e)
         {
             frmPrincipal prin = new frmPrincipal(lblemail.Text);
-            this.Close();
+            this.Hide();
             prin.Show();
         }
 
@@ -99,7 +100,7 @@ namespace MatchBook
         private void btnMiBiblioteca_Click(object sender, EventArgs e)
         {
             frmBiblioteca biblio = new frmBiblioteca(lblemail.Text);
-            this.Close();
+            this.Hide();
             biblio.Show();
         }
 
@@ -112,15 +113,15 @@ namespace MatchBook
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
-            this.Close();
-            frmBuscar fr = new frmBuscar();
+            this.Hide();
+            frmBuscar fr = new frmBuscar(lblemail.Text);
             fr.Show();
         }
 
         private void btnForo_Click_1(object sender, EventArgs e)
         {
             frmForo foro = new frmForo(lblemail.Text);
-            this.Close();
+            this.Hide();
             foro.Show();
         }
 

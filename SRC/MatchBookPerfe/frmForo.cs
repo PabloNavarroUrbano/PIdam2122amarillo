@@ -59,7 +59,7 @@ namespace MatchBook
 
         private void btnPrincipal_Click(object sender, EventArgs e)
         {
-            frmPrincipal prin = new frmPrincipal(lblemail.Text);
+            frmPrincipal prin = new frmPrincipal(lblUsu.Text);
             this.Close();
             prin.Show();
         }
@@ -67,35 +67,35 @@ namespace MatchBook
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmEditarUsuario edit = new frmEditarUsuario(lblemail.Text);
+            frmEditarUsuario edit = new frmEditarUsuario(lblUsu.Text);
             edit.Show();
         }
 
         private void btnMiBiblioteca_Click(object sender, EventArgs e)
         {
-            frmBiblioteca biblio = new frmBiblioteca(lblemail.Text);
-            this.Close();
+            frmBiblioteca biblio = new frmBiblioteca(lblUsu.Text);
+            this.Hide();
             biblio.Show();
         }
 
         private void btnSubirPagina_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmSubirLibro sub = new frmSubirLibro(lblemail.Text);
+            frmSubirLibro sub = new frmSubirLibro(lblUsu.Text);
             sub.Show();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frmBuscar fr = new frmBuscar();
+            this.Hide();
+            frmBuscar fr = new frmBuscar(lblUsu.Text);
             fr.Show();
         }
 
         private void btnForo_Click(object sender, EventArgs e)
         {
-            frmForo foro = new frmForo(lblemail.Text);
-            this.Close();
+            frmForo foro = new frmForo(lblUsu.Text);
+            this.Hide();
             foro.Show();
         }
 

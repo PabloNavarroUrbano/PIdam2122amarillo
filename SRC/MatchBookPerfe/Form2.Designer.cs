@@ -29,6 +29,7 @@ namespace MatchBook
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.grpMenu = new System.Windows.Forms.GroupBox();
             this.btnMiBiblioteca = new System.Windows.Forms.Button();
@@ -53,6 +54,8 @@ namespace MatchBook
             this.btnInformacion = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnMasCosas = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblLikes = new System.Windows.Forms.Label();
             this.grpMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -226,12 +229,13 @@ namespace MatchBook
             this.lblemail.AutoSize = true;
             this.lblemail.Location = new System.Drawing.Point(1155, 672);
             this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(0, 16);
+            this.lblemail.Size = new System.Drawing.Size(0, 17);
             this.lblemail.TabIndex = 14;
             // 
             // btnLike
             // 
             this.btnLike.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLike.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLike.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLike.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLike.ForeColor = System.Drawing.Color.Black;
@@ -361,12 +365,28 @@ namespace MatchBook
             this.btnMasCosas.UseVisualStyleBackColor = false;
             this.btnMasCosas.Click += new System.EventHandler(this.btnMasCosas_Click_1);
             // 
+            // lblLikes
+            // 
+            this.lblLikes.AutoSize = true;
+            this.lblLikes.BackColor = System.Drawing.Color.Transparent;
+            this.lblLikes.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.lblLikes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblLikes.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLikes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblLikes.Location = new System.Drawing.Point(655, 672);
+            this.lblLikes.Name = "lblLikes";
+            this.lblLikes.Size = new System.Drawing.Size(40, 27);
+            this.lblLikes.TabIndex = 43;
+            this.lblLikes.Text = "25";
+            this.lblLikes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1180, 713);
+            this.ClientSize = new System.Drawing.Size(1180, 705);
+            this.Controls.Add(this.lblLikes);
             this.Controls.Add(this.btnMasCosas);
             this.Controls.Add(this.grbMenu2);
             this.Controls.Add(this.lblemail);
@@ -423,5 +443,7 @@ namespace MatchBook
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnMiBiblioteca;
         private System.Windows.Forms.Button btnMasCosas;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label lblLikes;
     }
 }

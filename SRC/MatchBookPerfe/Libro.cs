@@ -260,6 +260,29 @@ namespace MatchBook
 
         }
 
+        public int ObtieneLikes(MySqlConnection conexion, int id)
+        {
+            int retorno;
+            string consulta;
+            consulta = String.Format("SELECT num_likes FROM libro WHERE id_libro = '{0}'", id);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                reader.Read();
+                retorno = reader.GetInt32(0);
+                reader.Close();
+                return retorno;
+            }
+            else
+            {
+
+                retorno = 0;
+                reader.Close();
+                return retorno;
+            }
+        }
 
 
         public static List<libro> BuscarLibro(MySqlConnection conexion, string titulo)

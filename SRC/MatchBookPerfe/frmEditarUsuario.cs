@@ -29,14 +29,14 @@ namespace MatchBook
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             frmPrincipal frprinc = new frmPrincipal(txtemail1.Text);
             frprinc.Show();
         }
 
         private void btnPrincipal_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             frmPrincipal principal = new frmPrincipal(txtemail1.Text);
             principal.Show();
         }
@@ -180,29 +180,29 @@ namespace MatchBook
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frmBuscar fr = new frmBuscar();
+            this.Hide();
+            frmBuscar fr = new frmBuscar(txtemail1.Text);
             fr.Show();
         }
 
         private void btnPrincipal_Click_1(object sender, EventArgs e)
         {
             frmPrincipal prin = new frmPrincipal(txtemail1.Text);
-            this.Close();
+            this.Hide();
             prin.Show();
         }
 
         private void btnPerfil_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            frmEditarUsuario edit = new frmEditarUsuario(tbxEmaill.Text);
+            frmEditarUsuario edit = new frmEditarUsuario(txtemail1.Text);
             edit.Show();
         }
 
         private void btnMiBiblioteca_Click(object sender, EventArgs e)
         {
-            frmBiblioteca biblio = new frmBiblioteca(tbxEmaill.Text);
-            this.Close();
+            frmBiblioteca biblio = new frmBiblioteca(txtemail1.Text);
+            this.Hide();
             biblio.Show();
         }
 
@@ -215,15 +215,15 @@ namespace MatchBook
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
-            this.Close();
-            frmBuscar fr = new frmBuscar();
+            this.Hide();
+            frmBuscar fr = new frmBuscar(txtemail1.Text);
             fr.Show();
         }
 
         private void btnForo_Click(object sender, EventArgs e)
         {
             frmForo foro = new frmForo(txtemail1.Text);
-            this.Close();
+            this.Hide();
             foro.Show();
         }
 

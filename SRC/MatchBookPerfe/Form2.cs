@@ -54,6 +54,7 @@ namespace MatchBook
             string titu;
             text = li.VisualizarContenido(BBDD.Conexion, id);
             titu = li.VisualizarTitulo(BBDD.Conexion, id);
+            lblLikes.Text = li.ObtieneLikes(BBDD.Conexion, id).ToString();
             txtitulo.Text = titu;
             txtPagina.Text = text;
             BBDD.CerrarConexion();
@@ -87,8 +88,11 @@ namespace MatchBook
             text = li.VisualizarContenido(BBDD.Conexion, id);
             txtPagina.Text = text;
             titu = li.VisualizarTitulo(BBDD.Conexion, id);
+            lblLikes.Text = li.ObtieneLikes(BBDD.Conexion, id).ToString();
             txtitulo.Text = titu;
             cont = 0;
+            Bitmap likeno = new Bitmap(Properties.Resources.like);
+            btnLike.Image = likeno;
             BBDD.CerrarConexion();
         }
 
@@ -102,6 +106,7 @@ namespace MatchBook
                 cont++;
                 Bitmap like = new Bitmap(Properties.Resources.likee);
                 btnLike.Image = like;
+                lblLikes.Text = li.ObtieneLikes(BBDD.Conexion, id).ToString();
             }
             else if (cont==1)
             {
@@ -109,14 +114,15 @@ namespace MatchBook
                 cont--;
                 Bitmap likeno = new Bitmap(Properties.Resources.like);
                 btnLike.Image = likeno;
+                lblLikes.Text = li.ObtieneLikes(BBDD.Conexion, id).ToString();
             }
             BBDD.CerrarConexion();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frmBuscar fr = new frmBuscar();
+            this.Hide();
+            frmBuscar fr = new frmBuscar(lblemail.Text);
             fr.Show();   
         }
 
@@ -157,14 +163,14 @@ namespace MatchBook
         {
 
             frmBiblioteca biblio = new frmBiblioteca(lblemail.Text);
-            this.Close();
+            this.Hide();
             biblio.Show();
         }
 
         private void btnForo_Click(object sender, EventArgs e)
         {
             frmForo foro = new frmForo(lblemail.Text);
-            this.Close();
+            this.Hide();
             foro.Show();
         }
 
@@ -172,7 +178,7 @@ namespace MatchBook
         {
 
             frmPrincipal prin = new frmPrincipal(lblemail.Text);
-            this.Close();
+            this.Hide();
             prin.Show();
 
         }
@@ -211,5 +217,7 @@ namespace MatchBook
         {
             Application.Exit();
         }
+
+        
     }
 }
