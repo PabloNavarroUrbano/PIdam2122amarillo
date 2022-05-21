@@ -1,7 +1,11 @@
 ﻿using System;
+using MatchBook.Recursos;
+using System.Globalization;
+using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,6 +26,43 @@ namespace MatchBook
         {
             InitializeComponent();
         }
+        private void AplicarIdioma()
+        {
+            btnSalir.Text = StringRecursos.btnSalir;
+            btnInformacion.Text = StringRecursos.btnInformacion;
+            btnCerrarSesion.Text = StringRecursos.btnCerrarSesion;
+            btnPrincipal.Text = StringRecursos.btnPrincipal;
+            btnPerfil.Text = StringRecursos.btnPerfil;
+            btnMiBiblioteca.Text = StringRecursos.btnBiblioteca;
+            btnSubirPagina.Text = StringRecursos.btnSubirPagina;
+            btnBuscar.Text = StringRecursos.btnBuscar;
+            btnForo.Text = StringRecursos.btnForo;
+            lblTitulo.Text = StringRecursos.lblTitulo;
+            lblAutor.Text = StringRecursos.lblAutor;
+            lblTexto.Text = StringRecursos.lblContenido;
+            lblPaginas.Text = StringRecursos.lblPagina;
+            btnSubirLibro.Text = StringRecursos.btnSubir;
+        }
+        private void cmbLengua_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cultura = "";
+            switch (cmbLengua.Text)
+            {
+                case "Castellano":
+                    {
+                        cultura = "ES-ES";
+                        break;
+                    }
+                case "English":
+                    {
+                        cultura = "EN-GB";
+                        break;
+                    }
+
+            }
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
+            AplicarIdioma();
+        }
 
         private void btnSubirLibro_Click_1(object sender, EventArgs e)
         {
@@ -38,7 +79,7 @@ namespace MatchBook
                     lib.Contenido = txtContenido.Text;
 
                     resultado = lib.AgregarLibro(BBDD.Conexion, lib, lblidusu.Text);
-                    MessageBox.Show("Listo pa");
+                    MessageBox.Show("Subido correctamente.");
                     BBDD.CerrarConexion();
                 }
             }
@@ -73,6 +114,8 @@ namespace MatchBook
             grbMenu2.Hide();
             grpMenu.Hide();
             txtContenido.MaxLength = 310;
+            cmbLengua.Text = "Castellano";
+            AplicarIdioma();
         }
         private bool ComprobacionCajasSubir()
         {
@@ -216,5 +259,13 @@ namespace MatchBook
         {
             Application.Exit();
         }
+
+        private void btnInformacion_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://matchbook.com.s3-website-us-east-1.amazonaws.com/español.html");
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        
     }
 }

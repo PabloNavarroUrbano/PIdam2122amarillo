@@ -1,7 +1,11 @@
 ﻿using System;
+using MatchBook.Recursos;
+using System.Globalization;
+using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,6 +30,18 @@ namespace MatchBook
       
 
 
+        }
+        private void AplicarIdioma()
+        {
+            btnSalir.Text = StringRecursos.btnSalir;
+            btnInformacion.Text = StringRecursos.btnInformacion;
+            btnCerrarSesion.Text = StringRecursos.btnCerrarSesion;
+            btnPrincipal.Text = StringRecursos.btnPrincipal;
+            btnPerfil.Text = StringRecursos.btnPerfil;
+            btnMiBiblioteca.Text = StringRecursos.btnBiblioteca;
+            btnSubirPagina.Text = StringRecursos.btnSubirPagina;
+            btnBuscar.Text = StringRecursos.btnBuscar;
+            btnForo.Text = StringRecursos.btnForo;
         }
 
         public frmPrincipal(string email)
@@ -60,8 +76,29 @@ namespace MatchBook
             BBDD.CerrarConexion();
             cont = 0;
             grbMenu2.Hide();
+            cmbLengua.Text = "Castellano";
+            AplicarIdioma();
         }
+        private void cmbLengua_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cultura = "";
+            switch (cmbLengua.Text)
+            {
+                case "Castellano":
+                    {
+                        cultura = "ES-ES";
+                        break;
+                    }
+                case "English":
+                    {
+                        cultura = "EN-GB";
+                        break;
+                    }
 
+            }
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
+            AplicarIdioma();
+        }
 
 
 
@@ -141,7 +178,8 @@ namespace MatchBook
 
         private void btnInformacion_Click(object sender, EventArgs e)
         {
-            
+            Process.Start("http://matchbook.com.s3-website-us-east-1.amazonaws.com/español.html");
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void btnAnyadir_Click(object sender, EventArgs e)
@@ -218,6 +256,5 @@ namespace MatchBook
             Application.Exit();
         }
 
-        
     }
 }

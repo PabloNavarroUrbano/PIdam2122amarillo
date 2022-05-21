@@ -58,6 +58,7 @@ namespace MatchBook
             this.btnMasCosas = new System.Windows.Forms.Button();
             this.lblemail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbLengua = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -299,7 +300,7 @@ namespace MatchBook
             this.grbMenu2.Controls.Add(this.btnCerrarSesion);
             this.grbMenu2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbMenu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbMenu2.Location = new System.Drawing.Point(852, 136);
+            this.grbMenu2.Location = new System.Drawing.Point(886, 142);
             this.grbMenu2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grbMenu2.Name = "grbMenu2";
             this.grbMenu2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -331,6 +332,7 @@ namespace MatchBook
             this.btnInformacion.TabIndex = 2;
             this.btnInformacion.Text = "Informacion";
             this.btnInformacion.UseVisualStyleBackColor = true;
+            this.btnInformacion.Click += new System.EventHandler(this.btnInformacion_Click);
             // 
             // btnCerrarSesion
             // 
@@ -352,7 +354,7 @@ namespace MatchBook
             this.btnMasCosas.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMasCosas.ForeColor = System.Drawing.Color.Black;
             this.btnMasCosas.Image = ((System.Drawing.Image)(resources.GetObject("btnMasCosas.Image")));
-            this.btnMasCosas.Location = new System.Drawing.Point(930, 93);
+            this.btnMasCosas.Location = new System.Drawing.Point(964, 93);
             this.btnMasCosas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMasCosas.Name = "btnMasCosas";
             this.btnMasCosas.Size = new System.Drawing.Size(59, 45);
@@ -364,7 +366,7 @@ namespace MatchBook
             // lblemail
             // 
             this.lblemail.AutoSize = true;
-            this.lblemail.Location = new System.Drawing.Point(115, 99);
+            this.lblemail.Location = new System.Drawing.Point(37, 106);
             this.lblemail.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblemail.Name = "lblemail";
             this.lblemail.Size = new System.Drawing.Size(0, 13);
@@ -383,14 +385,29 @@ namespace MatchBook
             this.label1.TabIndex = 45;
             this.label1.Text = "BUSCAR LIBRO";
             // 
+            // cmbLengua
+            // 
+            this.cmbLengua.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbLengua.FormattingEnabled = true;
+            this.cmbLengua.Items.AddRange(new object[] {
+            "Castellano",
+            "English"});
+            this.cmbLengua.Location = new System.Drawing.Point(898, 624);
+            this.cmbLengua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbLengua.Name = "cmbLengua";
+            this.cmbLengua.Size = new System.Drawing.Size(134, 30);
+            this.cmbLengua.TabIndex = 46;
+            this.cmbLengua.Text = "Idioma";
+            this.cmbLengua.SelectedIndexChanged += new System.EventHandler(this.cmbLengua_SelectedIndexChanged);
+            // 
             // frmBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1043, 665);
+            this.Controls.Add(this.cmbLengua);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblemail);
             this.Controls.Add(this.btnMasCosas);
             this.Controls.Add(this.grbMenu2);
             this.Controls.Add(this.btnMenu2);
@@ -399,6 +416,7 @@ namespace MatchBook
             this.Controls.Add(this.dtgvLibros);
             this.Controls.Add(this.txtbuscartitulo);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblemail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmBuscar";
@@ -445,5 +463,6 @@ namespace MatchBook
         private System.Windows.Forms.Button btnMasCosas;
         private System.Windows.Forms.Label lblemail;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbLengua;
     }
 }

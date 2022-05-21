@@ -1,7 +1,11 @@
 ﻿using System;
+using MatchBook.Recursos;
+using System.Globalization;
+using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,6 +27,45 @@ namespace MatchBook
             comboBox2.DataSource = listabook;
             BBDD.CerrarConexion();
             lblUsu.Text = email;
+        }
+        private void AplicarIdioma()
+        {
+            btnSalir.Text = StringRecursos.btnSalir;
+            btnInformacion.Text = StringRecursos.btnInformacion;
+            btnCerrarSesion.Text = StringRecursos.btnCerrarSesion;
+            btnPrincipal.Text = StringRecursos.btnPrincipal;
+            btnPerfil.Text = StringRecursos.btnPerfil;
+            btnMiBiblioteca.Text = StringRecursos.btnBiblioteca;
+            btnSubirPagina.Text = StringRecursos.btnSubirPagina;
+            btnBuscar.Text = StringRecursos.btnBuscar;
+            btnForo.Text = StringRecursos.btnForo;
+            lblTitulo.Text = StringRecursos.lblTitulo;
+            lblTexto.Text = StringRecursos.lblReseña;
+            label3.Text = StringRecursos.lblForo;
+            btnSubirLibro.Text = StringRecursos.btnSubirReseña;
+            label2.Text = StringRecursos.lblTitulo;
+            btnBuscarRes.Text = StringRecursos.btnBuscar;
+            label1.Text = StringRecursos.lblReseña;
+        }
+        private void cmbLengua_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cultura = "";
+            switch (cmbLengua.Text)
+            {
+                case "Castellano":
+                    {
+                        cultura = "ES-ES";
+                        break;
+                    }
+                case "English":
+                    {
+                        cultura = "EN-GB";
+                        break;
+                    }
+
+            }
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
+            AplicarIdioma();
         }
 
         private void btnMasCosas_Click(object sender, EventArgs e)
@@ -135,6 +178,8 @@ namespace MatchBook
         {
             grbMenu2.Hide();
             grpMenu.Hide();
+            cmbLengua.Text = "Castellano";
+            AplicarIdioma();
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
@@ -196,5 +241,13 @@ namespace MatchBook
             }
             txtResenya.Text = "";
         }
+
+        private void btnInformacion_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://matchbook.com.s3-website-us-east-1.amazonaws.com/español.html");
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        
     }
 }

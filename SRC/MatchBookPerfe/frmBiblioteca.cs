@@ -1,7 +1,11 @@
 ﻿using System;
+using MatchBook.Recursos;
+using System.Globalization;
+using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,14 +21,50 @@ namespace MatchBook
             InitializeComponent();
             lblemail.Text = email;
         }
+        private void AplicarIdioma()
+        {
+            btnSalir.Text = StringRecursos.btnSalir;
+            btnInformacion.Text = StringRecursos.btnInformacion;
+            btnCerrarSesion.Text = StringRecursos.btnCerrarSesion;
+            btnPrincipal.Text = StringRecursos.btnPrincipal;
+            btnPerfil.Text = StringRecursos.btnPerfil;
+            btnMiBiblioteca.Text = StringRecursos.btnBiblioteca;
+            btnSubirPagina.Text = StringRecursos.btnSubirPagina;
+            btnBuscar.Text = StringRecursos.btnBuscar;
+            btnForo.Text = StringRecursos.btnForo;
+            label1.Text = StringRecursos.lblMiBiblioteca;
 
+        }
         private void frmBiblioteca_Load(object sender, EventArgs e)
         {
             grpMenu.Hide();
-            
+            cmbLengua.Text = "Castellano";
+            AplicarIdioma();
             BBDD.AbrirConexion();
+            grbMenu2.Hide();
+            lblemail.Hide();
             RellenarDtgvBiblio();
             BBDD.CerrarConexion();
+        }
+        private void cmbLengua_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cultura = "";
+            switch (cmbLengua.Text)
+            {
+                case "Castellano":
+                    {
+                        cultura = "ES-ES";
+                        break;
+                    }
+                case "English":
+                    {
+                        cultura = "EN-GB";
+                        break;
+                    }
+
+            }
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
+            AplicarIdioma();
         }
 
 
@@ -122,5 +162,13 @@ namespace MatchBook
         {
             Application.Exit();
         }
+
+        private void btnInformacion_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://matchbook.com.s3-website-us-east-1.amazonaws.com/español.html");
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        
     }
 }

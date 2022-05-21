@@ -117,52 +117,106 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Id_libro.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="titulo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="autor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="paginas.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="num_likes.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnMasCosas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAA2lJREFUeF7t
-        2knITlEcx/HXuDDPRZaGDElRSKZQsmQhIUlKhkKyINNGyBhiochKUpRQyoqyUGJhFjYSyjyW6fuLp263
-        //Oc+7z3vufc9+n86tNLXeeee97rjLcpJiYmJiYmJsZjluIhfuNPwgvsREc0bOYg+dCWPWjYXIb10Ekf
-        0BYNmbuwHjqtF1pdeqL9vz9WTdYG6I1a6fv/ZykyFnegin/DLnRAOm3wFumHtYyAlQV4BV2jn/p70EzF
-        J6Qf4CzSjTAP6euqOYB01sC6dh2CZAa+wKqU3MAsjMZGfIV1nUVD5DGMw3gch3VdxXp4zSTodbcqE8oq
-        eMsTWJUI6TsGosXTH1YFymAuWjzq3Mr2+leoz/CSTbAqEJJmmRpqvUQ3OgyrIiHchPfZoxrhEqwKVfMT
-        57EEw9ANnTAIWiidxGdY/7aap+iBIJkMq1KWKxgJV9TJusb9pGATIWUUrEqlaZ1f7wpvMTS0WeUlaX8h
-        WLbBqlTSXjQ3mutbZSZdhPd0wUr8gFWpimtohzw5AqvspENosRWiXt3VuA2t5kSdmVWRJM3nixiX++A9
-        rHukVeqnLbftcC3PM2UDrJu56LdfVA7CuofLFuTOc1iFuxTZO0+DdQ+XB8gdq+AstFdQVLrCuofLR+SO
-        VXAWg1Fk9DDWfWoJ2gBDUGSsnSeXoA1Q5H8BTZmte7gU0gDPYBXuUuQ21XRY93C5h9zRg1iFu5RhGNRe
-        ZO5o1bcCt1DvREgbmnmjiZBOi6x7pL2D6vcImgMUMhGy0hlZpsLXkXcqfBRW2Un7EOSwJMtiaD+am0Ww
-        ykw6h2DJuhzejXrfBG2auN4wUSMFSz0bIlehBnNlAE7AKsPi9TwgmeZsif3CBWgTYzi6Q1timjVqS/sU
-        ap02WdThaarsNWXbFNWQ67URNsOqSEjeOkN9w1PWg5EsfUzulPlobDa8RB2PVYGQ1Hn2g5dMRD3n/T4s
-        h9fMRK1G0DRYH0iMwVbU029UPpBQQ0/BaVjXVZTuK5EzSH8io4OO9HXVWGcJ1UaetQiaCbgPVUa/5R2w
-        VmGaCmfd1RkKK8ug1Z6ueY2FKE20bHUtP7N+WVJrUqNzCo1Emoy1uhTRAK06WhBZD5z0Bg2b+bAeOkkn
-        yQ0djdePkX7wl2j4z+VjYmJiYmJiypKmpr9+R42qRgk+uAAAAABJRU5ErkJggg==
-</value>
+  <data name="botonbuscar" xml:space="preserve">
+    <value>Search</value>
   </data>
-  <data name="btnMenu2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAC
-        qwAAAqsBQFZX7AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACcSURBVEhLtdUx
-        CoRAFAPQtHaCt1q22NtYegebPZM2C9t4AluvMCZoYfHL5MMbMEUGHJhBay1KM9BEf9pM1KVOdeNL2ipB
-        3dgfgZu6MT8CN3Wjp5FW+pmoS519efJOZehUhk7XAnT0oo+Jurq7G286SF9O6lQ3ljtIUHd+g+wvih+y
-        lqQydCpDJ032suPEr+v4gxN/MrOPfnXyPg0nwJGEBjCbTk0AAAAASUVORK5CYII=
-</value>
+  <data name="btnBiblioteca" xml:space="preserve">
+    <value>My library</value>
+  </data>
+  <data name="btnBuscar" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="btnCerrarSesion" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="btnEditar" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="btnEntrar" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="btnForo" xml:space="preserve">
+    <value>Forum</value>
+  </data>
+  <data name="btnInformacion" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="btnPerfil" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="btnPrincipal" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="btnRegistro" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="btnSalir" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="btnSubir" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btnSubirPagina" xml:space="preserve">
+    <value>Page up</value>
+  </data>
+  <data name="btnSubirReseña" xml:space="preserve">
+    <value>Add  Review</value>
+  </data>
+  <data name="lblAMor" xml:space="preserve">
+    <value>Love at first page</value>
+  </data>
+  <data name="lblAutor" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="lblBuscarLibro" xml:space="preserve">
+    <value>BOOK SEARCH</value>
+  </data>
+  <data name="lblConfirmarCon" xml:space="preserve">
+    <value>Confirm Pass.</value>
+  </data>
+  <data name="lblContenido" xml:space="preserve">
+    <value>Content to show</value>
+  </data>
+  <data name="lblContraseña" xml:space="preserve">
+    <value>Password: </value>
+  </data>
+  <data name="lblDirección" xml:space="preserve">
+    <value>Address: </value>
+  </data>
+  <data name="lblEmail" xml:space="preserve">
+    <value>Email: </value>
+  </data>
+  <data name="lblFechaNacimiento" xml:space="preserve">
+    <value>Date of birth: </value>
+  </data>
+  <data name="lblForo" xml:space="preserve">
+    <value>FORUM</value>
+  </data>
+  <data name="lblMiBiblioteca" xml:space="preserve">
+    <value>MY LIBRARY</value>
+  </data>
+  <data name="lblMostrarContrasenya" xml:space="preserve">
+    <value>Show password</value>
+  </data>
+  <data name="lblPagina" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="lblPerfil" xml:space="preserve">
+    <value>PROFILE</value>
+  </data>
+  <data name="lblRegistro" xml:space="preserve">
+    <value>Don´t you have an account? Register now!</value>
+  </data>
+  <data name="lblReseña" xml:space="preserve">
+    <value>Review: </value>
+  </data>
+  <data name="lblSubirLibro" xml:space="preserve">
+    <value>ADD BOOK</value>
+  </data>
+  <data name="lblTitulo" xml:space="preserve">
+    <value>Title: </value>
+  </data>
+  <data name="lblUsuario" xml:space="preserve">
+    <value>Username</value>
   </data>
 </root>

@@ -74,6 +74,7 @@ namespace MatchBook
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnMasCosas = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.cmbLengua = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.grbRegistro.SuspendLayout();
             this.gboxModificar.SuspendLayout();
@@ -122,6 +123,7 @@ namespace MatchBook
             this.grbRegistro.Controls.Add(this.lblFechaNacimiento);
             this.grbRegistro.Controls.Add(this.lblDireccion);
             this.grbRegistro.Controls.Add(this.lblUsername);
+            this.grbRegistro.Controls.Add(this.gboxModificar);
             this.grbRegistro.Controls.Add(this.lblContrasenya);
             this.grbRegistro.Controls.Add(this.lblEmail);
             this.grbRegistro.Controls.Add(this.btnModificar);
@@ -134,10 +136,9 @@ namespace MatchBook
             this.grbRegistro.Margin = new System.Windows.Forms.Padding(2);
             this.grbRegistro.Name = "grbRegistro";
             this.grbRegistro.Padding = new System.Windows.Forms.Padding(2);
-            this.grbRegistro.Size = new System.Drawing.Size(376, 394);
+            this.grbRegistro.Size = new System.Drawing.Size(415, 394);
             this.grbRegistro.TabIndex = 34;
             this.grbRegistro.TabStop = false;
-            this.grbRegistro.Text = ".";
             // 
             // lblFechaNacimiento
             // 
@@ -290,11 +291,11 @@ namespace MatchBook
             this.gboxModificar.Controls.Add(this.tbxDireccion);
             this.gboxModificar.Controls.Add(this.tbxUsername);
             this.gboxModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gboxModificar.Location = new System.Drawing.Point(250, 173);
+            this.gboxModificar.Location = new System.Drawing.Point(0, 0);
             this.gboxModificar.Margin = new System.Windows.Forms.Padding(1);
             this.gboxModificar.Name = "gboxModificar";
             this.gboxModificar.Padding = new System.Windows.Forms.Padding(1);
-            this.gboxModificar.Size = new System.Drawing.Size(380, 394);
+            this.gboxModificar.Size = new System.Drawing.Size(415, 394);
             this.gboxModificar.TabIndex = 36;
             this.gboxModificar.TabStop = false;
             this.gboxModificar.Enter += new System.EventHandler(this.gboxModificar_Enter_1);
@@ -330,7 +331,7 @@ namespace MatchBook
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 279);
+            this.label5.Location = new System.Drawing.Point(7, 276);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(170, 21);
@@ -438,7 +439,7 @@ namespace MatchBook
             // 
             // txtemail1
             // 
-            this.txtemail1.Location = new System.Drawing.Point(80, 119);
+            this.txtemail1.Location = new System.Drawing.Point(36, 104);
             this.txtemail1.Margin = new System.Windows.Forms.Padding(1);
             this.txtemail1.Name = "txtemail1";
             this.txtemail1.Size = new System.Drawing.Size(8, 20);
@@ -596,6 +597,7 @@ namespace MatchBook
             this.btnInformacion.TabIndex = 2;
             this.btnInformacion.Text = "Informacion";
             this.btnInformacion.UseVisualStyleBackColor = true;
+            this.btnInformacion.Click += new System.EventHandler(this.btnInformacion_Click);
             // 
             // btnCerrarSesion
             // 
@@ -617,7 +619,7 @@ namespace MatchBook
             this.btnMasCosas.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMasCosas.ForeColor = System.Drawing.Color.Black;
             this.btnMasCosas.Image = ((System.Drawing.Image)(resources.GetObject("btnMasCosas.Image")));
-            this.btnMasCosas.Location = new System.Drawing.Point(809, 90);
+            this.btnMasCosas.Location = new System.Drawing.Point(805, 88);
             this.btnMasCosas.Margin = new System.Windows.Forms.Padding(2);
             this.btnMasCosas.Name = "btnMasCosas";
             this.btnMasCosas.Size = new System.Drawing.Size(59, 45);
@@ -639,15 +641,30 @@ namespace MatchBook
             this.label11.TabIndex = 43;
             this.label11.Text = "PERFIL";
             // 
+            // cmbLengua
+            // 
+            this.cmbLengua.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbLengua.FormattingEnabled = true;
+            this.cmbLengua.Items.AddRange(new object[] {
+            "Castellano",
+            "English"});
+            this.cmbLengua.Location = new System.Drawing.Point(738, 574);
+            this.cmbLengua.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbLengua.Name = "cmbLengua";
+            this.cmbLengua.Size = new System.Drawing.Size(130, 30);
+            this.cmbLengua.TabIndex = 44;
+            this.cmbLengua.Text = "Idioma";
+            this.cmbLengua.SelectedIndexChanged += new System.EventHandler(this.cmbLengua_SelectedIndexChanged);
+            // 
             // frmEditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(881, 633);
+            this.Controls.Add(this.cmbLengua);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnMasCosas);
-            this.Controls.Add(this.gboxModificar);
             this.Controls.Add(this.grbMenu2);
             this.Controls.Add(this.btnMenu2);
             this.Controls.Add(this.grpMenu);
@@ -720,5 +737,6 @@ namespace MatchBook
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnMasCosas;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cmbLengua;
     }
 }

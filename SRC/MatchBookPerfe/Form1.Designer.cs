@@ -32,6 +32,7 @@ namespace MatchBook
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbLengua = new System.Windows.Forms.ComboBox();
             this.grbRegistro = new System.Windows.Forms.GroupBox();
             this.btnRegistro = new System.Windows.Forms.Button();
             this.dtpfecha = new System.Windows.Forms.DateTimePicker();
@@ -63,14 +64,30 @@ namespace MatchBook
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.cmbLengua);
             this.panel1.Controls.Add(this.grbRegistro);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Location = new System.Drawing.Point(544, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 519);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // cmbLengua
+            // 
+            this.cmbLengua.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbLengua.FormattingEnabled = true;
+            this.cmbLengua.Items.AddRange(new object[] {
+            "Castellano",
+            "English"});
+            this.cmbLengua.Location = new System.Drawing.Point(51, 477);
+            this.cmbLengua.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbLengua.Name = "cmbLengua";
+            this.cmbLengua.Size = new System.Drawing.Size(166, 30);
+            this.cmbLengua.TabIndex = 2;
+            this.cmbLengua.Text = "Idioma";
+            this.cmbLengua.SelectedIndexChanged += new System.EventHandler(this.cmbLengua_SelectedIndexChanged);
             // 
             // grbRegistro
             // 
@@ -86,9 +103,9 @@ namespace MatchBook
             this.grbRegistro.Controls.Add(this.txtemail1);
             this.grbRegistro.Controls.Add(this.label6);
             this.grbRegistro.Location = new System.Drawing.Point(26, 93);
-            this.grbRegistro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbRegistro.Margin = new System.Windows.Forms.Padding(2);
             this.grbRegistro.Name = "grbRegistro";
-            this.grbRegistro.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbRegistro.Padding = new System.Windows.Forms.Padding(2);
             this.grbRegistro.Size = new System.Drawing.Size(191, 345);
             this.grbRegistro.TabIndex = 32;
             this.grbRegistro.TabStop = false;
@@ -96,7 +113,7 @@ namespace MatchBook
             // btnRegistro
             // 
             this.btnRegistro.Location = new System.Drawing.Point(54, 309);
-            this.btnRegistro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistro.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(68, 24);
             this.btnRegistro.TabIndex = 14;
@@ -108,7 +125,7 @@ namespace MatchBook
             // 
             this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpfecha.Location = new System.Drawing.Point(8, 275);
-            this.dtpfecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpfecha.Margin = new System.Windows.Forms.Padding(2);
             this.dtpfecha.Name = "dtpfecha";
             this.dtpfecha.Size = new System.Drawing.Size(151, 20);
             this.dtpfecha.TabIndex = 13;
@@ -131,7 +148,7 @@ namespace MatchBook
             this.txtdir.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtdir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdir.Location = new System.Drawing.Point(8, 217);
-            this.txtdir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtdir.Margin = new System.Windows.Forms.Padding(2);
             this.txtdir.Name = "txtdir";
             this.txtdir.Size = new System.Drawing.Size(152, 22);
             this.txtdir.TabIndex = 11;
@@ -154,7 +171,7 @@ namespace MatchBook
             this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.Location = new System.Drawing.Point(8, 160);
-            this.txtuser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtuser.Margin = new System.Windows.Forms.Padding(2);
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(152, 22);
             this.txtuser.TabIndex = 9;
@@ -177,7 +194,7 @@ namespace MatchBook
             this.txtpsw.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpsw.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpsw.Location = new System.Drawing.Point(8, 101);
-            this.txtpsw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtpsw.Margin = new System.Windows.Forms.Padding(2);
             this.txtpsw.Name = "txtpsw";
             this.txtpsw.PasswordChar = '*';
             this.txtpsw.Size = new System.Drawing.Size(152, 22);
@@ -201,7 +218,7 @@ namespace MatchBook
             this.txtemail1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtemail1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtemail1.Location = new System.Drawing.Point(8, 41);
-            this.txtemail1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtemail1.Margin = new System.Windows.Forms.Padding(2);
             this.txtemail1.Name = "txtemail1";
             this.txtemail1.Size = new System.Drawing.Size(152, 22);
             this.txtemail1.TabIndex = 5;
@@ -225,21 +242,21 @@ namespace MatchBook
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(181, 288);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(203, 22);
-            this.txtEmail.TabIndex = 1;
+            this.txtEmail.TabIndex = 0;
             // 
             // txtContraseña
             // 
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.Location = new System.Drawing.Point(181, 344);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(203, 22);
-            this.txtContraseña.TabIndex = 2;
+            this.txtContraseña.TabIndex = 1;
             // 
             // lblEmail
             // 
@@ -319,10 +336,10 @@ namespace MatchBook
             // 
             this.btnEntrar.BackColor = System.Drawing.Color.Black;
             this.btnEntrar.Location = new System.Drawing.Point(258, 387);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(57, 21);
-            this.btnEntrar.TabIndex = 11;
+            this.btnEntrar.TabIndex = 3;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -366,7 +383,7 @@ namespace MatchBook
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio Sesion";
@@ -406,6 +423,7 @@ namespace MatchBook
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button bntExit;
+        private System.Windows.Forms.ComboBox cmbLengua;
     }
 }
 

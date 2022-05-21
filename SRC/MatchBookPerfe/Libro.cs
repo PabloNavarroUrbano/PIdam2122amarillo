@@ -288,7 +288,7 @@ namespace MatchBook
         public static List<libro> BuscarLibro(MySqlConnection conexion, string titulo)
         {
             List<libro> lista = new List<libro>();
-            string consulta = String.Format("SELECT id_libro,titulo,autor,paginas,num_likes FROM libro WHERE titulo = ('{0}') ", titulo);
+            string consulta = String.Format("SELECT id_libro,titulo,autor,paginas,num_likes FROM libro WHERE titulo LIKE '%{0}%'", titulo);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             MySqlDataReader reader = comando.ExecuteReader();

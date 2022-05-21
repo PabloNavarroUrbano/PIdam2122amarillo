@@ -1,4 +1,7 @@
 ﻿using System;
+using MatchBook.Recursos;
+using System.Globalization;
+using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,13 +20,50 @@ namespace MatchBook
         {
             InitializeComponent();
         }
+        private void AplicarIdioma()
+        {
+            lblEmail.Text = StringRecursos.lblEmail;
+            label1.Text = StringRecursos.lblContraseña;
+            btnEntrar.Text = StringRecursos.btnBuscar;
+            label5.Text = StringRecursos.lblRegistro;
+            label6.Text = StringRecursos.lblEmail;
+            label7.Text = StringRecursos.lblContraseña;
+            label8.Text = StringRecursos.lblUsuario;
+            label9.Text = StringRecursos.lblDirección;
+            label10.Text = StringRecursos.lblFechaNacimiento;
+            btnRegistro.Text = StringRecursos.btnregistro;
+            bntExit.Text = StringRecursos.btnSalir;
+            label4.Text = StringRecursos.lblAMor;
 
+
+        }
         private void frm1_Load(object sender, EventArgs e)
         {
             grbRegistro.Hide();
+            cmbLengua.Text = "Castellano";
+            AplicarIdioma();
+        }
+        private void cmbLengua_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cultura = "";
+            switch (cmbLengua.Text)
+            {
+                case "Castellano":
+                    {
+                        cultura = "ES-ES";
+                        break;
+                    }
+                case "English":
+                    {
+                        cultura = "EN-GB";
+                        break;
+                    }
+                    
+            }
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
+            AplicarIdioma();
         }
 
-        
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -77,7 +117,7 @@ namespace MatchBook
 
                         int resultado = 1;
                         resultado = usu.AgregarUsuario(BBDD.Conexion, usu);
-                        MessageBox.Show("Listo pa");
+                        MessageBox.Show("Te has registrado correctamente.");
                         grbRegistro.Hide();
                         BBDD.CerrarConexion();
                     }
@@ -89,7 +129,7 @@ namespace MatchBook
             }
             else
             {
-                MessageBox.Show("salio mal pa");
+                MessageBox.Show("Algo ha salido mal...");
             }
         }
 
@@ -161,6 +201,7 @@ namespace MatchBook
         {
             Application.Exit();
         }
-       
+
+        
     }
 }

@@ -1,7 +1,11 @@
 ﻿using System;
+using MatchBook.Recursos;
+using System.Globalization;
+using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,7 +27,25 @@ namespace MatchBook
             InitializeComponent();
             txtemail1.Text = ema;
         }
-       
+        private void AplicarIdioma()
+        {
+            btnSalir.Text = StringRecursos.btnSalir;
+            btnInformacion.Text = StringRecursos.btnInformacion;
+            btnCerrarSesion.Text = StringRecursos.btnCerrarSesion;
+            btnPrincipal.Text = StringRecursos.btnPrincipal;
+            btnPerfil.Text = StringRecursos.btnPerfil;
+            btnMiBiblioteca.Text = StringRecursos.btnBiblioteca;
+            btnSubirPagina.Text = StringRecursos.btnSubirPagina;
+            btnBuscar.Text = StringRecursos.btnBuscar;
+            btnForo.Text = StringRecursos.btnForo;
+            label11.Text = StringRecursos.lblPerfil;
+            lblUsername.Text = StringRecursos.lblUsuario;
+            lblDireccion.Text = StringRecursos.lblDirección;
+            lblEmail.Text = StringRecursos.lblEmail;
+            lblContrasenya.Text = StringRecursos.lblContraseña;
+            checkBox1.Text = StringRecursos.lblMostrarContrasenya;
+            label5.Text = StringRecursos.lblConfirmarCon;
+        }
 
 
 
@@ -50,12 +72,34 @@ namespace MatchBook
             frmSubirLibro lib = new frmSubirLibro();
             lib.Show();
         }
+        private void cmbLengua_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cultura = "";
+            switch (cmbLengua.Text)
+            {
+                case "Castellano":
+                    {
+                        cultura = "ES-ES";
+                        break;
+                    }
+                case "English":
+                    {
+                        cultura = "EN-GB";
+                        break;
+                    }
+
+            }
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
+            AplicarIdioma();
+        }
 
         private void frmEditarUsuario_Load(object sender, EventArgs e)
         {
             grpMenu.Hide();
             grbMenu2.Hide();
             gboxModificar.Hide();
+            cmbLengua.Text = "Castellano";
+            AplicarIdioma();
 
 
             string consulta = String.Format("SELECT username,email,direccion,pswd,fecha_nac FROM usuario WHERE email='{0}'", txtemail1.Text);
@@ -281,5 +325,13 @@ namespace MatchBook
         {
 
         }
+
+        private void btnInformacion_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://matchbook.com.s3-website-us-east-1.amazonaws.com/español.html");
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        
     }
 }
