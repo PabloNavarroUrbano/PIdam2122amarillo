@@ -91,7 +91,7 @@ namespace MatchBook
 
 
                 resultado = res.AgregarResenya(BBDD.Conexion, res, lblUsu.Text,comboBox1.Text);
-                MessageBox.Show("Listo pa");
+                MessageBox.Show("Reseña agregada correctamente");
                 BBDD.CerrarConexion();
             }else
             {
