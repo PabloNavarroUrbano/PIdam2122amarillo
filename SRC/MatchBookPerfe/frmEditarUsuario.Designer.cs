@@ -36,7 +36,7 @@ namespace MatchBook
             this.grbRegistro = new System.Windows.Forms.GroupBox();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
-            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblEmail2 = new System.Windows.Forms.Label();
             this.lblContrasenya = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -122,8 +122,7 @@ namespace MatchBook
             // 
             this.grbRegistro.Controls.Add(this.lblFechaNacimiento);
             this.grbRegistro.Controls.Add(this.lblDireccion);
-            this.grbRegistro.Controls.Add(this.lblUsername);
-            this.grbRegistro.Controls.Add(this.gboxModificar);
+            this.grbRegistro.Controls.Add(this.lblEmail2);
             this.grbRegistro.Controls.Add(this.lblContrasenya);
             this.grbRegistro.Controls.Add(this.lblEmail);
             this.grbRegistro.Controls.Add(this.btnModificar);
@@ -159,21 +158,23 @@ namespace MatchBook
             this.lblDireccion.Location = new System.Drawing.Point(179, 188);
             this.lblDireccion.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(51, 20);
+            this.lblDireccion.Size = new System.Drawing.Size(75, 20);
             this.lblDireccion.TabIndex = 19;
-            this.lblDireccion.Text = "label5";
+            this.lblDireccion.Text = "Direccion";
             // 
-            // lblUsername
+            // lblEmail2
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblUsername.Location = new System.Drawing.Point(179, 136);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(51, 20);
-            this.lblUsername.TabIndex = 18;
-            this.lblUsername.Text = "label4";
+            this.lblEmail2.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.lblEmail2.AutoSize = true;
+            this.lblEmail2.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmail2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblEmail2.Location = new System.Drawing.Point(179, 136);
+            this.lblEmail2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblEmail2.Name = "lblEmail2";
+            this.lblEmail2.Size = new System.Drawing.Size(48, 20);
+            this.lblEmail2.TabIndex = 18;
+            this.lblEmail2.Text = "Email";
             // 
             // lblContrasenya
             // 
@@ -291,7 +292,7 @@ namespace MatchBook
             this.gboxModificar.Controls.Add(this.tbxDireccion);
             this.gboxModificar.Controls.Add(this.tbxUsername);
             this.gboxModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gboxModificar.Location = new System.Drawing.Point(0, 0);
+            this.gboxModificar.Location = new System.Drawing.Point(250, 173);
             this.gboxModificar.Margin = new System.Windows.Forms.Padding(1);
             this.gboxModificar.Name = "gboxModificar";
             this.gboxModificar.Padding = new System.Windows.Forms.Padding(1);
@@ -665,6 +666,7 @@ namespace MatchBook
             this.Controls.Add(this.cmbLengua);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnMasCosas);
+            this.Controls.Add(this.gboxModificar);
             this.Controls.Add(this.grbMenu2);
             this.Controls.Add(this.btnMenu2);
             this.Controls.Add(this.grpMenu);
@@ -699,7 +701,7 @@ namespace MatchBook
         private System.Windows.Forms.GroupBox grbRegistro;
         private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.Label lblDireccion;
-        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblEmail2;
         private System.Windows.Forms.Label lblContrasenya;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Button btnModificar;

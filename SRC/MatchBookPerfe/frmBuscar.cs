@@ -40,6 +40,7 @@ namespace MatchBook
             grpMenu.Hide();
             grbMenu2.Hide();
             cmbLengua.Text = "Castellano";
+            lblemail.Hide();
             AplicarIdioma();
         }
         private void cmbLengua_SelectedIndexChanged(object sender, EventArgs e)

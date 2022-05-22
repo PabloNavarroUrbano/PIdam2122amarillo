@@ -73,7 +73,7 @@ namespace MatchBook
             this.panel1.Controls.Add(this.lblMatchBook);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1043, 85);
             this.panel1.TabIndex = 14;
@@ -83,7 +83,7 @@ namespace MatchBook
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.Location = new System.Drawing.Point(296, 267);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(260, 188);
             this.panel2.TabIndex = 13;
@@ -105,7 +105,7 @@ namespace MatchBook
             // 
             this.txtbuscartitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbuscartitulo.Location = new System.Drawing.Point(160, 153);
-            this.txtbuscartitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtbuscartitulo.Margin = new System.Windows.Forms.Padding(2);
             this.txtbuscartitulo.Name = "txtbuscartitulo";
             this.txtbuscartitulo.Size = new System.Drawing.Size(625, 30);
             this.txtbuscartitulo.TabIndex = 17;
@@ -120,7 +120,7 @@ namespace MatchBook
             this.paginas,
             this.num_likes});
             this.dtgvLibros.Location = new System.Drawing.Point(160, 199);
-            this.dtgvLibros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgvLibros.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvLibros.Name = "dtgvLibros";
             this.dtgvLibros.RowHeadersWidth = 51;
             this.dtgvLibros.RowTemplate.Height = 24;
@@ -169,7 +169,7 @@ namespace MatchBook
             this.btnBscar.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBscar.ForeColor = System.Drawing.Color.Black;
             this.btnBscar.Location = new System.Drawing.Point(789, 153);
-            this.btnBscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBscar.Name = "btnBscar";
             this.btnBscar.Size = new System.Drawing.Size(38, 30);
             this.btnBscar.TabIndex = 20;
@@ -189,7 +189,7 @@ namespace MatchBook
             this.btnMenu2.ForeColor = System.Drawing.Color.Black;
             this.btnMenu2.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu2.Image")));
             this.btnMenu2.Location = new System.Drawing.Point(9, 89);
-            this.btnMenu2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu2.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenu2.Name = "btnMenu2";
             this.btnMenu2.Size = new System.Drawing.Size(51, 46);
             this.btnMenu2.TabIndex = 22;
@@ -208,9 +208,9 @@ namespace MatchBook
             this.grpMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpMenu.Location = new System.Drawing.Point(9, 140);
-            this.grpMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpMenu.Margin = new System.Windows.Forms.Padding(2);
             this.grpMenu.Name = "grpMenu";
-            this.grpMenu.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpMenu.Padding = new System.Windows.Forms.Padding(2);
             this.grpMenu.Size = new System.Drawing.Size(138, 298);
             this.grpMenu.TabIndex = 21;
             this.grpMenu.TabStop = false;
@@ -220,7 +220,7 @@ namespace MatchBook
             this.btnMiBiblioteca.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMiBiblioteca.ForeColor = System.Drawing.Color.Black;
             this.btnMiBiblioteca.Location = new System.Drawing.Point(4, 110);
-            this.btnMiBiblioteca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMiBiblioteca.Margin = new System.Windows.Forms.Padding(2);
             this.btnMiBiblioteca.Name = "btnMiBiblioteca";
             this.btnMiBiblioteca.Size = new System.Drawing.Size(129, 41);
             this.btnMiBiblioteca.TabIndex = 7;
@@ -233,7 +233,7 @@ namespace MatchBook
             this.btnForo.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForo.ForeColor = System.Drawing.Color.Black;
             this.btnForo.Location = new System.Drawing.Point(4, 249);
-            this.btnForo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnForo.Margin = new System.Windows.Forms.Padding(2);
             this.btnForo.Name = "btnForo";
             this.btnForo.Size = new System.Drawing.Size(129, 41);
             this.btnForo.TabIndex = 5;
@@ -246,7 +246,7 @@ namespace MatchBook
             this.btnSubirPagina.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubirPagina.ForeColor = System.Drawing.Color.Black;
             this.btnSubirPagina.Location = new System.Drawing.Point(4, 156);
-            this.btnSubirPagina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubirPagina.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubirPagina.Name = "btnSubirPagina";
             this.btnSubirPagina.Size = new System.Drawing.Size(129, 41);
             this.btnSubirPagina.TabIndex = 4;
@@ -259,7 +259,7 @@ namespace MatchBook
             this.btnBuscar.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
             this.btnBuscar.Location = new System.Drawing.Point(4, 202);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(129, 41);
             this.btnBuscar.TabIndex = 6;
@@ -272,7 +272,7 @@ namespace MatchBook
             this.btnPerfil.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.ForeColor = System.Drawing.Color.Black;
             this.btnPerfil.Location = new System.Drawing.Point(4, 63);
-            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(129, 41);
             this.btnPerfil.TabIndex = 2;
@@ -285,7 +285,7 @@ namespace MatchBook
             this.btnPrincipal.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrincipal.ForeColor = System.Drawing.Color.Black;
             this.btnPrincipal.Location = new System.Drawing.Point(4, 17);
-            this.btnPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrincipal.Name = "btnPrincipal";
             this.btnPrincipal.Size = new System.Drawing.Size(129, 41);
             this.btnPrincipal.TabIndex = 1;
@@ -301,9 +301,9 @@ namespace MatchBook
             this.grbMenu2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbMenu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbMenu2.Location = new System.Drawing.Point(886, 142);
-            this.grbMenu2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbMenu2.Margin = new System.Windows.Forms.Padding(2);
             this.grbMenu2.Name = "grbMenu2";
-            this.grbMenu2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbMenu2.Padding = new System.Windows.Forms.Padding(2);
             this.grbMenu2.Size = new System.Drawing.Size(137, 168);
             this.grbMenu2.TabIndex = 24;
             this.grbMenu2.TabStop = false;
@@ -313,7 +313,7 @@ namespace MatchBook
             this.btnSalir.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Location = new System.Drawing.Point(4, 110);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(129, 41);
             this.btnSalir.TabIndex = 4;
@@ -326,7 +326,7 @@ namespace MatchBook
             this.btnInformacion.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInformacion.ForeColor = System.Drawing.Color.Black;
             this.btnInformacion.Location = new System.Drawing.Point(4, 63);
-            this.btnInformacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInformacion.Margin = new System.Windows.Forms.Padding(2);
             this.btnInformacion.Name = "btnInformacion";
             this.btnInformacion.Size = new System.Drawing.Size(129, 41);
             this.btnInformacion.TabIndex = 2;
@@ -339,7 +339,7 @@ namespace MatchBook
             this.btnCerrarSesion.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Black;
             this.btnCerrarSesion.Location = new System.Drawing.Point(4, 17);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(129, 41);
             this.btnCerrarSesion.TabIndex = 1;
@@ -355,7 +355,7 @@ namespace MatchBook
             this.btnMasCosas.ForeColor = System.Drawing.Color.Black;
             this.btnMasCosas.Image = ((System.Drawing.Image)(resources.GetObject("btnMasCosas.Image")));
             this.btnMasCosas.Location = new System.Drawing.Point(964, 93);
-            this.btnMasCosas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMasCosas.Margin = new System.Windows.Forms.Padding(2);
             this.btnMasCosas.Name = "btnMasCosas";
             this.btnMasCosas.Size = new System.Drawing.Size(59, 45);
             this.btnMasCosas.TabIndex = 42;
@@ -393,7 +393,7 @@ namespace MatchBook
             "Castellano",
             "English"});
             this.cmbLengua.Location = new System.Drawing.Point(898, 624);
-            this.cmbLengua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbLengua.Margin = new System.Windows.Forms.Padding(2);
             this.cmbLengua.Name = "cmbLengua";
             this.cmbLengua.Size = new System.Drawing.Size(134, 30);
             this.cmbLengua.TabIndex = 46;
@@ -418,7 +418,7 @@ namespace MatchBook
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblemail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmBuscar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscar";

@@ -24,7 +24,7 @@ namespace MatchBook
         {
             lblEmail.Text = StringRecursos.lblEmail;
             label1.Text = StringRecursos.lblContraseña;
-            btnEntrar.Text = StringRecursos.btnBuscar;
+            btnEntrar.Text = StringRecursos.btnEntrar;
             label5.Text = StringRecursos.lblRegistro;
             label6.Text = StringRecursos.lblEmail;
             label7.Text = StringRecursos.lblContraseña;
@@ -192,16 +192,36 @@ namespace MatchBook
             return valido;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
         private void bntExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        
+        private void btnEntrar_Click_1(object sender, EventArgs e)
+        {
+            if (BBDD.Conexion != null)
+            {
+                if (ComprobacionCajasInicio())
+                {
+                    BBDD.AbrirConexion();
+
+                    if (usuario.InicioSesion(BBDD.Conexion, txtEmail.Text, txtContraseña.Text))
+                    {
+                        this.Hide();
+                        frmPrincipal principal = new frmPrincipal(txtEmail.Text);
+                        principal.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario/Contraseña incorrectos.");
+                    }
+
+                    BBDD.CerrarConexion();
+                }
+            }
+            BBDD.CerrarConexion();
+        }
     }
 }

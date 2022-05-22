@@ -177,6 +177,8 @@ namespace MatchBook
         private void frmForo_Load(object sender, EventArgs e)
         {
             grbMenu2.Hide();
+            lblemail.Hide();
+            lblUsu.Hide();
             grpMenu.Hide();
             cmbLengua.Text = "Castellano";
             AplicarIdioma();

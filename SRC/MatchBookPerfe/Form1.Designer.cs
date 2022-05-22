@@ -53,9 +53,9 @@ namespace MatchBook
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnEntrar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.bntExit = new System.Windows.Forms.Button();
+            this.btnEntrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.grbRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -72,7 +72,6 @@ namespace MatchBook
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 519);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // cmbLengua
             // 
@@ -332,18 +331,6 @@ namespace MatchBook
             this.label5.Text = "¿No tienes cuenta? ¡Regístrate ahora! ";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // btnEntrar
-            // 
-            this.btnEntrar.BackColor = System.Drawing.Color.Black;
-            this.btnEntrar.Location = new System.Drawing.Point(258, 387);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(57, 21);
-            this.btnEntrar.TabIndex = 3;
-            this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = false;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -361,6 +348,18 @@ namespace MatchBook
             this.bntExit.UseVisualStyleBackColor = false;
             this.bntExit.Click += new System.EventHandler(this.bntExit_Click);
             // 
+            // btnEntrar
+            // 
+            this.btnEntrar.BackColor = System.Drawing.Color.Black;
+            this.btnEntrar.Location = new System.Drawing.Point(254, 385);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(57, 21);
+            this.btnEntrar.TabIndex = 13;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click_1);
+            // 
             // frmInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,8 +368,8 @@ namespace MatchBook
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 518);
             this.ControlBox = false;
-            this.Controls.Add(this.bntExit);
             this.Controls.Add(this.btnEntrar);
+            this.Controls.Add(this.bntExit);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -420,10 +419,10 @@ namespace MatchBook
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtemail1;
         private System.Windows.Forms.Button btnRegistro;
-        private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button bntExit;
         private System.Windows.Forms.ComboBox cmbLengua;
+        private System.Windows.Forms.Button btnEntrar;
     }
 }
 

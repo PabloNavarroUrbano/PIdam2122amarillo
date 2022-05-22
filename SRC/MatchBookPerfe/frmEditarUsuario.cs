@@ -39,7 +39,7 @@ namespace MatchBook
             btnBuscar.Text = StringRecursos.btnBuscar;
             btnForo.Text = StringRecursos.btnForo;
             label11.Text = StringRecursos.lblPerfil;
-            lblUsername.Text = StringRecursos.lblUsuario;
+            lblEmail2.Text = StringRecursos.lblUsuario;
             lblDireccion.Text = StringRecursos.lblDirección;
             lblEmail.Text = StringRecursos.lblEmail;
             lblContrasenya.Text = StringRecursos.lblContraseña;
@@ -114,7 +114,7 @@ namespace MatchBook
             {
                 while (reader.Read())
                 {
-                    lblUsername.Text = reader.GetString(0);
+                    lblEmail2.Text = reader.GetString(0);
                     lblEmail.Text = reader.GetString(1);
                     lblDireccion.Text = reader.GetString(2);
                     lblContrasenya.Text = "*******";//reader.GetString(3);
@@ -184,7 +184,7 @@ namespace MatchBook
         {
       
             usuario.CambiarDatos( tbxContraseña.Text, tbxUsername.Text, tbxDireccion.Text, tbxEmaill.Text, txtemail1.Text);
-            MessageBox.Show("Listo pa");
+            MessageBox.Show("Editado correctamente");
             this.Close();
             frmEditarUsuario uwu = new frmEditarUsuario(txtemail1.Text);
             uwu.Show();
