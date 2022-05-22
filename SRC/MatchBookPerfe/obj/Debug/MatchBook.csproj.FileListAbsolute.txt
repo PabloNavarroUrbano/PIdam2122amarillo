@@ -575,7 +575,6 @@ C:\Users\Estanis-\Desktop\Nueva carpeta (2)\SRC\MatchBookPerfe\bin\Debug\K4os.Ha
 C:\Users\Estanis-\Desktop\Nueva carpeta (2)\SRC\MatchBookPerfe\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\Estanis-\Desktop\Nueva carpeta (2)\SRC\MatchBookPerfe\bin\Debug\MySql.Data.xml
 C:\Users\Estanis-\Desktop\Nueva carpeta (2)\SRC\MatchBookPerfe\obj\Debug\MatchBook.csproj.AssemblyReference.cache
-C:\Users\Estanis-\Desktop\Nueva carpeta (2)\SRC\MatchBookPerfe\obj\Debug\MatchBook.csproj.SuggestedBindingRedirects.cache
 C:\Users\Estanis-\Desktop\Nueva carpeta (2)\SRC\MatchBookPerfe\obj\Debug\MatchBook.exe.config
 C:\Users\Estanis-\Desktop\Nueva carpeta (2)\SRC\MatchBookPerfe\obj\Debug\MatchBook.AboutBox1.resources
 C:\Users\Estanis-\Desktop\Nueva carpeta (2)\SRC\MatchBookPerfe\obj\Debug\MatchBook.frmInicioSesion.resources

@@ -62,6 +62,7 @@ namespace MatchBook
         int cont = 0;
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            
             BBDD.CerrarConexion();
             BBDD.AbrirConexion();
             idusuario = usu.SacarID(BBDD.Conexion, lblemail.Text);
