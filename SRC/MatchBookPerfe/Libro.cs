@@ -63,6 +63,14 @@ namespace MatchBook
         static List<libro> libros = new List<libro>();
 
 
+
+        /// <summary>
+        /// Agregamos un libro a la base de datos de forma timida
+        /// </summary>
+        /// <param name="conexion"></param>
+        /// <param name="lib"> constructor de libro </param>
+        /// <param name="email"> el email del usuario que ha subido el libro</param>
+        /// <returns></returns>
         public int AgregarLibro(MySqlConnection conexion, libro lib, string email)
         {
             int retorno;
@@ -85,7 +93,11 @@ namespace MatchBook
             Console.WriteLine("un descanso timidin");
         }
 
-
+        /// <summary>
+        /// Sacamos una id aleatoria de todos los usuarios que hay en la base de datos
+        /// </summary>
+        /// <param name="conexion"></param>
+        /// <returns> la id en int </returns>
         public int SacarID(MySqlConnection conexion)
         {
             int retorno;
@@ -116,6 +128,12 @@ namespace MatchBook
 
         }
 
+        /// <summary>
+        /// Sacamos la id de un libro dependiendo de su titulo
+        /// </summary>
+        /// <param name="conexion"></param>
+        /// <param name="titu"> nombre del libro</param>
+        /// <returns> la id en int </returns>
         public int ObtieneIDLibro(MySqlConnection conexion, string titu)
         {
             int retorno;
@@ -146,7 +164,11 @@ namespace MatchBook
 
         }
 
-
+        /// <summary>
+        /// numero maximo de libros
+        /// </summary>
+        /// <param name="conexion"></param>
+        /// <returns> </returns>
         public int SacarMAX(MySqlConnection conexion)
         {
             int retorno;
@@ -177,7 +199,12 @@ namespace MatchBook
 
         }
 
-
+        /// <summary>
+        /// Nos muestra el contenido de texto de los libros dependiendo de su id 
+        /// </summary>
+        /// <param name="conexion"></param>
+        /// <param name="id"> la id del libro </param>
+        /// <returns></returns>
         public string VisualizarContenido(MySqlConnection conexion, int id)
         {
             string retorno;
@@ -204,6 +231,12 @@ namespace MatchBook
             }
         }
 
+        /// <summary>
+        /// mostramos el titulo de la aplicacion dependiendo de su id
+        /// </summary>
+        /// <param name="conexion"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public string VisualizarTitulo(MySqlConnection conexion, int id)
         {
             string retorno;
@@ -284,7 +317,12 @@ namespace MatchBook
             }
         }
 
-
+        /// <summary>
+        /// Buscamos un libro dependiendo de si coincide con el nombre en la base de datos
+        /// </summary>
+        /// <param name="conexion"></param>
+        /// <param name="titulo"></param>
+        /// <returns></returns>
         public static List<libro> BuscarLibro(MySqlConnection conexion, string titulo)
         {
             List<libro> lista = new List<libro>();

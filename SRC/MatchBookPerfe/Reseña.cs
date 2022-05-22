@@ -29,7 +29,14 @@ namespace MatchBook
             Resenya = res;
             fecha = fec;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="conexion"></param>
+        /// <param name="res"></param>
+        /// <param name="email"></param>
+        /// <param name="titulo"></param>
+        /// <returns></returns>
         public int AgregarResenya(MySqlConnection conexion, Reseña res, string email, string titulo)
         {
             int retorno;
@@ -53,6 +60,14 @@ namespace MatchBook
             return retorno;
             Console.WriteLine("un descanso timidin");
         }
+
+
+        /// <summary>
+        /// Sacamos las reseñas de la base de datos y las visualizamos en un texto dependiendo de su titulo
+        /// </summary>
+        /// <param name="conexion"></param>
+        /// <param name="titulo"></param>
+        /// <returns></returns>
         public string ObtieneResenyas(MySqlConnection conexion, string titulo)
         {
             string retorno;

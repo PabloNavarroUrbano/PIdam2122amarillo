@@ -43,6 +43,13 @@ namespace MatchBook
             cmbLengua.Text = "Castellano";
             AplicarIdioma();
         }
+
+
+        /// <summary>
+        /// Sistema que nos va a cambiar el idioma dependiendo de nuestra eleccion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbLengua_SelectedIndexChanged(object sender, EventArgs e)
         {
             string cultura = "";
@@ -69,6 +76,12 @@ namespace MatchBook
         {
             grbRegistro.Show();
         }
+
+        /// <summary>
+        /// Comprobamos que la conexion no es nula y que las cajas de texto no estan vacias, si todo ha ido bien accederemos al programa
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             if (BBDD.Conexion != null)

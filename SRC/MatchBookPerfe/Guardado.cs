@@ -25,6 +25,15 @@ namespace MatchBook
         public Guardado() { }
 
 
+
+        /// <summary>
+        /// Metodo que nos inserta en la base de datos biblio el contenido guardado de un usuario
+        /// </summary>
+        /// <param name="conexion"></param>
+        /// <param name="usu"></param>
+        /// <param name="li"></param>
+        /// <param name="txt"></param>
+        /// <returns> resultado del comando </returns>
         public int Guardar(MySqlConnection conexion, usuario usu, string li,string txt)
         {
             /*List<Guardado> bibliotecaUsuario = new List<Guardado>();

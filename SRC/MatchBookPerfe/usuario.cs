@@ -48,8 +48,13 @@ namespace MatchBook
         static List<usuario> plant = new List<usuario>();
 
 
-
-
+        /// <summary>
+        /// Comprobamos si coincide el email y la contraseña para iniciar sesion
+        /// </summary>
+        /// <param name="conexion"></param>
+        /// <param name="email"></param>
+        /// <param name="cont"></param>
+        /// <returns></returns>
         public static bool InicioSesion(MySqlConnection conexion, string email, string cont)
         {
 
@@ -119,6 +124,13 @@ namespace MatchBook
 
         }
 
+        /// <summary>
+        /// 
+        ///Comprobamos si el email existe en la base de datoss
+        /// </summary>
+        /// <param name="conexion"></param>
+        /// <param name="email"></param>
+        /// <returns> boolean</returns>
         public bool ComprobarEmail(MySqlConnection conexion, string email)
         {
             string consulta = string.Format("SELECT * FROM usuario" +
@@ -139,7 +151,12 @@ namespace MatchBook
 
         }
 
-        
+        /// <summary>
+        /// Sacamos la id de un usuario a partir de su email
+        /// </summary>
+        /// <param name="conexion"></param>
+        /// <param name="email"></param>
+        /// <returns></returns>
                 public int SacarID(MySqlConnection conexion, string email)
                 {
                     int retorno;
